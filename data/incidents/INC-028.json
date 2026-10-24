@@ -1,0 +1,29 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "pool_warning_bystander"
+    ],
+    "gold_evidence_ids": [
+      "L-0106",
+      "L-0283",
+      "L-0285",
+      "M-006",
+      "M-008",
+      "R-07-5"
+    ],
+    "gold_runbook_section": "R-07-5",
+    "hard_case": null,
+    "incident_id": "INC-028",
+    "root_cause_category": "expired_tls_cert",
+    "root_cause_statement": "The TLS certificate for auth.internal.shop expired at 2026-03-05T07:39:00Z and was not renewed, so clients could not complete handshakes.",
+    "split": "test"
+  },
+  "incident": {
+    "alert_text": "auth-service: HTTP error rate above 5% for 5 minutes (since 07:42 UTC)",
+    "incident_id": "INC-028",
+    "service": "auth",
+    "start_time": "2026-03-05T07:42:00Z",
+    "window_end": "2026-03-05T09:00:00Z",
+    "window_start": "2026-03-05T06:00:00Z"
+  }
+}

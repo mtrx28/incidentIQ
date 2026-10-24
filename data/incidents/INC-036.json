@@ -1,0 +1,31 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "log_volume_notice",
+      "partner_webhook_retry",
+      "session_cache_eviction"
+    ],
+    "gold_evidence_ids": [
+      "L-0123",
+      "L-0289",
+      "L-0292",
+      "M-024",
+      "M-026",
+      "R-07-5"
+    ],
+    "gold_runbook_section": "R-07-5",
+    "hard_case": null,
+    "incident_id": "INC-036",
+    "root_cause_category": "expired_tls_cert",
+    "root_cause_statement": "The TLS certificate for inventory.internal.shop expired at 2026-08-15T15:39:00Z and was not renewed, so clients could not complete handshakes.",
+    "split": "dev"
+  },
+  "incident": {
+    "alert_text": "inventory-service: HTTP error rate above 5% for 5 minutes (since 15:43 UTC)",
+    "incident_id": "INC-036",
+    "service": "inventory",
+    "start_time": "2026-08-15T15:43:00Z",
+    "window_end": "2026-08-15T17:00:00Z",
+    "window_start": "2026-08-15T14:00:00Z"
+  }
+}

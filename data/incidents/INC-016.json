@@ -1,0 +1,30 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "pool_warning_bystander",
+      "unrelated_cert_expiring"
+    ],
+    "gold_evidence_ids": [
+      "L-0263",
+      "L-0278",
+      "L-0279",
+      "M-021",
+      "M-024",
+      "R-03-5"
+    ],
+    "gold_runbook_section": "R-03-5",
+    "hard_case": null,
+    "incident_id": "INC-016",
+    "root_cause_category": "slow_query_missing_index",
+    "root_cause_statement": "A schema migration dropped the index on orders.customer_ref, so a hot query on inventory fell back to a sequential scan and slowed every request.",
+    "split": "dev"
+  },
+  "incident": {
+    "alert_text": "inventory-service: p99 latency above 1000ms for 5 minutes (since 15:43 UTC)",
+    "incident_id": "INC-016",
+    "service": "inventory",
+    "start_time": "2026-06-10T15:43:00Z",
+    "window_end": "2026-06-10T17:00:00Z",
+    "window_start": "2026-06-10T14:00:00Z"
+  }
+}

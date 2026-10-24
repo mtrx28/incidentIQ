@@ -1,0 +1,30 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "partner_webhook_retry",
+      "unrelated_cert_expiring"
+    ],
+    "gold_evidence_ids": [
+      "L-0274",
+      "L-0291",
+      "L-0295",
+      "M-016",
+      "M-018",
+      "R-05-5"
+    ],
+    "gold_runbook_section": "R-05-5",
+    "hard_case": null,
+    "incident_id": "INC-040",
+    "root_cause_category": "memory_leak_oom",
+    "root_cause_statement": "A memory leak in checkout drove heap usage to the limit and the kernel OOM-killed the container repeatedly.",
+    "split": "test"
+  },
+  "incident": {
+    "alert_text": "checkout-service: HTTP error rate above 5% for 5 minutes (since 19:43 UTC)",
+    "incident_id": "INC-040",
+    "service": "checkout",
+    "start_time": "2026-04-05T19:43:00Z",
+    "window_end": "2026-04-05T21:00:00Z",
+    "window_start": "2026-04-05T18:00:00Z"
+  }
+}

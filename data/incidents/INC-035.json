@@ -1,0 +1,28 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "pool_warning_bystander"
+    ],
+    "gold_evidence_ids": [
+      "L-0281",
+      "L-0283",
+      "M-009",
+      "R-08-3",
+      "R-08-5"
+    ],
+    "gold_runbook_section": "R-08-5",
+    "hard_case": "runbook_needed",
+    "incident_id": "INC-035",
+    "root_cause_category": "misconfiguration",
+    "root_cause_statement": "A config change set FEATURE_NEW_PRICING to 'true' (was 'false') and auth began failing as it restarted with the bad value.",
+    "split": "test"
+  },
+  "incident": {
+    "alert_text": "auth-service: HTTP error rate above 5% for 5 minutes (since 03:43 UTC)",
+    "incident_id": "INC-035",
+    "service": "auth",
+    "start_time": "2026-03-26T03:43:00Z",
+    "window_end": "2026-03-26T05:00:00Z",
+    "window_start": "2026-03-26T02:00:00Z"
+  }
+}

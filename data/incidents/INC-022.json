@@ -1,0 +1,30 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "log_volume_notice",
+      "pool_warning_bystander"
+    ],
+    "gold_evidence_ids": [
+      "L-0266",
+      "L-0275",
+      "L-0277",
+      "L-0278",
+      "M-027",
+      "R-01-5"
+    ],
+    "gold_runbook_section": "R-01-5",
+    "hard_case": null,
+    "incident_id": "INC-022",
+    "root_cause_category": "bad_deployment",
+    "root_cause_statement": "Release v2.8.7 of inventory introduced an unhandled NullPointerException; errors began right after the rolling deploy replaced v2.8.6.",
+    "split": "test"
+  },
+  "incident": {
+    "alert_text": "inventory-service: HTTP error rate above 5% for 5 minutes (since 20:43 UTC)",
+    "incident_id": "INC-022",
+    "service": "inventory",
+    "start_time": "2026-09-01T20:43:00Z",
+    "window_end": "2026-09-01T22:00:00Z",
+    "window_start": "2026-09-01T19:00:00Z"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "minor_gc_pause",
+      "session_cache_eviction"
+    ],
+    "gold_evidence_ids": [
+      "L-0281",
+      "L-0289",
+      "L-0291",
+      "L-0296",
+      "M-036",
+      "R-01-5"
+    ],
+    "gold_runbook_section": "R-01-5",
+    "hard_case": null,
+    "incident_id": "INC-033",
+    "root_cause_category": "bad_deployment",
+    "root_cause_statement": "Release v3.15.6 of notifications introduced an unhandled NullPointerException; errors began right after the rolling deploy replaced v3.15.5.",
+    "split": "test"
+  },
+  "incident": {
+    "alert_text": "notifications-service: HTTP error rate above 5% for 5 minutes (since 11:43 UTC)",
+    "incident_id": "INC-033",
+    "service": "notifications",
+    "start_time": "2026-04-10T11:43:00Z",
+    "window_end": "2026-04-10T13:00:00Z",
+    "window_start": "2026-04-10T10:00:00Z"
+  }
+}

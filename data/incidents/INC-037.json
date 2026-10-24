@@ -1,0 +1,29 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "session_cache_eviction"
+    ],
+    "gold_evidence_ids": [
+      "L-0264",
+      "L-0277",
+      "L-0281",
+      "M-052",
+      "M-054",
+      "R-05-5"
+    ],
+    "gold_runbook_section": "R-05-5",
+    "hard_case": null,
+    "incident_id": "INC-037",
+    "root_cause_category": "memory_leak_oom",
+    "root_cause_statement": "A memory leak in search drove heap usage to the limit and the kernel OOM-killed the container repeatedly.",
+    "split": "dev"
+  },
+  "incident": {
+    "alert_text": "search-service: HTTP error rate above 5% for 5 minutes (since 09:42 UTC)",
+    "incident_id": "INC-037",
+    "service": "search",
+    "start_time": "2026-06-15T09:42:00Z",
+    "window_end": "2026-06-15T11:00:00Z",
+    "window_start": "2026-06-15T08:00:00Z"
+  }
+}

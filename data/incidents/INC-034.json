@@ -1,0 +1,28 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "nightly_analytics_query"
+    ],
+    "gold_evidence_ids": [
+      "L-0287",
+      "L-0291",
+      "L-0294",
+      "M-030",
+      "R-02-5"
+    ],
+    "gold_runbook_section": "R-02-5",
+    "hard_case": null,
+    "incident_id": "INC-034",
+    "root_cause_category": "db_connection_pool_exhaustion",
+    "root_cause_statement": "The notifications database connection pool (max 20) was fully saturated, so requests queued for a connection and timed out.",
+    "split": "test"
+  },
+  "incident": {
+    "alert_text": "notifications-service: p99 latency above 1000ms for 5 minutes (since 21:43 UTC)",
+    "incident_id": "INC-034",
+    "service": "notifications",
+    "start_time": "2026-05-16T21:43:00Z",
+    "window_end": "2026-05-16T23:00:00Z",
+    "window_start": "2026-05-16T20:00:00Z"
+  }
+}

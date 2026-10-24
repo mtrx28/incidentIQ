@@ -1,0 +1,29 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "partner_webhook_retry"
+    ],
+    "gold_evidence_ids": [
+      "L-0296",
+      "L-0303",
+      "L-0306",
+      "L-0309",
+      "M-054",
+      "R-01-5"
+    ],
+    "gold_runbook_section": "R-01-5",
+    "hard_case": null,
+    "incident_id": "INC-002",
+    "root_cause_category": "bad_deployment",
+    "root_cause_statement": "Release v5.6.9 of search introduced an unhandled NullPointerException; errors began right after the rolling deploy replaced v5.6.8.",
+    "split": "dev"
+  },
+  "incident": {
+    "alert_text": "search-service: HTTP error rate above 5% for 5 minutes (since 09:44 UTC)",
+    "incident_id": "INC-002",
+    "service": "search",
+    "start_time": "2026-04-26T09:44:00Z",
+    "window_end": "2026-04-26T11:00:00Z",
+    "window_start": "2026-04-26T08:00:00Z"
+  }
+}

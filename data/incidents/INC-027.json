@@ -1,0 +1,31 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "config_drift_notice",
+      "minor_gc_pause",
+      "partner_webhook_retry"
+    ],
+    "gold_evidence_ids": [
+      "L-0277",
+      "L-0280",
+      "L-0283",
+      "M-038",
+      "M-044",
+      "R-09-5"
+    ],
+    "gold_runbook_section": "R-09-5",
+    "hard_case": null,
+    "incident_id": "INC-027",
+    "root_cause_category": "traffic_spike_rate_limit",
+    "root_cause_statement": "Inbound traffic to payments jumped to about four times normal; autoscaling hit its ceiling and rate limiting plus load shedding rejected requests.",
+    "split": "test"
+  },
+  "incident": {
+    "alert_text": "payments-service: p99 latency above 1000ms for 5 minutes (since 09:43 UTC)",
+    "incident_id": "INC-027",
+    "service": "payments",
+    "start_time": "2026-05-20T09:43:00Z",
+    "window_end": "2026-05-20T11:00:00Z",
+    "window_start": "2026-05-20T08:00:00Z"
+  }
+}

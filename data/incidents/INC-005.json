@@ -1,0 +1,27 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "bystander_cpu_blip",
+      "deprecated_api_client"
+    ],
+    "gold_evidence_ids": [
+      "M-028",
+      "M-030",
+      "R-10-5"
+    ],
+    "gold_runbook_section": "R-10-5",
+    "hard_case": "metrics_only",
+    "incident_id": "INC-005",
+    "root_cause_category": "cache_stampede_outage",
+    "root_cause_statement": "The Redis cache in front of notifications went down; every request fell through to the database, which saturated under the resulting stampede.",
+    "split": "test"
+  },
+  "incident": {
+    "alert_text": "notifications-service: HTTP error rate above 5% for 5 minutes (since 11:44 UTC)",
+    "incident_id": "INC-005",
+    "service": "notifications",
+    "start_time": "2026-07-28T11:44:00Z",
+    "window_end": "2026-07-28T13:00:00Z",
+    "window_start": "2026-07-28T10:00:00Z"
+  }
+}

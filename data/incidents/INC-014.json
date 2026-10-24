@@ -1,0 +1,29 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "log_volume_notice"
+    ],
+    "gold_evidence_ids": [
+      "L-0278",
+      "L-0281",
+      "M-002",
+      "M-006",
+      "R-04-3",
+      "R-04-5"
+    ],
+    "gold_runbook_section": "R-04-5",
+    "hard_case": "runbook_needed",
+    "incident_id": "INC-014",
+    "root_cause_category": "downstream_timeout",
+    "root_cause_statement": "auth-service became slow, so calls from payments exceeded their 5000ms timeout and the circuit breaker opened.",
+    "split": "dev"
+  },
+  "incident": {
+    "alert_text": "payments-service: HTTP error rate above 5% for 5 minutes (since 05:44 UTC)",
+    "incident_id": "INC-014",
+    "service": "payments",
+    "start_time": "2026-08-04T05:44:00Z",
+    "window_end": "2026-08-04T07:00:00Z",
+    "window_start": "2026-08-04T04:00:00Z"
+  }
+}

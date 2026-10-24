@@ -1,0 +1,531 @@
+{"level": "INFO", "line_id": "L-0001", "message": "token issued sub=u-363077 ttl=3600 request_id=req-ac54dc13", "service": "auth", "ts": "2026-04-18T15:01:01Z"}
+{"level": "INFO", "line_id": "L-0002", "message": "cart loaded cart_id=c-678937 items=4 request_id=req-ef5581e3", "service": "checkout", "ts": "2026-04-18T15:01:17Z"}
+{"level": "INFO", "line_id": "L-0003", "message": "config heartbeat ok revision=167", "service": "search", "ts": "2026-04-18T15:01:20Z"}
+{"level": "WARN", "line_id": "L-0004", "message": "slow request took 629ms path=/api/v1/search", "service": "search", "ts": "2026-04-18T15:01:57Z"}
+{"level": "INFO", "line_id": "L-0005", "message": "metrics scrape served bytes=41704", "service": "notifications", "ts": "2026-04-18T15:02:24Z"}
+{"level": "INFO", "line_id": "L-0006", "message": "healthcheck ok latency_ms=6", "service": "search", "ts": "2026-04-18T15:02:56Z"}
+{"level": "INFO", "line_id": "L-0007", "message": "config heartbeat ok revision=501", "service": "search", "ts": "2026-04-18T15:03:22Z"}
+{"level": "INFO", "line_id": "L-0008", "message": "warehouse sync batch=7082 rows=2771 sha=1724406", "service": "inventory", "ts": "2026-04-18T15:03:28Z"}
+{"level": "WARN", "line_id": "L-0009", "message": "retrying idempotent request attempt 1/3 request_id=req-766c5565 (succeeded)", "service": "checkout", "ts": "2026-04-18T15:03:48Z"}
+{"level": "INFO", "line_id": "L-0010", "message": "3ds challenge completed txn=TXN-368245", "service": "payments", "ts": "2026-04-18T15:04:33Z"}
+{"level": "INFO", "line_id": "L-0011", "message": "index refresh completed shard=3 docs=355947", "service": "search", "ts": "2026-04-18T15:04:34Z"}
+{"level": "INFO", "line_id": "L-0012", "message": "3ds challenge completed txn=TXN-267747", "service": "payments", "ts": "2026-04-18T15:05:22Z"}
+{"level": "INFO", "line_id": "L-0013", "message": "3ds challenge completed txn=TXN-797010", "service": "payments", "ts": "2026-04-18T15:05:42Z"}
+{"level": "INFO", "line_id": "L-0014", "message": "gc pause 48ms heap_used=47%", "service": "notifications", "ts": "2026-04-18T15:05:43Z"}
+{"level": "WARN", "line_id": "L-0015", "message": "slow ldap lookup took 823ms", "service": "auth", "ts": "2026-04-18T15:05:52Z"}
+{"level": "INFO", "line_id": "L-0016", "message": "metrics scrape served bytes=46361", "service": "notifications", "ts": "2026-04-18T15:06:21Z"}
+{"level": "INFO", "line_id": "L-0017", "message": "metrics scrape served bytes=33764", "service": "checkout", "ts": "2026-04-18T15:06:38Z"}
+{"level": "INFO", "line_id": "L-0018", "message": "cart loaded cart_id=c-554750 items=1 request_id=req-8e852a99", "service": "checkout", "ts": "2026-04-18T15:06:51Z"}
+{"level": "INFO", "line_id": "L-0019", "message": "healthcheck ok latency_ms=4", "service": "inventory", "ts": "2026-04-18T15:06:57Z"}
+{"level": "INFO", "line_id": "L-0020", "message": "config heartbeat ok revision=868", "service": "search", "ts": "2026-04-18T15:07:17Z"}
+{"level": "INFO", "line_id": "L-0021", "message": "config heartbeat ok revision=374", "service": "auth", "ts": "2026-04-18T15:07:36Z"}
+{"level": "INFO", "line_id": "L-0022", "message": "refund issued user=Liam Johnson order=ORD-73758", "service": "payments", "ts": "2026-04-18T15:07:57Z"}
+{"level": "INFO", "line_id": "L-0023", "message": "gc pause 33ms heap_used=66%", "service": "notifications", "ts": "2026-04-18T15:08:11Z"}
+{"level": "INFO", "line_id": "L-0024", "message": "gc pause 32ms heap_used=61%", "service": "search", "ts": "2026-04-18T15:08:38Z"}
+{"level": "INFO", "line_id": "L-0025", "message": "config heartbeat ok revision=807", "service": "auth", "ts": "2026-04-18T15:08:41Z"}
+{"level": "INFO", "line_id": "L-0026", "message": "settlement batch closed batch=4319 txns=314", "service": "payments", "ts": "2026-04-18T15:10:02Z"}
+{"level": "INFO", "line_id": "L-0027", "message": "metrics scrape served bytes=42551", "service": "notifications", "ts": "2026-04-18T15:10:09Z"}
+{"level": "WARN", "line_id": "L-0028", "message": "slow ldap lookup took 599ms", "service": "auth", "ts": "2026-04-18T15:10:54Z"}
+{"level": "INFO", "line_id": "L-0029", "message": "inventory reserved sku=SKU-2750 qty=3", "service": "checkout", "ts": "2026-04-18T15:10:56Z"}
+{"level": "INFO", "line_id": "L-0030", "message": "config heartbeat ok revision=744", "service": "notifications", "ts": "2026-04-18T15:10:58Z"}
+{"level": "INFO", "line_id": "L-0031", "message": "index refresh completed shard=2 docs=120580", "service": "search", "ts": "2026-04-18T15:11:01Z"}
+{"level": "INFO", "line_id": "L-0032", "message": "healthcheck ok latency_ms=2", "service": "checkout", "ts": "2026-04-18T15:11:11Z"}
+{"level": "INFO", "line_id": "L-0033", "message": "token validated sub=u-598775 latency_ms=5", "service": "auth", "ts": "2026-04-18T15:11:12Z"}
+{"level": "INFO", "line_id": "L-0034", "message": "queue depth=5 oldest_age_s=9", "service": "notifications", "ts": "2026-04-18T15:11:15Z"}
+{"level": "INFO", "line_id": "L-0035", "message": "session refreshed session=62d5c375c37b trace=14108c17b6d9ea25", "service": "auth", "ts": "2026-04-18T15:12:07Z"}
+{"level": "INFO", "line_id": "L-0036", "message": "config heartbeat ok revision=528", "service": "inventory", "ts": "2026-04-18T15:12:42Z"}
+{"level": "INFO", "line_id": "L-0037", "message": "reconciliation matched ref=202608093851 ledger_entry=559760", "service": "payments", "ts": "2026-04-18T15:13:23Z"}
+{"level": "INFO", "line_id": "L-0038", "message": "ranking model loaded version=v2.9.1 sha=8725a77", "service": "search", "ts": "2026-04-18T15:13:34Z"}
+{"level": "INFO", "line_id": "L-0039", "message": "POST /api/v1/checkout status=200 duration_ms=164 trace=f9c9fb1a9d461d52", "service": "checkout", "ts": "2026-04-18T15:13:47Z"}
+{"level": "INFO", "line_id": "L-0040", "message": "config heartbeat ok revision=105", "service": "inventory", "ts": "2026-04-18T15:13:54Z"}
+{"level": "INFO", "line_id": "L-0041", "message": "config heartbeat ok revision=754", "service": "inventory", "ts": "2026-04-18T15:14:43Z"}
+{"level": "INFO", "line_id": "L-0042", "message": "index refresh completed shard=2 docs=327640", "service": "search", "ts": "2026-04-18T15:14:44Z"}
+{"level": "INFO", "line_id": "L-0043", "message": "config heartbeat ok revision=438", "service": "search", "ts": "2026-04-18T15:14:44Z"}
+{"level": "INFO", "line_id": "L-0044", "message": "reservation released sku=SKU-6747 qty=2", "service": "inventory", "ts": "2026-04-18T15:15:25Z"}
+{"level": "INFO", "line_id": "L-0045", "message": "push notification sent topic=order-updates delivered=186", "service": "notifications", "ts": "2026-04-18T15:15:25Z"}
+{"level": "WARN", "line_id": "L-0046", "message": "slow request took 587ms path=/api/v1/search", "service": "search", "ts": "2026-04-18T15:16:17Z"}
+{"level": "INFO", "line_id": "L-0047", "message": "gateway response code=00 gateway_ref=ee80b3fdf4c6", "service": "payments", "ts": "2026-04-18T15:16:29Z"}
+{"level": "INFO", "line_id": "L-0048", "message": "config heartbeat ok revision=566", "service": "search", "ts": "2026-04-18T15:16:57Z"}
+{"level": "INFO", "line_id": "L-0049", "message": "push notification sent topic=order-updates delivered=82", "service": "notifications", "ts": "2026-04-18T15:17:15Z"}
+{"level": "DEBUG", "line_id": "L-0050", "message": "gateway call headers Authorization: Bearer 6IyMvpri6hSzQWsrX8YyZdu5tndmWbAyzfxV25dk", "service": "payments", "ts": "2026-04-18T15:17:29Z"}
+{"level": "INFO", "line_id": "L-0051", "message": "metrics scrape served bytes=74311", "service": "inventory", "ts": "2026-04-18T15:17:33Z"}
+{"level": "INFO", "line_id": "L-0052", "message": "metrics scrape served bytes=25667", "service": "checkout", "ts": "2026-04-18T15:18:42Z"}
+{"level": "INFO", "line_id": "L-0053", "message": "3ds challenge completed txn=TXN-983616", "service": "payments", "ts": "2026-04-18T15:18:55Z"}
+{"level": "INFO", "line_id": "L-0054", "message": "POST /api/v1/checkout status=200 duration_ms=219 trace=291c0b5b95047e0d", "service": "checkout", "ts": "2026-04-18T15:20:22Z"}
+{"level": "INFO", "line_id": "L-0055", "message": "email job dequeued job=d5c4bef601 template=order_confirmation", "service": "notifications", "ts": "2026-04-18T15:20:38Z"}
+{"level": "INFO", "line_id": "L-0056", "message": "email job dequeued job=08109ffd0d template=order_confirmation", "service": "notifications", "ts": "2026-04-18T15:21:17Z"}
+{"level": "INFO", "line_id": "L-0057", "message": "config heartbeat ok revision=893", "service": "notifications", "ts": "2026-04-18T15:21:20Z"}
+{"level": "WARN", "line_id": "L-0058", "message": "retrying idempotent request attempt 1/3 request_id=req-9b55c540 (succeeded)", "service": "checkout", "ts": "2026-04-18T15:21:33Z"}
+{"level": "INFO", "line_id": "L-0059", "message": "metrics scrape served bytes=66983", "service": "search", "ts": "2026-04-18T15:21:33Z"}
+{"level": "INFO", "line_id": "L-0060", "message": "token validated sub=u-560417 latency_ms=6", "service": "auth", "ts": "2026-04-18T15:21:42Z"}
+{"level": "WARN", "line_id": "L-0061", "message": "provider rate hint: 94% of hourly send quota used", "service": "notifications", "ts": "2026-04-18T15:22:06Z"}
+{"level": "INFO", "line_id": "L-0062", "message": "ranking model loaded version=v7.7.1 sha=98cf54a", "service": "search", "ts": "2026-04-18T15:22:14Z"}
+{"level": "INFO", "line_id": "L-0063", "message": "email job dequeued job=e891ae5a65 template=order_confirmation", "service": "notifications", "ts": "2026-04-18T15:22:22Z"}
+{"level": "WARN", "line_id": "L-0064", "message": "slow request took 519ms path=/api/v1/search", "service": "search", "ts": "2026-04-18T15:22:22Z"}
+{"level": "INFO", "line_id": "L-0065", "message": "queue depth=15 oldest_age_s=1", "service": "notifications", "ts": "2026-04-18T15:22:40Z"}
+{"level": "WARN", "line_id": "L-0066", "message": "slow request took 539ms path=/api/v1/stock/bulk", "service": "inventory", "ts": "2026-04-18T15:22:52Z"}
+{"level": "INFO", "line_id": "L-0067", "message": "reconciliation matched ref=202606134319 ledger_entry=196303", "service": "payments", "ts": "2026-04-18T15:23:18Z"}
+{"level": "WARN", "line_id": "L-0068", "message": "slow request took 506ms path=/api/v1/stock/bulk", "service": "inventory", "ts": "2026-04-18T15:23:40Z"}
+{"level": "INFO", "line_id": "L-0069", "message": "config heartbeat ok revision=675", "service": "auth", "ts": "2026-04-18T15:23:54Z"}
+{"level": "INFO", "line_id": "L-0070", "message": "metrics scrape served bytes=70614", "service": "notifications", "ts": "2026-04-18T15:25:04Z"}
+{"level": "INFO", "line_id": "L-0071", "message": "gc pause 27ms heap_used=55%", "service": "auth", "ts": "2026-04-18T15:25:35Z"}
+{"level": "INFO", "line_id": "L-0072", "message": "reconciliation matched ref=202603933628 ledger_entry=608250", "service": "payments", "ts": "2026-04-18T15:26:36Z"}
+{"level": "INFO", "line_id": "L-0073", "message": "coupon applied code=FEST23 discount_pct=15", "service": "checkout", "ts": "2026-04-18T15:27:25Z"}
+{"level": "INFO", "line_id": "L-0074", "message": "index refresh completed shard=3 docs=553074", "service": "search", "ts": "2026-04-18T15:27:33Z"}
+{"level": "INFO", "line_id": "L-0075", "message": "healthcheck ok latency_ms=6", "service": "checkout", "ts": "2026-04-18T15:27:44Z"}
+{"level": "INFO", "line_id": "L-0076", "message": "settlement batch closed batch=1066 txns=527", "service": "payments", "ts": "2026-04-18T15:28:01Z"}
+{"level": "INFO", "line_id": "L-0077", "message": "shipment dispatched ref=202609143490 carrier=express parcels=3", "service": "inventory", "ts": "2026-04-18T15:28:03Z"}
+{"level": "INFO", "line_id": "L-0078", "message": "config heartbeat ok revision=727", "service": "checkout", "ts": "2026-04-18T15:28:13Z"}
+{"level": "INFO", "line_id": "L-0079", "message": "healthcheck ok latency_ms=6", "service": "search", "ts": "2026-04-18T15:28:15Z"}
+{"level": "INFO", "line_id": "L-0080", "message": "GET /api/v1/search status=200 hits=449 duration_ms=99 trace=c21730fcbf4531dc", "service": "search", "ts": "2026-04-18T15:28:30Z"}
+{"level": "INFO", "line_id": "L-0081", "message": "config heartbeat ok revision=376", "service": "auth", "ts": "2026-04-18T15:28:31Z"}
+{"level": "INFO", "line_id": "L-0082", "message": "healthcheck ok latency_ms=5", "service": "checkout", "ts": "2026-04-18T15:28:47Z"}
+{"level": "INFO", "line_id": "L-0083", "message": "reservation released sku=SKU-7218 qty=4", "service": "inventory", "ts": "2026-04-18T15:29:21Z"}
+{"level": "INFO", "line_id": "L-0084", "message": "gateway response code=00 gateway_ref=7992fa5dac1e", "service": "payments", "ts": "2026-04-18T15:29:42Z"}
+{"level": "INFO", "line_id": "L-0085", "message": "healthcheck ok latency_ms=3", "service": "auth", "ts": "2026-04-18T15:30:23Z"}
+{"level": "INFO", "line_id": "L-0086", "message": "POST /api/v1/payments status=200 duration_ms=236 trace=26e4d89f34c8ad14", "service": "payments", "ts": "2026-04-18T15:30:46Z"}
+{"level": "INFO", "line_id": "L-0087", "message": "email provider call api_key=key_zYrbANIO7ZHkkmX8J4dSjnQU status=200", "service": "notifications", "ts": "2026-04-18T15:31:29Z"}
+{"level": "INFO", "line_id": "L-0088", "message": "token issued sub=u-508049 ttl=3600 request_id=req-aca98ed0", "service": "auth", "ts": "2026-04-18T15:31:32Z"}
+{"level": "INFO", "line_id": "L-0089", "message": "config heartbeat ok revision=354", "service": "inventory", "ts": "2026-04-18T15:31:43Z"}
+{"level": "INFO", "line_id": "L-0090", "message": "stock level query sku=SKU-5036 on_hand=116", "service": "inventory", "ts": "2026-04-18T15:32:25Z"}
+{"level": "INFO", "line_id": "L-0091", "message": "3ds challenge completed txn=TXN-990960", "service": "payments", "ts": "2026-04-18T15:32:28Z"}
+{"level": "INFO", "line_id": "L-0092", "message": "session refreshed session=9d8c41c710d6 trace=04a5dc74e95129ef", "service": "auth", "ts": "2026-04-18T15:32:30Z"}
+{"level": "INFO", "line_id": "L-0093", "message": "3ds challenge completed txn=TXN-157606", "service": "payments", "ts": "2026-04-18T15:34:32Z"}
+{"level": "INFO", "line_id": "L-0094", "message": "autocomplete served prefix_len=6 duration_ms=7", "service": "search", "ts": "2026-04-18T15:34:49Z"}
+{"level": "INFO", "line_id": "L-0095", "message": "healthcheck ok latency_ms=4", "service": "payments", "ts": "2026-04-18T15:35:29Z"}
+{"level": "INFO", "line_id": "L-0096", "message": "token issued sub=u-803896 ttl=3600 request_id=req-d532ecd6", "service": "auth", "ts": "2026-04-18T15:35:32Z"}
+{"level": "INFO", "line_id": "L-0097", "message": "healthcheck ok latency_ms=1", "service": "checkout", "ts": "2026-04-18T15:35:42Z"}
+{"level": "INFO", "line_id": "L-0098", "message": "healthcheck ok latency_ms=2", "service": "inventory", "ts": "2026-04-18T15:35:51Z"}
+{"level": "INFO", "line_id": "L-0099", "message": "template rendered name=shipping_update version=v2.4.0", "service": "notifications", "ts": "2026-04-18T15:36:54Z"}
+{"level": "INFO", "line_id": "L-0100", "message": "metrics scrape served bytes=82921", "service": "auth", "ts": "2026-04-18T15:37:58Z"}
+{"level": "INFO", "line_id": "L-0101", "message": "ranking model loaded version=v2.8.2 sha=f08b1d4", "service": "search", "ts": "2026-04-18T15:38:11Z"}
+{"level": "INFO", "line_id": "L-0102", "message": "healthcheck ok latency_ms=6", "service": "auth", "ts": "2026-04-18T15:38:34Z"}
+{"level": "INFO", "line_id": "L-0103", "message": "config heartbeat ok revision=446", "service": "checkout", "ts": "2026-04-18T15:38:37Z"}
+{"level": "INFO", "line_id": "L-0104", "message": "config heartbeat ok revision=544", "service": "search", "ts": "2026-04-18T15:39:05Z"}
+{"level": "INFO", "line_id": "L-0105", "message": "gc pause 58ms heap_used=49%", "service": "search", "ts": "2026-04-18T15:39:12Z"}
+{"level": "INFO", "line_id": "L-0106", "message": "POST /api/v1/payments status=200 duration_ms=225 trace=7a4b0b9a411d6fcf", "service": "payments", "ts": "2026-04-18T15:39:16Z"}
+{"level": "WARN", "line_id": "L-0107", "message": "provider rate hint: 91% of hourly send quota used", "service": "notifications", "ts": "2026-04-18T15:39:34Z"}
+{"level": "INFO", "line_id": "L-0108", "message": "gc pause 42ms heap_used=42%", "service": "inventory", "ts": "2026-04-18T15:41:32Z"}
+{"level": "INFO", "line_id": "L-0109", "message": "gc pause 60ms heap_used=42%", "service": "notifications", "ts": "2026-04-18T15:41:54Z"}
+{"level": "WARN", "line_id": "L-0110", "message": "retrying idempotent request attempt 1/3 request_id=req-597098e4 (succeeded)", "service": "checkout", "ts": "2026-04-18T15:41:57Z"}
+{"level": "INFO", "line_id": "L-0111", "message": "stock level query sku=SKU-1496 on_hand=530", "service": "inventory", "ts": "2026-04-18T15:41:58Z"}
+{"level": "INFO", "line_id": "L-0112", "message": "config heartbeat ok revision=767", "service": "auth", "ts": "2026-04-18T15:42:18Z"}
+{"level": "INFO", "line_id": "L-0113", "message": "config heartbeat ok revision=528", "service": "notifications", "ts": "2026-04-18T15:42:31Z"}
+{"level": "INFO", "line_id": "L-0114", "message": "healthcheck ok latency_ms=2", "service": "notifications", "ts": "2026-04-18T15:42:43Z"}
+{"level": "INFO", "line_id": "L-0115", "message": "reconciliation matched ref=202603941116 ledger_entry=609617", "service": "payments", "ts": "2026-04-18T15:43:08Z"}
+{"level": "INFO", "line_id": "L-0116", "message": "email job dequeued job=3089b68451 template=order_confirmation", "service": "notifications", "ts": "2026-04-18T15:43:11Z"}
+{"level": "INFO", "line_id": "L-0117", "message": "POST /api/v1/payments status=200 duration_ms=148 trace=5247246269dc6253", "service": "payments", "ts": "2026-04-18T15:43:17Z"}
+{"level": "INFO", "line_id": "L-0118", "message": "healthcheck ok latency_ms=4", "service": "notifications", "ts": "2026-04-18T15:43:52Z"}
+{"level": "INFO", "line_id": "L-0119", "message": "healthcheck ok latency_ms=6", "service": "inventory", "ts": "2026-04-18T15:44:07Z"}
+{"level": "INFO", "line_id": "L-0120", "message": "reservation released sku=SKU-8301 qty=2", "service": "inventory", "ts": "2026-04-18T15:44:36Z"}
+{"level": "INFO", "line_id": "L-0121", "message": "coupon applied code=FEST45 discount_pct=18", "service": "checkout", "ts": "2026-04-18T15:44:44Z"}
+{"level": "INFO", "line_id": "L-0122", "message": "order created order_ref=202608273196 total_inr=24119", "service": "checkout", "ts": "2026-04-18T15:45:37Z"}
+{"level": "INFO", "line_id": "L-0123", "message": "warehouse sync batch=5399 rows=2390 sha=ef1c3b7", "service": "inventory", "ts": "2026-04-18T15:45:41Z"}
+{"level": "INFO", "line_id": "L-0124", "message": "template rendered name=shipping_update version=v3.4.2", "service": "notifications", "ts": "2026-04-18T15:45:42Z"}
+{"level": "WARN", "line_id": "L-0125", "message": "gateway latency elevated 653ms (within SLO)", "service": "payments", "ts": "2026-04-18T15:45:48Z"}
+{"level": "INFO", "line_id": "L-0126", "message": "config heartbeat ok revision=849", "service": "search", "ts": "2026-04-18T15:46:08Z"}
+{"level": "INFO", "line_id": "L-0127", "message": "order created order_ref=202604746831 total_inr=16143", "service": "checkout", "ts": "2026-04-18T15:46:25Z"}
+{"level": "INFO", "line_id": "L-0128", "message": "gc pause 13ms heap_used=55%", "service": "auth", "ts": "2026-04-18T15:46:54Z"}
+{"level": "INFO", "line_id": "L-0129", "message": "config heartbeat ok revision=498", "service": "payments", "ts": "2026-04-18T15:46:57Z"}
+{"level": "WARN", "line_id": "L-0130", "message": "retrying idempotent request attempt 1/3 request_id=req-5068b7df (succeeded)", "service": "checkout", "ts": "2026-04-18T15:47:01Z"}
+{"level": "INFO", "line_id": "L-0131", "message": "metrics scrape served bytes=87379", "service": "search", "ts": "2026-04-18T15:49:03Z"}
+{"level": "INFO", "line_id": "L-0132", "message": "config heartbeat ok revision=166", "service": "auth", "ts": "2026-04-18T15:49:25Z"}
+{"level": "INFO", "line_id": "L-0133", "message": "session refreshed session=335da80f0889 trace=297cd93b036bd771", "service": "auth", "ts": "2026-04-18T15:49:38Z"}
+{"level": "INFO", "line_id": "L-0134", "message": "healthcheck ok latency_ms=4", "service": "checkout", "ts": "2026-04-18T15:49:40Z"}
+{"level": "INFO", "line_id": "L-0135", "message": "metrics scrape served bytes=34946", "service": "inventory", "ts": "2026-04-18T15:50:31Z"}
+{"level": "INFO", "line_id": "L-0136", "message": "healthcheck ok latency_ms=5", "service": "notifications", "ts": "2026-04-18T15:50:56Z"}
+{"level": "INFO", "line_id": "L-0137", "message": "reconciliation matched ref=202607352578 ledger_entry=960705", "service": "payments", "ts": "2026-04-18T15:51:09Z"}
+{"level": "INFO", "line_id": "L-0138", "message": "metrics scrape served bytes=47075", "service": "auth", "ts": "2026-04-18T15:51:23Z"}
+{"level": "INFO", "line_id": "L-0139", "message": "template rendered name=shipping_update version=v5.5.5", "service": "notifications", "ts": "2026-04-18T15:51:31Z"}
+{"level": "INFO", "line_id": "L-0140", "message": "index refresh completed shard=0 docs=236074", "service": "search", "ts": "2026-04-18T15:51:48Z"}
+{"level": "INFO", "line_id": "L-0141", "message": "gc pause 28ms heap_used=53%", "service": "search", "ts": "2026-04-18T15:51:50Z"}
+{"level": "INFO", "line_id": "L-0142", "message": "gc pause 14ms heap_used=46%", "service": "inventory", "ts": "2026-04-18T15:52:15Z"}
+{"level": "INFO", "line_id": "L-0143", "message": "queue depth=20 oldest_age_s=14", "service": "notifications", "ts": "2026-04-18T15:52:51Z"}
+{"level": "INFO", "line_id": "L-0144", "message": "metrics scrape served bytes=83284", "service": "search", "ts": "2026-04-18T15:53:01Z"}
+{"level": "INFO", "line_id": "L-0145", "message": "POST /api/v1/checkout status=200 duration_ms=201 trace=f0486361db81b79e", "service": "checkout", "ts": "2026-04-18T15:53:54Z"}
+{"level": "INFO", "line_id": "L-0146", "message": "password policy check passed", "service": "auth", "ts": "2026-04-18T15:54:24Z"}
+{"level": "WARN", "line_id": "L-0147", "message": "retrying idempotent request attempt 1/3 request_id=req-433580f9 (succeeded)", "service": "checkout", "ts": "2026-04-18T15:54:38Z"}
+{"level": "WARN", "line_id": "L-0148", "message": "provider rate hint: 84% of hourly send quota used", "service": "notifications", "ts": "2026-04-18T15:55:36Z"}
+{"level": "INFO", "line_id": "L-0149", "message": "cart loaded cart_id=c-974133 items=5 request_id=req-aaf9acbf", "service": "checkout", "ts": "2026-04-18T15:55:43Z"}
+{"level": "INFO", "line_id": "L-0150", "message": "healthcheck ok latency_ms=4", "service": "auth", "ts": "2026-04-18T15:56:44Z"}
+{"level": "INFO", "line_id": "L-0151", "message": "settlement batch closed batch=1279 txns=428", "service": "payments", "ts": "2026-04-18T15:57:09Z"}
+{"level": "INFO", "line_id": "L-0152", "message": "metrics scrape served bytes=89388", "service": "inventory", "ts": "2026-04-18T15:58:01Z"}
+{"level": "INFO", "line_id": "L-0153", "message": "session refreshed session=6b099e466879 trace=a5a17b0395daff56", "service": "auth", "ts": "2026-04-18T15:58:07Z"}
+{"level": "INFO", "line_id": "L-0154", "message": "config heartbeat ok revision=508", "service": "inventory", "ts": "2026-04-18T15:58:08Z"}
+{"level": "INFO", "line_id": "L-0155", "message": "gc pause 10ms heap_used=68%", "service": "payments", "ts": "2026-04-18T15:58:21Z"}
+{"level": "INFO", "line_id": "L-0156", "message": "healthcheck ok latency_ms=2", "service": "search", "ts": "2026-04-18T15:58:52Z"}
+{"level": "INFO", "line_id": "L-0157", "message": "config heartbeat ok revision=881", "service": "search", "ts": "2026-04-18T15:59:26Z"}
+{"level": "INFO", "line_id": "L-0158", "message": "order created order_ref=202605979557 total_inr=10005", "service": "checkout", "ts": "2026-04-18T16:00:06Z"}
+{"level": "INFO", "line_id": "L-0159", "message": "template rendered name=shipping_update version=v9.2.1", "service": "notifications", "ts": "2026-04-18T16:00:10Z"}
+{"level": "INFO", "line_id": "L-0160", "message": "session refreshed session=5ed3a4e60738 trace=72ec6c15e5813f1f", "service": "auth", "ts": "2026-04-18T16:01:26Z"}
+{"level": "INFO", "line_id": "L-0161", "message": "password policy check passed", "service": "auth", "ts": "2026-04-18T16:01:29Z"}
+{"level": "INFO", "line_id": "L-0162", "message": "shipment dispatched ref=202609718925 carrier=express parcels=1", "service": "inventory", "ts": "2026-04-18T16:01:32Z"}
+{"level": "INFO", "line_id": "L-0163", "message": "GET /api/v1/search status=200 hits=38 duration_ms=78 trace=38aa0e819cbd2597", "service": "search", "ts": "2026-04-18T16:01:57Z"}
+{"level": "INFO", "line_id": "L-0164", "message": "config heartbeat ok revision=518", "service": "checkout", "ts": "2026-04-18T16:02:22Z"}
+{"level": "INFO", "line_id": "L-0165", "message": "template rendered name=shipping_update version=v7.9.4", "service": "notifications", "ts": "2026-04-18T16:02:41Z"}
+{"level": "WARN", "line_id": "L-0166", "message": "slow request took 738ms path=/api/v1/stock/bulk", "service": "inventory", "ts": "2026-04-18T16:03:09Z"}
+{"level": "INFO", "line_id": "L-0167", "message": "config heartbeat ok revision=461", "service": "notifications", "ts": "2026-04-18T16:03:22Z"}
+{"level": "INFO", "line_id": "L-0168", "message": "stock level query sku=SKU-6911 on_hand=728", "service": "inventory", "ts": "2026-04-18T16:03:36Z"}
+{"level": "INFO", "line_id": "L-0169", "message": "index refresh completed shard=0 docs=436281", "service": "search", "ts": "2026-04-18T16:04:08Z"}
+{"level": "INFO", "line_id": "L-0170", "message": "gc pause 15ms heap_used=48%", "service": "search", "ts": "2026-04-18T16:04:29Z"}
+{"level": "INFO", "line_id": "L-0171", "message": "metrics scrape served bytes=39178", "service": "search", "ts": "2026-04-18T16:04:45Z"}
+{"level": "INFO", "line_id": "L-0172", "message": "healthcheck ok latency_ms=5", "service": "payments", "ts": "2026-04-18T16:06:08Z"}
+{"level": "INFO", "line_id": "L-0173", "message": "stock level query sku=SKU-7648 on_hand=238", "service": "inventory", "ts": "2026-04-18T16:06:13Z"}
+{"level": "INFO", "line_id": "L-0174", "message": "queue depth=29 oldest_age_s=15", "service": "notifications", "ts": "2026-04-18T16:06:38Z"}
+{"level": "INFO", "line_id": "L-0175", "message": "metrics scrape served bytes=46829", "service": "inventory", "ts": "2026-04-18T16:07:07Z"}
+{"level": "INFO", "line_id": "L-0176", "message": "config heartbeat ok revision=422", "service": "auth", "ts": "2026-04-18T16:07:29Z"}
+{"level": "INFO", "line_id": "L-0177", "message": "payout kyc check aadhaar=3460 6849 4375 result=match", "service": "payments", "ts": "2026-04-18T16:07:36Z"}
+{"level": "INFO", "line_id": "L-0178", "message": "config heartbeat ok revision=753", "service": "notifications", "ts": "2026-04-18T16:07:59Z"}
+{"level": "INFO", "line_id": "L-0179", "message": "metrics scrape served bytes=71641", "service": "search", "ts": "2026-04-18T16:08:34Z"}
+{"level": "INFO", "line_id": "L-0180", "message": "metrics scrape served bytes=67716", "service": "search", "ts": "2026-04-18T16:08:36Z"}
+{"level": "INFO", "line_id": "L-0181", "message": "gc pause 47ms heap_used=59%", "service": "payments", "ts": "2026-04-18T16:08:55Z"}
+{"level": "WARN", "line_id": "L-0182", "message": "gateway latency elevated 731ms (within SLO)", "service": "payments", "ts": "2026-04-18T16:09:41Z"}
+{"level": "INFO", "line_id": "L-0183", "message": "gc pause 49ms heap_used=50%", "service": "payments", "ts": "2026-04-18T16:10:34Z"}
+{"level": "WARN", "line_id": "L-0184", "message": "slow ldap lookup took 604ms", "service": "auth", "ts": "2026-04-18T16:10:41Z"}
+{"level": "INFO", "line_id": "L-0185", "message": "metrics scrape served bytes=85136", "service": "payments", "ts": "2026-04-18T16:11:00Z"}
+{"level": "INFO", "line_id": "L-0186", "message": "config heartbeat ok revision=909", "service": "search", "ts": "2026-04-18T16:11:25Z"}
+{"level": "INFO", "line_id": "L-0187", "message": "config heartbeat ok revision=414", "service": "search", "ts": "2026-04-18T16:11:39Z"}
+{"level": "INFO", "line_id": "L-0188", "message": "healthcheck ok latency_ms=2", "service": "checkout", "ts": "2026-04-18T16:12:03Z"}
+{"level": "INFO", "line_id": "L-0189", "message": "reservation released sku=SKU-5345 qty=1", "service": "inventory", "ts": "2026-04-18T16:12:07Z"}
+{"level": "INFO", "line_id": "L-0190", "message": "metrics scrape served bytes=79519", "service": "auth", "ts": "2026-04-18T16:12:16Z"}
+{"level": "INFO", "line_id": "L-0191", "message": "warehouse sync batch=2262 rows=2384 sha=21d9e60", "service": "inventory", "ts": "2026-04-18T16:12:46Z"}
+{"level": "INFO", "line_id": "L-0192", "message": "healthcheck ok latency_ms=5", "service": "auth", "ts": "2026-04-18T16:13:20Z"}
+{"level": "INFO", "line_id": "L-0193", "message": "GET /api/v1/stock status=200 duration_ms=35 trace=2496ee559d974091", "service": "inventory", "ts": "2026-04-18T16:13:55Z"}
+{"level": "INFO", "line_id": "L-0194", "message": "order created order_ref=202609065720 total_inr=3042", "service": "checkout", "ts": "2026-04-18T16:13:57Z"}
+{"level": "INFO", "line_id": "L-0195", "message": "queue depth=15 oldest_age_s=14", "service": "notifications", "ts": "2026-04-18T16:14:14Z"}
+{"level": "INFO", "line_id": "L-0196", "message": "POST /api/v1/checkout status=200 duration_ms=379 trace=0af6d113dcbbd731", "service": "checkout", "ts": "2026-04-18T16:14:20Z"}
+{"level": "INFO", "line_id": "L-0197", "message": "coupon applied code=FEST34 discount_pct=25", "service": "checkout", "ts": "2026-04-18T16:14:25Z"}
+{"level": "INFO", "line_id": "L-0198", "message": "metrics scrape served bytes=68460", "service": "search", "ts": "2026-04-18T16:15:20Z"}
+{"level": "INFO", "line_id": "L-0199", "message": "reconciliation matched ref=202608143535 ledger_entry=873427", "service": "payments", "ts": "2026-04-18T16:15:31Z"}
+{"level": "INFO", "line_id": "L-0200", "message": "metrics scrape served bytes=67830", "service": "payments", "ts": "2026-04-18T16:15:50Z"}
+{"level": "INFO", "line_id": "L-0201", "message": "gc pause 57ms heap_used=60%", "service": "checkout", "ts": "2026-04-18T16:17:38Z"}
+{"level": "INFO", "line_id": "L-0202", "message": "session refreshed session=0a4d21ce80f0 trace=65cc631b620009ef", "service": "auth", "ts": "2026-04-18T16:17:43Z"}
+{"level": "INFO", "line_id": "L-0203", "message": "GET /api/v1/search status=200 hits=177 duration_ms=88 trace=cacdb04293aa61a3", "service": "search", "ts": "2026-04-18T16:18:44Z"}
+{"level": "INFO", "line_id": "L-0204", "message": "token validated sub=u-924197 latency_ms=9", "service": "auth", "ts": "2026-04-18T16:19:03Z"}
+{"level": "INFO", "line_id": "L-0205", "message": "warehouse sync batch=1465 rows=1733 sha=038a11c", "service": "inventory", "ts": "2026-04-18T16:20:33Z"}
+{"level": "INFO", "line_id": "L-0206", "message": "config heartbeat ok revision=996", "service": "auth", "ts": "2026-04-18T16:20:42Z"}
+{"level": "INFO", "line_id": "L-0207", "message": "metrics scrape served bytes=40333", "service": "notifications", "ts": "2026-04-18T16:20:43Z"}
+{"level": "INFO", "line_id": "L-0208", "message": "config heartbeat ok revision=770", "service": "search", "ts": "2026-04-18T16:21:18Z"}
+{"level": "INFO", "line_id": "L-0209", "message": "config heartbeat ok revision=368", "service": "search", "ts": "2026-04-18T16:21:20Z"}
+{"level": "INFO", "line_id": "L-0210", "message": "inventory reserved sku=SKU-6652 qty=2", "service": "checkout", "ts": "2026-04-18T16:21:32Z"}
+{"level": "INFO", "line_id": "L-0211", "message": "gc pause 49ms heap_used=54%", "service": "inventory", "ts": "2026-04-18T16:22:02Z"}
+{"level": "INFO", "line_id": "L-0212", "message": "gc pause 13ms heap_used=56%", "service": "notifications", "ts": "2026-04-18T16:22:24Z"}
+{"level": "INFO", "line_id": "L-0213", "message": "token issued sub=u-233281 ttl=3600 request_id=req-624cccc5", "service": "auth", "ts": "2026-04-18T16:23:59Z"}
+{"level": "INFO", "line_id": "L-0214", "message": "healthcheck ok latency_ms=1", "service": "inventory", "ts": "2026-04-18T16:24:03Z"}
+{"level": "INFO", "line_id": "L-0215", "message": "healthcheck ok latency_ms=3", "service": "payments", "ts": "2026-04-18T16:24:35Z"}
+{"level": "INFO", "line_id": "L-0216", "message": "POST /api/v1/checkout status=200 duration_ms=201 trace=4babd2c3a9f0751a", "service": "checkout", "ts": "2026-04-18T16:25:15Z"}
+{"level": "INFO", "line_id": "L-0217", "message": "autocomplete served prefix_len=2 duration_ms=16", "service": "search", "ts": "2026-04-18T16:25:18Z"}
+{"level": "INFO", "line_id": "L-0218", "message": "config heartbeat ok revision=759", "service": "payments", "ts": "2026-04-18T16:25:51Z"}
+{"level": "INFO", "line_id": "L-0219", "message": "session refreshed session=de5323a94fe9 trace=fe8fc177581890e0", "service": "auth", "ts": "2026-04-18T16:26:12Z"}
+{"level": "INFO", "line_id": "L-0220", "message": "config heartbeat ok revision=116", "service": "search", "ts": "2026-04-18T16:26:33Z"}
+{"level": "INFO", "line_id": "L-0221", "message": "GET /api/v1/search status=200 hits=121 duration_ms=40 trace=c5cba9c028e624f5", "service": "search", "ts": "2026-04-18T16:27:00Z"}
+{"level": "INFO", "line_id": "L-0222", "message": "metrics scrape served bytes=43417", "service": "inventory", "ts": "2026-04-18T16:27:08Z"}
+{"level": "WARN", "line_id": "L-0223", "message": "slow ldap lookup took 752ms", "service": "auth", "ts": "2026-04-18T16:27:34Z"}
+{"level": "WARN", "line_id": "L-0224", "message": "log volume on node-7 at 71%, rotation scheduled", "service": "search", "ts": "2026-04-18T16:27:58Z"}
+{"level": "WARN", "line_id": "L-0225", "message": "login failed for olga.khan92@mail.co.uk reason=invalid_password attempt=2", "service": "auth", "ts": "2026-04-18T16:27:58Z"}
+{"level": "INFO", "line_id": "L-0226", "message": "GET /api/v1/search status=200 hits=98 duration_ms=40 trace=91bb5082768b0f55", "service": "search", "ts": "2026-04-18T16:28:00Z"}
+{"level": "INFO", "line_id": "L-0227", "message": "gc pause 48ms heap_used=65%", "service": "auth", "ts": "2026-04-18T16:28:24Z"}
+{"level": "INFO", "line_id": "L-0228", "message": "config heartbeat ok revision=503", "service": "inventory", "ts": "2026-04-18T16:28:55Z"}
+{"level": "INFO", "line_id": "L-0229", "message": "phone verification requested number=+91 63333 00665", "service": "auth", "ts": "2026-04-18T16:28:59Z"}
+{"level": "WARN", "line_id": "L-0230", "message": "slow ldap lookup took 694ms", "service": "auth", "ts": "2026-04-18T16:29:25Z"}
+{"level": "INFO", "line_id": "L-0231", "message": "metrics scrape served bytes=37544", "service": "auth", "ts": "2026-04-18T16:29:45Z"}
+{"level": "INFO", "line_id": "L-0232", "message": "healthcheck ok latency_ms=6", "service": "auth", "ts": "2026-04-18T16:29:53Z"}
+{"level": "INFO", "line_id": "L-0233", "message": "inventory reserved sku=SKU-3294 qty=1", "service": "checkout", "ts": "2026-04-18T16:30:04Z"}
+{"level": "WARN", "line_id": "L-0234", "message": "slow ldap lookup took 370ms", "service": "auth", "ts": "2026-04-18T16:30:20Z"}
+{"level": "INFO", "line_id": "L-0235", "message": "config heartbeat ok revision=146", "service": "search", "ts": "2026-04-18T16:30:29Z"}
+{"level": "INFO", "line_id": "L-0236", "message": "config heartbeat ok revision=605", "service": "search", "ts": "2026-04-18T16:31:42Z"}
+{"level": "INFO", "line_id": "L-0237", "message": "reservation released sku=SKU-7131 qty=2", "service": "inventory", "ts": "2026-04-18T16:32:36Z"}
+{"level": "INFO", "line_id": "L-0238", "message": "metrics scrape served bytes=71307", "service": "checkout", "ts": "2026-04-18T16:32:43Z"}
+{"level": "INFO", "line_id": "L-0239", "message": "inventory reserved sku=SKU-4940 qty=1", "service": "checkout", "ts": "2026-04-18T16:32:55Z"}
+{"level": "WARN", "line_id": "L-0240", "message": "provider rate hint: 93% of hourly send quota used", "service": "notifications", "ts": "2026-04-18T16:33:03Z"}
+{"level": "INFO", "line_id": "L-0241", "message": "opening mongodb://notify:Orbit-6278q@notify-db-1:27017/queue", "service": "notifications", "ts": "2026-04-18T16:34:04Z"}
+{"level": "INFO", "line_id": "L-0242", "message": "gc pause 31ms heap_used=54%", "service": "payments", "ts": "2026-04-18T16:34:18Z"}
+{"level": "INFO", "line_id": "L-0243", "message": "gc pause 33ms heap_used=48%", "service": "checkout", "ts": "2026-04-18T16:34:25Z"}
+{"level": "INFO", "line_id": "L-0244", "message": "index refresh completed shard=1 docs=838232", "service": "search", "ts": "2026-04-18T16:34:43Z"}
+{"level": "INFO", "line_id": "L-0245", "message": "GET /api/v1/search status=200 hits=487 duration_ms=107 trace=121392582ab7c50f", "service": "search", "ts": "2026-04-18T16:34:45Z"}
+{"level": "INFO", "line_id": "L-0246", "message": "GET /api/v1/stock status=200 duration_ms=43 trace=80785d6e4924af44", "service": "inventory", "ts": "2026-04-18T16:35:29Z"}
+{"level": "WARN", "line_id": "L-0247", "message": "slow query took 1840ms: analytics_nightly_rollup (expected, batch job)", "service": "search", "ts": "2026-04-18T16:35:40Z"}
+{"level": "INFO", "line_id": "L-0248", "message": "coupon applied code=FEST42 discount_pct=8", "service": "checkout", "ts": "2026-04-18T16:35:47Z"}
+{"level": "INFO", "line_id": "L-0249", "message": "push notification sent topic=order-updates delivered=10", "service": "notifications", "ts": "2026-04-18T16:36:16Z"}
+{"level": "INFO", "line_id": "L-0250", "message": "push notification sent topic=order-updates delivered=9", "service": "notifications", "ts": "2026-04-18T16:36:38Z"}
+{"level": "INFO", "line_id": "L-0251", "message": "email job dequeued job=050bbbe13d template=order_confirmation", "service": "notifications", "ts": "2026-04-18T16:37:02Z"}
+{"level": "INFO", "line_id": "L-0252", "message": "warehouse sync batch=1165 rows=2799 sha=00a1539", "service": "inventory", "ts": "2026-04-18T16:37:26Z"}
+{"level": "INFO", "line_id": "L-0253", "message": "config heartbeat ok revision=582", "service": "notifications", "ts": "2026-04-18T16:37:33Z"}
+{"level": "INFO", "line_id": "L-0254", "message": "gc pause 33ms heap_used=63%", "service": "payments", "ts": "2026-04-18T16:38:49Z"}
+{"level": "ERROR", "line_id": "L-0255", "message": "redis connection refused: redis-2.cache.internal:6379 (ECONNREFUSED)", "service": "inventory", "ts": "2026-04-18T16:39:41Z"}
+{"level": "INFO", "line_id": "L-0256", "message": "push notification sent topic=order-updates delivered=92", "service": "notifications", "ts": "2026-04-18T16:40:10Z"}
+{"level": "INFO", "line_id": "L-0257", "message": "metrics scrape served bytes=68273", "service": "inventory", "ts": "2026-04-18T16:40:11Z"}
+{"level": "INFO", "line_id": "L-0258", "message": "template rendered name=shipping_update version=v9.6.3", "service": "notifications", "ts": "2026-04-18T16:40:11Z"}
+{"level": "WARN", "line_id": "L-0259", "message": "cache miss ratio 99%, falling back to database key=product:5777", "service": "inventory", "ts": "2026-04-18T16:40:15Z"}
+{"level": "WARN", "line_id": "L-0260", "message": "gateway latency elevated 699ms (within SLO)", "service": "payments", "ts": "2026-04-18T16:40:27Z"}
+{"level": "INFO", "line_id": "L-0261", "message": "email provider call api_key=iq_pk_aR1wrLmPSJYZYSY06xsdFTXt status=200", "service": "notifications", "ts": "2026-04-18T16:40:27Z"}
+{"level": "INFO", "line_id": "L-0262", "message": "gc pause 57ms heap_used=56%", "service": "search", "ts": "2026-04-18T16:40:35Z"}
+{"level": "WARN", "line_id": "L-0263", "message": "thundering herd: 1542 concurrent loads for key=product:featured", "service": "inventory", "ts": "2026-04-18T16:40:45Z"}
+{"level": "WARN", "line_id": "L-0264", "message": "request error rate above SLO window=5m", "service": "inventory", "ts": "2026-04-18T16:40:55Z"}
+{"level": "WARN", "line_id": "L-0265", "message": "provider rate hint: 96% of hourly send quota used", "service": "notifications", "ts": "2026-04-18T16:40:58Z"}
+{"level": "INFO", "line_id": "L-0266", "message": "reconciliation matched ref=202608752091 ledger_entry=913204", "service": "payments", "ts": "2026-04-18T16:41:01Z"}
+{"level": "INFO", "line_id": "L-0267", "message": "reservation released sku=SKU-5614 qty=3", "service": "inventory", "ts": "2026-04-18T16:41:02Z"}
+{"level": "INFO", "line_id": "L-0268", "message": "email job dequeued job=602b86731b template=order_confirmation", "service": "notifications", "ts": "2026-04-18T16:41:17Z"}
+{"level": "INFO", "line_id": "L-0269", "message": "healthcheck ok latency_ms=3", "service": "checkout", "ts": "2026-04-18T16:41:18Z"}
+{"level": "INFO", "line_id": "L-0270", "message": "gateway response code=00 gateway_ref=7a0a9ea54ff1", "service": "payments", "ts": "2026-04-18T16:41:20Z"}
+{"level": "WARN", "line_id": "L-0271", "message": "request error rate above SLO window=5m", "service": "inventory", "ts": "2026-04-18T16:41:28Z"}
+{"level": "INFO", "line_id": "L-0272", "message": "healthcheck ok latency_ms=5", "service": "auth", "ts": "2026-04-18T16:41:29Z"}
+{"level": "WARN", "line_id": "L-0273", "message": "gateway latency elevated 406ms (within SLO)", "service": "payments", "ts": "2026-04-18T16:41:49Z"}
+{"level": "WARN", "line_id": "L-0274", "message": "slow request took 645ms path=/api/v1/search", "service": "search", "ts": "2026-04-18T16:42:05Z"}
+{"level": "WARN", "line_id": "L-0275", "message": "slow request took 838ms path=/api/v1/stock/bulk", "service": "inventory", "ts": "2026-04-18T16:43:18Z"}
+{"level": "INFO", "line_id": "L-0276", "message": "push notification sent topic=order-updates delivered=182", "service": "notifications", "ts": "2026-04-18T16:43:20Z"}
+{"level": "INFO", "line_id": "L-0277", "message": "ranking model loaded version=v7.4.6 sha=d92e37c", "service": "search", "ts": "2026-04-18T16:43:25Z"}
+{"level": "INFO", "line_id": "L-0278", "message": "settlement batch closed batch=1754 txns=772", "service": "payments", "ts": "2026-04-18T16:43:44Z"}
+{"level": "INFO", "line_id": "L-0279", "message": "warehouse sync batch=6675 rows=2995 sha=3087e76", "service": "inventory", "ts": "2026-04-18T16:43:56Z"}
+{"level": "INFO", "line_id": "L-0280", "message": "gc pause 12ms heap_used=59%", "service": "notifications", "ts": "2026-04-18T16:44:28Z"}
+{"level": "INFO", "line_id": "L-0281", "message": "push notification sent topic=order-updates delivered=189", "service": "notifications", "ts": "2026-04-18T16:44:40Z"}
+{"level": "INFO", "line_id": "L-0282", "message": "email job dequeued job=d085ec557a template=order_confirmation", "service": "notifications", "ts": "2026-04-18T16:44:45Z"}
+{"level": "INFO", "line_id": "L-0283", "message": "token validated sub=u-508581 latency_ms=4", "service": "auth", "ts": "2026-04-18T16:45:07Z"}
+{"level": "WARN", "line_id": "L-0284", "message": "request error rate above SLO window=5m", "service": "inventory", "ts": "2026-04-18T16:45:14Z"}
+{"level": "ERROR", "line_id": "L-0285", "message": "request failed status=500 path=/api/v1/cart request_id=req-ec950ad5 duration_ms=3139", "service": "inventory", "ts": "2026-04-18T16:45:14Z"}
+{"level": "ERROR", "line_id": "L-0286", "message": "request failed status=500 path=/api/v1/cart request_id=req-fcb0b763 duration_ms=6673", "service": "inventory", "ts": "2026-04-18T16:45:30Z"}
+{"level": "INFO", "line_id": "L-0287", "message": "healthcheck ok latency_ms=2", "service": "payments", "ts": "2026-04-18T16:45:39Z"}
+{"level": "WARN", "line_id": "L-0288", "message": "request error rate above SLO window=5m", "service": "inventory", "ts": "2026-04-18T16:45:39Z"}
+{"level": "ERROR", "line_id": "L-0289", "message": "request failed status=502 path=/api/v1/cart request_id=req-e6d5a9c1", "service": "inventory", "ts": "2026-04-18T16:45:46Z"}
+{"level": "INFO", "line_id": "L-0290", "message": "healthcheck ok latency_ms=4", "service": "notifications", "ts": "2026-04-18T16:46:09Z"}
+{"level": "INFO", "line_id": "L-0291", "message": "template rendered name=shipping_update version=v3.4.0", "service": "notifications", "ts": "2026-04-18T16:46:59Z"}
+{"level": "INFO", "line_id": "L-0292", "message": "coupon applied code=FEST27 discount_pct=13", "service": "checkout", "ts": "2026-04-18T16:47:17Z"}
+{"level": "WARN", "line_id": "L-0293", "message": "request error rate above SLO window=5m", "service": "inventory", "ts": "2026-04-18T16:47:21Z"}
+{"level": "INFO", "line_id": "L-0294", "message": "gc pause 10ms heap_used=40%", "service": "search", "ts": "2026-04-18T16:47:32Z"}
+{"level": "ERROR", "line_id": "L-0295", "message": "request failed status=500 path=/api/v1/cart request_id=req-3ca1f516 duration_ms=23231", "service": "inventory", "ts": "2026-04-18T16:47:47Z"}
+{"level": "ERROR", "line_id": "L-0296", "message": "request failed status=502 path=/api/v1/cart request_id=req-34a961c5", "service": "inventory", "ts": "2026-04-18T16:48:16Z"}
+{"level": "INFO", "line_id": "L-0297", "message": "config heartbeat ok revision=218", "service": "checkout", "ts": "2026-04-18T16:48:19Z"}
+{"level": "INFO", "line_id": "L-0298", "message": "metrics scrape served bytes=65398", "service": "checkout", "ts": "2026-04-18T16:48:22Z"}
+{"level": "INFO", "line_id": "L-0299", "message": "healthcheck ok latency_ms=5", "service": "notifications", "ts": "2026-04-18T16:48:23Z"}
+{"level": "INFO", "line_id": "L-0300", "message": "config heartbeat ok revision=928", "service": "search", "ts": "2026-04-18T16:48:26Z"}
+{"level": "INFO", "line_id": "L-0301", "message": "config heartbeat ok revision=178", "service": "search", "ts": "2026-04-18T16:49:33Z"}
+{"level": "INFO", "line_id": "L-0302", "message": "coupon applied code=FEST34 discount_pct=24", "service": "checkout", "ts": "2026-04-18T16:49:47Z"}
+{"level": "INFO", "line_id": "L-0303", "message": "healthcheck ok latency_ms=6", "service": "checkout", "ts": "2026-04-18T16:50:19Z"}
+{"level": "INFO", "line_id": "L-0304", "message": "healthcheck ok latency_ms=6", "service": "auth", "ts": "2026-04-18T16:50:32Z"}
+{"level": "INFO", "line_id": "L-0305", "message": "order created order_ref=202605607005 total_inr=14492", "service": "checkout", "ts": "2026-04-18T16:51:07Z"}
+{"level": "INFO", "line_id": "L-0306", "message": "POST /api/v1/payments status=200 duration_ms=213 trace=141b18b56f98837a", "service": "payments", "ts": "2026-04-18T16:51:28Z"}
+{"level": "INFO", "line_id": "L-0307", "message": "metrics scrape served bytes=25290", "service": "auth", "ts": "2026-04-18T16:51:54Z"}
+{"level": "INFO", "line_id": "L-0308", "message": "healthcheck ok latency_ms=2", "service": "payments", "ts": "2026-04-18T16:52:04Z"}
+{"level": "INFO", "line_id": "L-0309", "message": "password policy check passed", "service": "auth", "ts": "2026-04-18T16:52:14Z"}
+{"level": "WARN", "line_id": "L-0310", "message": "slow ldap lookup took 661ms", "service": "auth", "ts": "2026-04-18T16:52:19Z"}
+{"level": "ERROR", "line_id": "L-0311", "message": "request failed status=500 path=/api/v1/cart request_id=req-e8a180b8 duration_ms=29106", "service": "inventory", "ts": "2026-04-18T16:52:26Z"}
+{"level": "INFO", "line_id": "L-0312", "message": "reconciliation matched ref=202605514065 ledger_entry=443672", "service": "payments", "ts": "2026-04-18T16:53:11Z"}
+{"level": "WARN", "line_id": "L-0313", "message": "slow ldap lookup took 828ms", "service": "auth", "ts": "2026-04-18T16:53:17Z"}
+{"level": "INFO", "line_id": "L-0314", "message": "gateway response code=00 gateway_ref=9d347001eb1d", "service": "payments", "ts": "2026-04-18T16:53:21Z"}
+{"level": "WARN", "line_id": "L-0315", "message": "slow request took 818ms path=/api/v1/stock/bulk", "service": "inventory", "ts": "2026-04-18T16:53:32Z"}
+{"level": "INFO", "line_id": "L-0316", "message": "template rendered name=shipping_update version=v2.3.5", "service": "notifications", "ts": "2026-04-18T16:53:37Z"}
+{"level": "INFO", "line_id": "L-0317", "message": "stock level query sku=SKU-3869 on_hand=80", "service": "inventory", "ts": "2026-04-18T16:53:48Z"}
+{"level": "WARN", "line_id": "L-0318", "message": "request error rate above SLO window=5m", "service": "inventory", "ts": "2026-04-18T16:53:56Z"}
+{"level": "INFO", "line_id": "L-0319", "message": "autocomplete served prefix_len=6 duration_ms=24", "service": "search", "ts": "2026-04-18T16:54:00Z"}
+{"level": "ERROR", "line_id": "L-0320", "message": "request failed status=500 path=/api/v1/cart request_id=req-bcef843f duration_ms=8747", "service": "inventory", "ts": "2026-04-18T16:54:17Z"}
+{"level": "INFO", "line_id": "L-0321", "message": "POST /api/v1/payments status=200 duration_ms=327 trace=f96eb50c4bec0f1b", "service": "payments", "ts": "2026-04-18T16:54:37Z"}
+{"level": "INFO", "line_id": "L-0322", "message": "metrics scrape served bytes=25651", "service": "checkout", "ts": "2026-04-18T16:54:52Z"}
+{"level": "INFO", "line_id": "L-0323", "message": "stock level query sku=SKU-8019 on_hand=387", "service": "inventory", "ts": "2026-04-18T16:55:07Z"}
+{"level": "ERROR", "line_id": "L-0324", "message": "upstream returned 503 for /api/v1/cart request_id=req-5c8b691c", "service": "inventory", "ts": "2026-04-18T16:56:08Z"}
+{"level": "INFO", "line_id": "L-0325", "message": "session refreshed session=fd1c4145d6eb trace=04e29eda64a2c402", "service": "auth", "ts": "2026-04-18T16:56:26Z"}
+{"level": "INFO", "line_id": "L-0326", "message": "GET /api/v1/stock status=200 duration_ms=22 trace=790050a5767dde1e", "service": "inventory", "ts": "2026-04-18T16:56:59Z"}
+{"level": "WARN", "line_id": "L-0327", "message": "retrying idempotent request attempt 1/3 request_id=req-294dfe90 (succeeded)", "service": "checkout", "ts": "2026-04-18T16:57:11Z"}
+{"level": "ERROR", "line_id": "L-0328", "message": "upstream returned 503 for /api/v1/cart request_id=req-8790d70b", "service": "inventory", "ts": "2026-04-18T16:57:20Z"}
+{"level": "INFO", "line_id": "L-0329", "message": "config heartbeat ok revision=777", "service": "notifications", "ts": "2026-04-18T16:57:32Z"}
+{"level": "WARN", "line_id": "L-0330", "message": "request error rate above SLO window=5m", "service": "inventory", "ts": "2026-04-18T16:57:46Z"}
+{"level": "INFO", "line_id": "L-0331", "message": "healthcheck ok latency_ms=2", "service": "inventory", "ts": "2026-04-18T16:58:29Z"}
+{"level": "INFO", "line_id": "L-0332", "message": "healthcheck ok latency_ms=6", "service": "search", "ts": "2026-04-18T16:58:33Z"}
+{"level": "WARN", "line_id": "L-0333", "message": "connection pool utilisation 74% (threshold 70%)", "service": "checkout", "ts": "2026-04-18T16:58:40Z"}
+{"level": "ERROR", "line_id": "L-0334", "message": "upstream returned 503 for /api/v1/cart request_id=req-4000da0c", "service": "inventory", "ts": "2026-04-18T16:58:47Z"}
+{"level": "INFO", "line_id": "L-0335", "message": "config heartbeat ok revision=678", "service": "checkout", "ts": "2026-04-18T16:59:14Z"}
+{"level": "INFO", "line_id": "L-0336", "message": "shipment dispatched ref=202608860430 carrier=express parcels=1", "service": "inventory", "ts": "2026-04-18T16:59:27Z"}
+{"level": "INFO", "line_id": "L-0337", "message": "index refresh completed shard=1 docs=477052", "service": "search", "ts": "2026-04-18T16:59:33Z"}
+{"level": "INFO", "line_id": "L-0338", "message": "shipment dispatched ref=202605897553 carrier=express parcels=2", "service": "inventory", "ts": "2026-04-18T16:59:45Z"}
+{"level": "INFO", "line_id": "L-0339", "message": "template rendered name=shipping_update version=v4.1.8", "service": "notifications", "ts": "2026-04-18T16:59:58Z"}
+{"level": "INFO", "line_id": "L-0340", "message": "password policy check passed", "service": "auth", "ts": "2026-04-18T17:00:39Z"}
+{"level": "WARN", "line_id": "L-0341", "message": "request error rate above SLO window=5m", "service": "inventory", "ts": "2026-04-18T17:01:33Z"}
+{"level": "ERROR", "line_id": "L-0342", "message": "upstream returned 503 for /api/v1/cart request_id=req-feef040e", "service": "inventory", "ts": "2026-04-18T17:01:36Z"}
+{"level": "INFO", "line_id": "L-0343", "message": "token validated sub=u-850411 latency_ms=4", "service": "auth", "ts": "2026-04-18T17:01:40Z"}
+{"level": "INFO", "line_id": "L-0344", "message": "token validated sub=u-273267 latency_ms=5", "service": "auth", "ts": "2026-04-18T17:01:42Z"}
+{"level": "WARN", "line_id": "L-0345", "message": "slow ldap lookup took 573ms", "service": "auth", "ts": "2026-04-18T17:01:44Z"}
+{"level": "INFO", "line_id": "L-0346", "message": "healthcheck ok latency_ms=3", "service": "inventory", "ts": "2026-04-18T17:01:44Z"}
+{"level": "INFO", "line_id": "L-0347", "message": "healthcheck ok latency_ms=3", "service": "auth", "ts": "2026-04-18T17:01:46Z"}
+{"level": "INFO", "line_id": "L-0348", "message": "healthcheck ok latency_ms=1", "service": "payments", "ts": "2026-04-18T17:01:58Z"}
+{"level": "INFO", "line_id": "L-0349", "message": "reconciliation matched ref=202606064836 ledger_entry=894970", "service": "payments", "ts": "2026-04-18T17:02:01Z"}
+{"level": "INFO", "line_id": "L-0350", "message": "settlement batch closed batch=3293 txns=199", "service": "payments", "ts": "2026-04-18T17:02:38Z"}
+{"level": "INFO", "line_id": "L-0351", "message": "session refreshed session=32aa2d4cf7e1 trace=b6a2ccae2a74ed60", "service": "auth", "ts": "2026-04-18T17:03:10Z"}
+{"level": "INFO", "line_id": "L-0352", "message": "order created order_ref=202603032622 total_inr=13275", "service": "checkout", "ts": "2026-04-18T17:03:52Z"}
+{"level": "INFO", "line_id": "L-0353", "message": "coupon applied code=FEST20 discount_pct=17", "service": "checkout", "ts": "2026-04-18T17:04:17Z"}
+{"level": "INFO", "line_id": "L-0354", "message": "password policy check passed", "service": "auth", "ts": "2026-04-18T17:04:31Z"}
+{"level": "INFO", "line_id": "L-0355", "message": "index refresh completed shard=0 docs=374637", "service": "search", "ts": "2026-04-18T17:04:45Z"}
+{"level": "INFO", "line_id": "L-0356", "message": "3ds challenge completed txn=TXN-193296", "service": "payments", "ts": "2026-04-18T17:04:48Z"}
+{"level": "ERROR", "line_id": "L-0357", "message": "request failed status=502 path=/api/v1/cart request_id=req-b44dfdf6", "service": "inventory", "ts": "2026-04-18T17:04:49Z"}
+{"level": "WARN", "line_id": "L-0358", "message": "slow ldap lookup took 552ms", "service": "auth", "ts": "2026-04-18T17:05:03Z"}
+{"level": "WARN", "line_id": "L-0359", "message": "gateway latency elevated 773ms (within SLO)", "service": "payments", "ts": "2026-04-18T17:05:25Z"}
+{"level": "INFO", "line_id": "L-0360", "message": "metrics scrape served bytes=38820", "service": "inventory", "ts": "2026-04-18T17:05:29Z"}
+{"level": "INFO", "line_id": "L-0361", "message": "shipment dispatched ref=202604258570 carrier=express parcels=4", "service": "inventory", "ts": "2026-04-18T17:05:50Z"}
+{"level": "INFO", "line_id": "L-0362", "message": "3ds challenge completed txn=TXN-829865", "service": "payments", "ts": "2026-04-18T17:06:21Z"}
+{"level": "INFO", "line_id": "L-0363", "message": "metrics scrape served bytes=87272", "service": "checkout", "ts": "2026-04-18T17:06:23Z"}
+{"level": "INFO", "line_id": "L-0364", "message": "POST /api/v1/checkout status=200 duration_ms=143 trace=674bca17535971b3", "service": "checkout", "ts": "2026-04-18T17:07:18Z"}
+{"level": "INFO", "line_id": "L-0365", "message": "gc pause 46ms heap_used=52%", "service": "checkout", "ts": "2026-04-18T17:07:32Z"}
+{"level": "INFO", "line_id": "L-0366", "message": "healthcheck ok latency_ms=1", "service": "search", "ts": "2026-04-18T17:07:49Z"}
+{"level": "WARN", "line_id": "L-0367", "message": "provider rate hint: 87% of hourly send quota used", "service": "notifications", "ts": "2026-04-18T17:08:22Z"}
+{"level": "INFO", "line_id": "L-0368", "message": "autocomplete served prefix_len=5 duration_ms=11", "service": "search", "ts": "2026-04-18T17:08:34Z"}
+{"level": "INFO", "line_id": "L-0369", "message": "POST /api/v1/checkout status=200 duration_ms=395 trace=fa50c320380d3973", "service": "checkout", "ts": "2026-04-18T17:08:45Z"}
+{"level": "INFO", "line_id": "L-0370", "message": "stock level query sku=SKU-8059 on_hand=445", "service": "inventory", "ts": "2026-04-18T17:09:06Z"}
+{"level": "INFO", "line_id": "L-0371", "message": "stock level query sku=SKU-9774 on_hand=322", "service": "inventory", "ts": "2026-04-18T17:11:02Z"}
+{"level": "INFO", "line_id": "L-0372", "message": "gc pause 50ms heap_used=55%", "service": "payments", "ts": "2026-04-18T17:11:12Z"}
+{"level": "INFO", "line_id": "L-0373", "message": "reservation released sku=SKU-1896 qty=4", "service": "inventory", "ts": "2026-04-18T17:11:18Z"}
+{"level": "INFO", "line_id": "L-0374", "message": "gc pause 53ms heap_used=46%", "service": "payments", "ts": "2026-04-18T17:11:27Z"}
+{"level": "WARN", "line_id": "L-0375", "message": "provider rate hint: 92% of hourly send quota used", "service": "notifications", "ts": "2026-04-18T17:12:09Z"}
+{"level": "INFO", "line_id": "L-0376", "message": "queue depth=21 oldest_age_s=2", "service": "notifications", "ts": "2026-04-18T17:12:18Z"}
+{"level": "WARN", "line_id": "L-0377", "message": "retrying idempotent request attempt 1/3 request_id=req-96189135 (succeeded)", "service": "checkout", "ts": "2026-04-18T17:13:21Z"}
+{"level": "INFO", "line_id": "L-0378", "message": "s3 upload using aws_access_key_id=AKIATHYT911JQDZY9USF bucket=inventory-exports", "service": "inventory", "ts": "2026-04-18T17:13:30Z"}
+{"level": "INFO", "line_id": "L-0379", "message": "gc pause 34ms heap_used=67%", "service": "auth", "ts": "2026-04-18T17:13:46Z"}
+{"level": "INFO", "line_id": "L-0380", "message": "payout kyc check aadhaar=7303 3456 8262 result=match", "service": "payments", "ts": "2026-04-18T17:14:04Z"}
+{"level": "INFO", "line_id": "L-0381", "message": "3ds challenge completed txn=TXN-435090", "service": "payments", "ts": "2026-04-18T17:14:22Z"}
+{"level": "INFO", "line_id": "L-0382", "message": "reconciliation matched ref=202604996640 ledger_entry=960878", "service": "payments", "ts": "2026-04-18T17:14:44Z"}
+{"level": "INFO", "line_id": "L-0383", "message": "healthcheck ok latency_ms=6", "service": "notifications", "ts": "2026-04-18T17:15:07Z"}
+{"level": "INFO", "line_id": "L-0384", "message": "settlement batch closed batch=3820 txns=457", "service": "payments", "ts": "2026-04-18T17:15:19Z"}
+{"level": "INFO", "line_id": "L-0385", "message": "template rendered name=shipping_update version=v4.2.1", "service": "notifications", "ts": "2026-04-18T17:15:38Z"}
+{"level": "INFO", "line_id": "L-0386", "message": "ranking model loaded version=v8.8.8 sha=6f827c5", "service": "search", "ts": "2026-04-18T17:15:55Z"}
+{"level": "INFO", "line_id": "L-0387", "message": "gc pause 51ms heap_used=56%", "service": "payments", "ts": "2026-04-18T17:15:58Z"}
+{"level": "INFO", "line_id": "L-0388", "message": "ranking model loaded version=v2.4.9 sha=68ffa0d", "service": "search", "ts": "2026-04-18T17:16:01Z"}
+{"level": "INFO", "line_id": "L-0389", "message": "cart loaded cart_id=c-294852 items=1 request_id=req-8d739532", "service": "checkout", "ts": "2026-04-18T17:16:34Z"}
+{"level": "INFO", "line_id": "L-0390", "message": "metrics scrape served bytes=82375", "service": "inventory", "ts": "2026-04-18T17:16:50Z"}
+{"level": "INFO", "line_id": "L-0391", "message": "gc pause 29ms heap_used=58%", "service": "notifications", "ts": "2026-04-18T17:17:01Z"}
+{"level": "INFO", "line_id": "L-0392", "message": "password policy check passed", "service": "auth", "ts": "2026-04-18T17:17:28Z"}
+{"level": "INFO", "line_id": "L-0393", "message": "config heartbeat ok revision=688", "service": "search", "ts": "2026-04-18T17:17:58Z"}
+{"level": "INFO", "line_id": "L-0394", "message": "3ds challenge completed txn=TXN-497409", "service": "payments", "ts": "2026-04-18T17:18:07Z"}
+{"level": "INFO", "line_id": "L-0395", "message": "template rendered name=shipping_update version=v5.8.7", "service": "notifications", "ts": "2026-04-18T17:18:08Z"}
+{"level": "INFO", "line_id": "L-0396", "message": "stock level query sku=SKU-2367 on_hand=301", "service": "inventory", "ts": "2026-04-18T17:18:33Z"}
+{"level": "INFO", "line_id": "L-0397", "message": "healthcheck ok latency_ms=6", "service": "auth", "ts": "2026-04-18T17:19:27Z"}
+{"level": "INFO", "line_id": "L-0398", "message": "reconciliation matched ref=202607222777 ledger_entry=530023", "service": "payments", "ts": "2026-04-18T17:19:27Z"}
+{"level": "INFO", "line_id": "L-0399", "message": "healthcheck ok latency_ms=2", "service": "auth", "ts": "2026-04-18T17:19:43Z"}
+{"level": "WARN", "line_id": "L-0400", "message": "slow request took 744ms path=/api/v1/stock/bulk", "service": "inventory", "ts": "2026-04-18T17:19:51Z"}
+{"level": "INFO", "line_id": "L-0401", "message": "gc pause 7ms heap_used=53%", "service": "auth", "ts": "2026-04-18T17:20:03Z"}
+{"level": "INFO", "line_id": "L-0402", "message": "healthcheck ok latency_ms=6", "service": "auth", "ts": "2026-04-18T17:20:26Z"}
+{"level": "INFO", "line_id": "L-0403", "message": "reservation released sku=SKU-4342 qty=2", "service": "inventory", "ts": "2026-04-18T17:21:24Z"}
+{"level": "INFO", "line_id": "L-0404", "message": "gateway response code=00 gateway_ref=251b836c9b05", "service": "payments", "ts": "2026-04-18T17:21:31Z"}
+{"level": "WARN", "line_id": "L-0405", "message": "slow ldap lookup took 760ms", "service": "auth", "ts": "2026-04-18T17:21:33Z"}
+{"level": "INFO", "line_id": "L-0406", "message": "token issued sub=u-247812 ttl=3600 request_id=req-d88b1a18", "service": "auth", "ts": "2026-04-18T17:22:02Z"}
+{"level": "INFO", "line_id": "L-0407", "message": "ranking model loaded version=v9.8.6 sha=65560df", "service": "search", "ts": "2026-04-18T17:22:16Z"}
+{"level": "INFO", "line_id": "L-0408", "message": "index refresh completed shard=3 docs=839812", "service": "search", "ts": "2026-04-18T17:22:25Z"}
+{"level": "INFO", "line_id": "L-0409", "message": "ranking model loaded version=v7.5.8 sha=ffbb663", "service": "search", "ts": "2026-04-18T17:22:35Z"}
+{"level": "INFO", "line_id": "L-0410", "message": "config heartbeat ok revision=207", "service": "inventory", "ts": "2026-04-18T17:23:29Z"}
+{"level": "INFO", "line_id": "L-0411", "message": "config heartbeat ok revision=408", "service": "payments", "ts": "2026-04-18T17:23:36Z"}
+{"level": "INFO", "line_id": "L-0412", "message": "healthcheck ok latency_ms=1", "service": "payments", "ts": "2026-04-18T17:24:07Z"}
+{"level": "DEBUG", "line_id": "L-0413", "message": "gateway call headers Authorization: Bearer 3kmVqBhcqnjyDvG_juT1b9RNEPe1la_h", "service": "payments", "ts": "2026-04-18T17:24:20Z"}
+{"level": "INFO", "line_id": "L-0414", "message": "config heartbeat ok revision=556", "service": "inventory", "ts": "2026-04-18T17:24:23Z"}
+{"level": "INFO", "line_id": "L-0415", "message": "GET /api/v1/search status=200 hits=483 duration_ms=43 trace=b769f8867230d68b", "service": "search", "ts": "2026-04-18T17:25:26Z"}
+{"level": "INFO", "line_id": "L-0416", "message": "autocomplete served prefix_len=4 duration_ms=15", "service": "search", "ts": "2026-04-18T17:25:37Z"}
+{"level": "INFO", "line_id": "L-0417", "message": "shipment dispatched ref=202608114972 carrier=express parcels=3", "service": "inventory", "ts": "2026-04-18T17:25:53Z"}
+{"level": "INFO", "line_id": "L-0418", "message": "token validated sub=u-595907 latency_ms=3", "service": "auth", "ts": "2026-04-18T17:26:12Z"}
+{"level": "INFO", "line_id": "L-0419", "message": "gc pause 40ms heap_used=58%", "service": "notifications", "ts": "2026-04-18T17:26:17Z"}
+{"level": "INFO", "line_id": "L-0420", "message": "POST /api/v1/payments status=200 duration_ms=348 trace=68f733fb32083712", "service": "payments", "ts": "2026-04-18T17:26:47Z"}
+{"level": "INFO", "line_id": "L-0421", "message": "ranking model loaded version=v9.7.1 sha=f97a365", "service": "search", "ts": "2026-04-18T17:27:03Z"}
+{"level": "INFO", "line_id": "L-0422", "message": "autocomplete served prefix_len=6 duration_ms=15", "service": "search", "ts": "2026-04-18T17:27:07Z"}
+{"level": "WARN", "line_id": "L-0423", "message": "slow request took 435ms path=/api/v1/search", "service": "search", "ts": "2026-04-18T17:27:12Z"}
+{"level": "INFO", "line_id": "L-0424", "message": "healthcheck ok latency_ms=3", "service": "notifications", "ts": "2026-04-18T17:27:34Z"}
+{"level": "INFO", "line_id": "L-0425", "message": "metrics scrape served bytes=64667", "service": "auth", "ts": "2026-04-18T17:28:29Z"}
+{"level": "INFO", "line_id": "L-0426", "message": "metrics scrape served bytes=73372", "service": "payments", "ts": "2026-04-18T17:28:35Z"}
+{"level": "INFO", "line_id": "L-0427", "message": "3ds challenge completed txn=TXN-868644", "service": "payments", "ts": "2026-04-18T17:28:36Z"}
+{"level": "INFO", "line_id": "L-0428", "message": "healthcheck ok latency_ms=3", "service": "search", "ts": "2026-04-18T17:29:23Z"}
+{"level": "INFO", "line_id": "L-0429", "message": "ranking model loaded version=v4.3.0 sha=03ff55d", "service": "search", "ts": "2026-04-18T17:29:41Z"}
+{"level": "WARN", "line_id": "L-0430", "message": "slow ldap lookup took 500ms", "service": "auth", "ts": "2026-04-18T17:29:51Z"}
+{"level": "INFO", "line_id": "L-0431", "message": "healthcheck ok latency_ms=4", "service": "notifications", "ts": "2026-04-18T17:29:56Z"}
+{"level": "INFO", "line_id": "L-0432", "message": "healthcheck ok latency_ms=5", "service": "notifications", "ts": "2026-04-18T17:30:06Z"}
+{"level": "INFO", "line_id": "L-0433", "message": "reconciliation matched ref=202607793894 ledger_entry=182144", "service": "payments", "ts": "2026-04-18T17:30:10Z"}
+{"level": "INFO", "line_id": "L-0434", "message": "inventory reserved sku=SKU-4293 qty=3", "service": "checkout", "ts": "2026-04-18T17:30:16Z"}
+{"level": "INFO", "line_id": "L-0435", "message": "inventory reserved sku=SKU-4388 qty=3", "service": "checkout", "ts": "2026-04-18T17:30:17Z"}
+{"level": "INFO", "line_id": "L-0436", "message": "ses client init aws_access_key_id=AKIAA393HT39GXAF8GX0 region=ap-south-1", "service": "notifications", "ts": "2026-04-18T17:30:35Z"}
+{"level": "INFO", "line_id": "L-0437", "message": "index refresh completed shard=3 docs=875711", "service": "search", "ts": "2026-04-18T17:30:53Z"}
+{"level": "INFO", "line_id": "L-0438", "message": "settlement batch closed batch=4953 txns=114", "service": "payments", "ts": "2026-04-18T17:30:57Z"}
+{"level": "INFO", "line_id": "L-0439", "message": "healthcheck ok latency_ms=5", "service": "checkout", "ts": "2026-04-18T17:31:15Z"}
+{"level": "WARN", "line_id": "L-0440", "message": "provider rate hint: 88% of hourly send quota used", "service": "notifications", "ts": "2026-04-18T17:31:18Z"}
+{"level": "INFO", "line_id": "L-0441", "message": "gc pause 12ms heap_used=49%", "service": "notifications", "ts": "2026-04-18T17:31:25Z"}
+{"level": "INFO", "line_id": "L-0442", "message": "gc pause 55ms heap_used=60%", "service": "search", "ts": "2026-04-18T17:31:26Z"}
+{"level": "INFO", "line_id": "L-0443", "message": "password policy check passed", "service": "auth", "ts": "2026-04-18T17:31:34Z"}
+{"level": "INFO", "line_id": "L-0444", "message": "email job dequeued job=fbb9dcff6d template=order_confirmation", "service": "notifications", "ts": "2026-04-18T17:31:55Z"}
+{"level": "INFO", "line_id": "L-0445", "message": "gc pause 25ms heap_used=47%", "service": "notifications", "ts": "2026-04-18T17:31:58Z"}
+{"level": "INFO", "line_id": "L-0446", "message": "gateway response code=00 gateway_ref=93cf608a2539", "service": "payments", "ts": "2026-04-18T17:32:55Z"}
+{"level": "INFO", "line_id": "L-0447", "message": "config heartbeat ok revision=382", "service": "checkout", "ts": "2026-04-18T17:32:59Z"}
+{"level": "INFO", "line_id": "L-0448", "message": "gc pause 10ms heap_used=45%", "service": "notifications", "ts": "2026-04-18T17:33:23Z"}
+{"level": "INFO", "line_id": "L-0449", "message": "gc pause 47ms heap_used=46%", "service": "search", "ts": "2026-04-18T17:33:41Z"}
+{"level": "WARN", "line_id": "L-0450", "message": "gateway latency elevated 424ms (within SLO)", "service": "payments", "ts": "2026-04-18T17:33:54Z"}
+{"level": "INFO", "line_id": "L-0451", "message": "coupon applied code=FEST50 discount_pct=13", "service": "checkout", "ts": "2026-04-18T17:34:03Z"}
+{"level": "INFO", "line_id": "L-0452", "message": "healthcheck ok latency_ms=1", "service": "checkout", "ts": "2026-04-18T17:34:07Z"}
+{"level": "INFO", "line_id": "L-0453", "message": "config heartbeat ok revision=846", "service": "notifications", "ts": "2026-04-18T17:34:09Z"}
+{"level": "INFO", "line_id": "L-0454", "message": "reconciliation matched ref=202605478846 ledger_entry=543348", "service": "payments", "ts": "2026-04-18T17:34:27Z"}
+{"level": "WARN", "line_id": "L-0455", "message": "slow ldap lookup took 464ms", "service": "auth", "ts": "2026-04-18T17:34:33Z"}
+{"level": "INFO", "line_id": "L-0456", "message": "template rendered name=shipping_update version=v1.4.3", "service": "notifications", "ts": "2026-04-18T17:34:36Z"}
+{"level": "INFO", "line_id": "L-0457", "message": "reconciliation matched ref=202604509329 ledger_entry=693619", "service": "payments", "ts": "2026-04-18T17:34:48Z"}
+{"level": "INFO", "line_id": "L-0458", "message": "healthcheck ok latency_ms=5", "service": "search", "ts": "2026-04-18T17:35:14Z"}
+{"level": "INFO", "line_id": "L-0459", "message": "inventory reserved sku=SKU-3972 qty=3", "service": "checkout", "ts": "2026-04-18T17:35:29Z"}
+{"level": "INFO", "line_id": "L-0460", "message": "config heartbeat ok revision=501", "service": "checkout", "ts": "2026-04-18T17:35:37Z"}
+{"level": "INFO", "line_id": "L-0461", "message": "config heartbeat ok revision=661", "service": "inventory", "ts": "2026-04-18T17:35:50Z"}
+{"level": "INFO", "line_id": "L-0462", "message": "config heartbeat ok revision=179", "service": "checkout", "ts": "2026-04-18T17:36:20Z"}
+{"level": "WARN", "line_id": "L-0463", "message": "gateway latency elevated 521ms (within SLO)", "service": "payments", "ts": "2026-04-18T17:36:46Z"}
+{"level": "INFO", "line_id": "L-0464", "message": "push notification sent topic=order-updates delivered=89", "service": "notifications", "ts": "2026-04-18T17:36:51Z"}
+{"level": "INFO", "line_id": "L-0465", "message": "metrics scrape served bytes=20013", "service": "inventory", "ts": "2026-04-18T17:36:52Z"}
+{"level": "INFO", "line_id": "L-0466", "message": "metrics scrape served bytes=86632", "service": "notifications", "ts": "2026-04-18T17:38:06Z"}
+{"level": "INFO", "line_id": "L-0467", "message": "POST /api/v1/checkout status=200 duration_ms=231 trace=bf4baa12c1e03817", "service": "checkout", "ts": "2026-04-18T17:38:30Z"}
+{"level": "INFO", "line_id": "L-0468", "message": "shipment dispatched ref=202605682754 carrier=express parcels=3", "service": "inventory", "ts": "2026-04-18T17:39:40Z"}
+{"level": "INFO", "line_id": "L-0469", "message": "warehouse sync batch=9667 rows=1915 sha=3d84bd1", "service": "inventory", "ts": "2026-04-18T17:40:59Z"}
+{"level": "INFO", "line_id": "L-0470", "message": "gc pause 18ms heap_used=63%", "service": "notifications", "ts": "2026-04-18T17:41:11Z"}
+{"level": "INFO", "line_id": "L-0471", "message": "shipment dispatched ref=202609856429 carrier=express parcels=4", "service": "inventory", "ts": "2026-04-18T17:41:13Z"}
+{"level": "INFO", "line_id": "L-0472", "message": "config heartbeat ok revision=725", "service": "inventory", "ts": "2026-04-18T17:41:31Z"}
+{"level": "WARN", "line_id": "L-0473", "message": "slow ldap lookup took 659ms", "service": "auth", "ts": "2026-04-18T17:41:49Z"}
+{"level": "INFO", "line_id": "L-0474", "message": "POST /api/v1/payments status=200 duration_ms=92 trace=9d0ba9c7adef7489", "service": "payments", "ts": "2026-04-18T17:41:53Z"}
+{"level": "INFO", "line_id": "L-0475", "message": "cart loaded cart_id=c-275567 items=8 request_id=req-c1b7b5f5", "service": "checkout", "ts": "2026-04-18T17:41:54Z"}
+{"level": "WARN", "line_id": "L-0476", "message": "gateway latency elevated 670ms (within SLO)", "service": "payments", "ts": "2026-04-18T17:42:00Z"}
+{"level": "INFO", "line_id": "L-0477", "message": "healthcheck ok latency_ms=2", "service": "search", "ts": "2026-04-18T17:43:09Z"}
+{"level": "INFO", "line_id": "L-0478", "message": "POST /api/v1/payments status=200 duration_ms=183 trace=c240bf3e00e1218e", "service": "payments", "ts": "2026-04-18T17:43:31Z"}
+{"level": "WARN", "line_id": "L-0479", "message": "slow request took 585ms path=/api/v1/stock/bulk", "service": "inventory", "ts": "2026-04-18T17:44:13Z"}
+{"level": "INFO", "line_id": "L-0480", "message": "password policy check passed", "service": "auth", "ts": "2026-04-18T17:44:21Z"}
+{"level": "INFO", "line_id": "L-0481", "message": "GET /api/v1/search status=200 hits=14 duration_ms=69 trace=6f393bbcbca3b5ff", "service": "search", "ts": "2026-04-18T17:44:24Z"}
+{"level": "INFO", "line_id": "L-0482", "message": "warehouse sync batch=8442 rows=3059 sha=354bc27", "service": "inventory", "ts": "2026-04-18T17:44:29Z"}
+{"level": "INFO", "line_id": "L-0483", "message": "gc pause 39ms heap_used=55%", "service": "auth", "ts": "2026-04-18T17:45:54Z"}
+{"level": "WARN", "line_id": "L-0484", "message": "gateway latency elevated 558ms (within SLO)", "service": "payments", "ts": "2026-04-18T17:46:01Z"}
+{"level": "INFO", "line_id": "L-0485", "message": "reservation released sku=SKU-4715 qty=2", "service": "inventory", "ts": "2026-04-18T17:46:32Z"}
+{"level": "INFO", "line_id": "L-0486", "message": "GET /api/v1/search status=200 hits=178 duration_ms=50 trace=7f34c3c680f2f9ed", "service": "search", "ts": "2026-04-18T17:46:39Z"}
+{"level": "INFO", "line_id": "L-0487", "message": "coupon applied code=FEST22 discount_pct=19", "service": "checkout", "ts": "2026-04-18T17:47:21Z"}
+{"level": "INFO", "line_id": "L-0488", "message": "queue depth=20 oldest_age_s=4", "service": "notifications", "ts": "2026-04-18T17:47:23Z"}
+{"level": "INFO", "line_id": "L-0489", "message": "metrics scrape served bytes=49663", "service": "notifications", "ts": "2026-04-18T17:47:26Z"}
+{"level": "INFO", "line_id": "L-0490", "message": "token validated sub=u-600690 latency_ms=3", "service": "auth", "ts": "2026-04-18T17:47:56Z"}
+{"level": "INFO", "line_id": "L-0491", "message": "order created order_ref=202603099585 total_inr=12826", "service": "checkout", "ts": "2026-04-18T17:48:06Z"}
+{"level": "INFO", "line_id": "L-0492", "message": "inventory reserved sku=SKU-9727 qty=4", "service": "checkout", "ts": "2026-04-18T17:48:47Z"}
+{"level": "INFO", "line_id": "L-0493", "message": "config heartbeat ok revision=583", "service": "auth", "ts": "2026-04-18T17:48:53Z"}
+{"level": "INFO", "line_id": "L-0494", "message": "warehouse sync batch=5024 rows=4529 sha=827ba11", "service": "inventory", "ts": "2026-04-18T17:49:05Z"}
+{"level": "INFO", "line_id": "L-0495", "message": "metrics scrape served bytes=45051", "service": "auth", "ts": "2026-04-18T17:49:23Z"}
+{"level": "INFO", "line_id": "L-0496", "message": "GET /api/v1/stock status=200 duration_ms=33 trace=f9a617af324dfd57", "service": "inventory", "ts": "2026-04-18T17:49:39Z"}
+{"level": "INFO", "line_id": "L-0497", "message": "metrics scrape served bytes=82634", "service": "inventory", "ts": "2026-04-18T17:50:00Z"}
+{"level": "INFO", "line_id": "L-0498", "message": "template rendered name=shipping_update version=v8.9.7", "service": "notifications", "ts": "2026-04-18T17:50:07Z"}
+{"level": "INFO", "line_id": "L-0499", "message": "POST /api/v1/checkout status=200 duration_ms=287 trace=04a3ea716a0e027a", "service": "checkout", "ts": "2026-04-18T17:50:08Z"}
+{"level": "INFO", "line_id": "L-0500", "message": "GET /api/v1/stock status=200 duration_ms=49 trace=9828b922261df8a1", "service": "inventory", "ts": "2026-04-18T17:50:10Z"}
+{"level": "INFO", "line_id": "L-0501", "message": "config heartbeat ok revision=820", "service": "notifications", "ts": "2026-04-18T17:51:28Z"}
+{"level": "INFO", "line_id": "L-0502", "message": "login ok client_ip=173.115.166.197 session=8940ac368aaa", "service": "auth", "ts": "2026-04-18T17:51:28Z"}
+{"level": "INFO", "line_id": "L-0503", "message": "reconciliation matched ref=202606472303 ledger_entry=501409", "service": "payments", "ts": "2026-04-18T17:51:51Z"}
+{"level": "INFO", "line_id": "L-0504", "message": "GET /api/v1/stock status=200 duration_ms=5 trace=a2c50864b79525b2", "service": "inventory", "ts": "2026-04-18T17:51:54Z"}
+{"level": "INFO", "line_id": "L-0505", "message": "healthcheck ok latency_ms=4", "service": "payments", "ts": "2026-04-18T17:51:58Z"}
+{"level": "INFO", "line_id": "L-0506", "message": "email job dequeued job=5260da00b0 template=order_confirmation", "service": "notifications", "ts": "2026-04-18T17:52:36Z"}
+{"level": "INFO", "line_id": "L-0507", "message": "config heartbeat ok revision=409", "service": "auth", "ts": "2026-04-18T17:53:11Z"}
+{"level": "INFO", "line_id": "L-0508", "message": "push notification sent topic=order-updates delivered=282", "service": "notifications", "ts": "2026-04-18T17:53:45Z"}
+{"level": "INFO", "line_id": "L-0509", "message": "settlement batch closed batch=6462 txns=293", "service": "payments", "ts": "2026-04-18T17:54:04Z"}
+{"level": "INFO", "line_id": "L-0510", "message": "gc pause 38ms heap_used=59%", "service": "inventory", "ts": "2026-04-18T17:54:29Z"}
+{"level": "INFO", "line_id": "L-0511", "message": "gc pause 57ms heap_used=65%", "service": "checkout", "ts": "2026-04-18T17:54:42Z"}
+{"level": "INFO", "line_id": "L-0512", "message": "metrics scrape served bytes=61600", "service": "search", "ts": "2026-04-18T17:54:43Z"}
+{"level": "INFO", "line_id": "L-0513", "message": "GET /api/v1/search status=200 hits=146 duration_ms=76 trace=0b9395f2e77c7fb4", "service": "search", "ts": "2026-04-18T17:54:45Z"}
+{"level": "INFO", "line_id": "L-0514", "message": "warehouse sync batch=2095 rows=3726 sha=901f6a5", "service": "inventory", "ts": "2026-04-18T17:54:53Z"}
+{"level": "INFO", "line_id": "L-0515", "message": "order created order_ref=202604448745 total_inr=21353", "service": "checkout", "ts": "2026-04-18T17:55:47Z"}
+{"level": "INFO", "line_id": "L-0516", "message": "autocomplete served prefix_len=3 duration_ms=17", "service": "search", "ts": "2026-04-18T17:56:18Z"}
+{"level": "INFO", "line_id": "L-0517", "message": "metrics scrape served bytes=30336", "service": "inventory", "ts": "2026-04-18T17:56:19Z"}
+{"level": "INFO", "line_id": "L-0518", "message": "reconciliation matched ref=202605782513 ledger_entry=882615", "service": "payments", "ts": "2026-04-18T17:56:26Z"}
+{"level": "INFO", "line_id": "L-0519", "message": "healthcheck ok latency_ms=4", "service": "inventory", "ts": "2026-04-18T17:56:30Z"}
+{"level": "INFO", "line_id": "L-0520", "message": "config heartbeat ok revision=889", "service": "inventory", "ts": "2026-04-18T17:56:38Z"}
+{"level": "INFO", "line_id": "L-0521", "message": "healthcheck ok latency_ms=3", "service": "notifications", "ts": "2026-04-18T17:56:59Z"}
+{"level": "INFO", "line_id": "L-0522", "message": "GET /api/v1/search status=200 hits=250 duration_ms=84 trace=6c307fe62dd36967", "service": "search", "ts": "2026-04-18T17:57:14Z"}
+{"level": "INFO", "line_id": "L-0523", "message": "gateway response code=00 gateway_ref=792eac8ccc29", "service": "payments", "ts": "2026-04-18T17:57:18Z"}
+{"level": "INFO", "line_id": "L-0524", "message": "POST /api/v1/checkout status=200 duration_ms=383 trace=d3a3effd21b3e315", "service": "checkout", "ts": "2026-04-18T17:57:37Z"}
+{"level": "WARN", "line_id": "L-0525", "message": "slow ldap lookup took 470ms", "service": "auth", "ts": "2026-04-18T17:57:50Z"}
+{"level": "INFO", "line_id": "L-0526", "message": "config heartbeat ok revision=282", "service": "search", "ts": "2026-04-18T17:58:07Z"}
+{"level": "INFO", "line_id": "L-0527", "message": "token validated sub=u-399115 latency_ms=9", "service": "auth", "ts": "2026-04-18T17:58:19Z"}
+{"level": "INFO", "line_id": "L-0528", "message": "password policy check passed", "service": "auth", "ts": "2026-04-18T17:58:28Z"}
+{"level": "INFO", "line_id": "L-0529", "message": "payment authorised card=5425-6655-5513-9571 amount_inr=7560 auth_code=1d7c05", "service": "payments", "ts": "2026-04-18T17:59:09Z"}
+{"level": "INFO", "line_id": "L-0530", "message": "gateway response code=00 gateway_ref=38be9e71cdc2", "service": "payments", "ts": "2026-04-18T17:59:22Z"}
+{"level": "INFO", "line_id": "L-0531", "message": "shipment dispatched ref=202609664351 carrier=express parcels=1", "service": "inventory", "ts": "2026-04-18T17:59:41Z"}

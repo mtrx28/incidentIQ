@@ -1,0 +1,31 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "partner_webhook_retry",
+      "pool_warning_bystander",
+      "session_cache_eviction"
+    ],
+    "gold_evidence_ids": [
+      "L-0283",
+      "L-0303",
+      "L-0306",
+      "M-030",
+      "M-033",
+      "R-03-5"
+    ],
+    "gold_runbook_section": "R-03-5",
+    "hard_case": null,
+    "incident_id": "INC-039",
+    "root_cause_category": "slow_query_missing_index",
+    "root_cause_statement": "A schema migration dropped the index on orders.customer_ref, so a hot query on notifications fell back to a sequential scan and slowed every request.",
+    "split": "test"
+  },
+  "incident": {
+    "alert_text": "notifications-service: HTTP error rate above 5% for 5 minutes (since 11:43 UTC)",
+    "incident_id": "INC-039",
+    "service": "notifications",
+    "start_time": "2026-04-09T11:43:00Z",
+    "window_end": "2026-04-09T13:00:00Z",
+    "window_start": "2026-04-09T10:00:00Z"
+  }
+}

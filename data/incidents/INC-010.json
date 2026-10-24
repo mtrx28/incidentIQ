@@ -1,0 +1,28 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "nightly_analytics_query"
+    ],
+    "gold_evidence_ids": [
+      "L-0261",
+      "L-0267",
+      "L-0272",
+      "M-018",
+      "R-08-5"
+    ],
+    "gold_runbook_section": "R-08-5",
+    "hard_case": null,
+    "incident_id": "INC-010",
+    "root_cause_category": "misconfiguration",
+    "root_cause_statement": "A config change set FEATURE_NEW_PRICING to 'true' (was 'false') and checkout began failing as it restarted with the bad value.",
+    "split": "test"
+  },
+  "incident": {
+    "alert_text": "checkout-service: HTTP error rate above 5% for 5 minutes (since 20:43 UTC)",
+    "incident_id": "INC-010",
+    "service": "checkout",
+    "start_time": "2026-05-07T20:43:00Z",
+    "window_end": "2026-05-07T22:00:00Z",
+    "window_start": "2026-05-07T19:00:00Z"
+  }
+}

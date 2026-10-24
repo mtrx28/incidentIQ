@@ -31,3 +31,4 @@ markers = ["db: needs the pgvector Postgres from docker compose"]
 [tool.ruff]
 line-length = 100
 target-version = "py311"
+lint.ignore = ["ISC004"]  # long log templates are wrapped as adjacent string literals on purpose

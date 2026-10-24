@@ -47,7 +47,8 @@ class GroundTruth(BaseModel):
     root_cause_statement: str
     gold_evidence_ids: list[str] = Field(min_length=1)
     gold_runbook_section: str  # evidence ID such as "R-12-3"
-    hard_case: str | None = None  # e.g. "logs_only", "metrics_only", "overlapping"
+    hard_case: str | None = None  # "logs_only", "metrics_only", "overlapping", "runbook_needed"
+    distractors: list[str] = Field(default_factory=list)  # red herrings injected, for failure analysis
 
 
 # --- Agent output -------------------------------------------------------------------------

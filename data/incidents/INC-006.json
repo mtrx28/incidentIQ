@@ -1,0 +1,29 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "minor_gc_pause",
+      "session_cache_eviction"
+    ],
+    "gold_evidence_ids": [
+      "L-0271",
+      "L-0277",
+      "L-0282",
+      "M-048",
+      "R-02-5"
+    ],
+    "gold_runbook_section": "R-02-5",
+    "hard_case": null,
+    "incident_id": "INC-006",
+    "root_cause_category": "db_connection_pool_exhaustion",
+    "root_cause_statement": "The search database connection pool (max 50) was fully saturated, so requests queued for a connection and timed out.",
+    "split": "dev"
+  },
+  "incident": {
+    "alert_text": "search-service: HTTP error rate above 5% for 5 minutes (since 02:43 UTC)",
+    "incident_id": "INC-006",
+    "service": "search",
+    "start_time": "2026-03-11T02:43:00Z",
+    "window_end": "2026-03-11T04:00:00Z",
+    "window_start": "2026-03-11T01:00:00Z"
+  }
+}

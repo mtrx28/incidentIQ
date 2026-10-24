@@ -1,0 +1,31 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "log_volume_notice",
+      "nightly_analytics_query",
+      "pool_warning_bystander"
+    ],
+    "gold_evidence_ids": [
+      "L-0255",
+      "L-0259",
+      "L-0263",
+      "M-019",
+      "M-021",
+      "R-10-5"
+    ],
+    "gold_runbook_section": "R-10-5",
+    "hard_case": null,
+    "incident_id": "INC-038",
+    "root_cause_category": "cache_stampede_outage",
+    "root_cause_statement": "The Redis cache in front of inventory went down; every request fell through to the database, which saturated under the resulting stampede.",
+    "split": "test"
+  },
+  "incident": {
+    "alert_text": "inventory-service: HTTP error rate above 5% for 5 minutes (since 16:42 UTC)",
+    "incident_id": "INC-038",
+    "service": "inventory",
+    "start_time": "2026-04-18T16:42:00Z",
+    "window_end": "2026-04-18T18:00:00Z",
+    "window_start": "2026-04-18T15:00:00Z"
+  }
+}

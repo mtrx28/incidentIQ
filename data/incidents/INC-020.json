@@ -1,0 +1,30 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "bystander_cpu_blip",
+      "log_volume_notice"
+    ],
+    "gold_evidence_ids": [
+      "L-0283",
+      "L-0284",
+      "L-0285",
+      "M-010",
+      "M-012",
+      "R-10-5"
+    ],
+    "gold_runbook_section": "R-10-5",
+    "hard_case": null,
+    "incident_id": "INC-020",
+    "root_cause_category": "cache_stampede_outage",
+    "root_cause_statement": "The Redis cache in front of checkout went down; every request fell through to the database, which saturated under the resulting stampede.",
+    "split": "dev"
+  },
+  "incident": {
+    "alert_text": "checkout-service: HTTP error rate above 5% for 5 minutes (since 07:44 UTC)",
+    "incident_id": "INC-020",
+    "service": "checkout",
+    "start_time": "2026-06-22T07:44:00Z",
+    "window_end": "2026-06-22T09:00:00Z",
+    "window_start": "2026-06-22T06:00:00Z"
+  }
+}

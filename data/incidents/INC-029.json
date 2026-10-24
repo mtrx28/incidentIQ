@@ -1,0 +1,31 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "deprecated_api_client",
+      "minor_gc_pause",
+      "session_cache_eviction"
+    ],
+    "gold_evidence_ids": [
+      "L-0278",
+      "L-0279",
+      "L-0281",
+      "M-002",
+      "M-008",
+      "R-09-5"
+    ],
+    "gold_runbook_section": "R-09-5",
+    "hard_case": null,
+    "incident_id": "INC-029",
+    "root_cause_category": "traffic_spike_rate_limit",
+    "root_cause_statement": "Inbound traffic to auth jumped to about four times normal; autoscaling hit its ceiling and rate limiting plus load shedding rejected requests.",
+    "split": "test"
+  },
+  "incident": {
+    "alert_text": "auth-service: HTTP error rate above 5% for 5 minutes (since 11:42 UTC)",
+    "incident_id": "INC-029",
+    "service": "auth",
+    "start_time": "2026-05-08T11:42:00Z",
+    "window_end": "2026-05-08T13:00:00Z",
+    "window_start": "2026-05-08T10:00:00Z"
+  }
+}

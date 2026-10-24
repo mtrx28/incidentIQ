@@ -1,0 +1,30 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "config_drift_notice",
+      "deprecated_api_client"
+    ],
+    "gold_evidence_ids": [
+      "L-0111",
+      "L-0282",
+      "L-0283",
+      "M-042",
+      "M-044",
+      "R-07-5"
+    ],
+    "gold_runbook_section": "R-07-5",
+    "hard_case": null,
+    "incident_id": "INC-012",
+    "root_cause_category": "expired_tls_cert",
+    "root_cause_statement": "The TLS certificate for payments.internal.shop expired at 2026-07-21T11:39:00Z and was not renewed, so clients could not complete handshakes.",
+    "split": "test"
+  },
+  "incident": {
+    "alert_text": "payments-service: HTTP error rate above 5% for 5 minutes (since 11:44 UTC)",
+    "incident_id": "INC-012",
+    "service": "payments",
+    "start_time": "2026-07-21T11:44:00Z",
+    "window_end": "2026-07-21T13:00:00Z",
+    "window_start": "2026-07-21T10:00:00Z"
+  }
+}

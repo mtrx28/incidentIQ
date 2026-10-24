@@ -1,0 +1,29 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "log_volume_notice",
+      "nightly_analytics_query",
+      "pool_warning_bystander"
+    ],
+    "gold_evidence_ids": [
+      "L-0262",
+      "L-0277",
+      "L-0279",
+      "R-05-5"
+    ],
+    "gold_runbook_section": "R-05-5",
+    "hard_case": "logs_only",
+    "incident_id": "INC-015",
+    "root_cause_category": "memory_leak_oom",
+    "root_cause_statement": "A memory leak in payments drove heap usage to the limit and the kernel OOM-killed the container repeatedly.",
+    "split": "dev"
+  },
+  "incident": {
+    "alert_text": "payments-service: HTTP error rate above 5% for 5 minutes (since 14:44 UTC)",
+    "incident_id": "INC-015",
+    "service": "payments",
+    "start_time": "2026-08-31T14:44:00Z",
+    "window_end": "2026-08-31T16:00:00Z",
+    "window_start": "2026-08-31T13:00:00Z"
+  }
+}

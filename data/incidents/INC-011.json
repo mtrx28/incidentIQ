@@ -1,0 +1,30 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "config_drift_notice",
+      "deprecated_api_client"
+    ],
+    "gold_evidence_ids": [
+      "L-0256",
+      "L-0257",
+      "L-0262",
+      "M-019",
+      "M-021",
+      "R-10-5"
+    ],
+    "gold_runbook_section": "R-10-5",
+    "hard_case": null,
+    "incident_id": "INC-011",
+    "root_cause_category": "cache_stampede_outage",
+    "root_cause_statement": "The Redis cache in front of inventory went down; every request fell through to the database, which saturated under the resulting stampede.",
+    "split": "test"
+  },
+  "incident": {
+    "alert_text": "inventory-service: p99 latency above 1000ms for 5 minutes (since 15:43 UTC)",
+    "incident_id": "INC-011",
+    "service": "inventory",
+    "start_time": "2026-07-12T15:43:00Z",
+    "window_end": "2026-07-12T17:00:00Z",
+    "window_start": "2026-07-12T14:00:00Z"
+  }
+}

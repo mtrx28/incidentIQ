@@ -1,0 +1,31 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "minor_gc_pause",
+      "overlap:db_connection_pool_exhaustion",
+      "session_cache_eviction"
+    ],
+    "gold_evidence_ids": [
+      "L-0101",
+      "L-0261",
+      "L-0263",
+      "M-015",
+      "M-017",
+      "R-07-5"
+    ],
+    "gold_runbook_section": "R-07-5",
+    "hard_case": "overlapping",
+    "incident_id": "INC-026",
+    "root_cause_category": "expired_tls_cert",
+    "root_cause_statement": "The TLS certificate for checkout.internal.shop expired at 2026-06-26T13:39:00Z and was not renewed, so clients could not complete handshakes.",
+    "split": "test"
+  },
+  "incident": {
+    "alert_text": "checkout-service: HTTP error rate above 5% for 5 minutes (since 13:44 UTC)",
+    "incident_id": "INC-026",
+    "service": "checkout",
+    "start_time": "2026-06-26T13:44:00Z",
+    "window_end": "2026-06-26T15:00:00Z",
+    "window_start": "2026-06-26T12:00:00Z"
+  }
+}

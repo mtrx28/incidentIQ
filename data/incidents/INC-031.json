@@ -1,0 +1,30 @@
+{
+  "ground_truth": {
+    "distractors": [
+      "bystander_cpu_blip",
+      "config_drift_notice",
+      "minor_gc_pause"
+    ],
+    "gold_evidence_ids": [
+      "L-0236",
+      "L-0259",
+      "L-0263",
+      "M-049",
+      "R-06-5"
+    ],
+    "gold_runbook_section": "R-06-5",
+    "hard_case": null,
+    "incident_id": "INC-031",
+    "root_cause_category": "disk_full",
+    "root_cause_statement": "The data volume on search filled to 100%, so writes failed with ENOSPC.",
+    "split": "test"
+  },
+  "incident": {
+    "alert_text": "search-service: HTTP error rate above 5% for 5 minutes (since 14:44 UTC)",
+    "incident_id": "INC-031",
+    "service": "search",
+    "start_time": "2026-07-29T14:44:00Z",
+    "window_end": "2026-07-29T16:00:00Z",
+    "window_start": "2026-07-29T13:00:00Z"
+  }
+}
