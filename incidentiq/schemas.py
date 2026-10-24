@@ -51,6 +51,17 @@ class GroundTruth(BaseModel):
     distractors: list[str] = Field(default_factory=list)  # red herrings injected, for failure analysis
 
 
+# --- Raw data and tool results ------------------------------------------------------------
+
+
+class LogLine(BaseModel):
+    line_id: str  # "L-0421"
+    ts: str  # ISO 8601, UTC
+    service: str
+    level: str
+    message: str
+
+
 # --- Agent output -------------------------------------------------------------------------
 
 
@@ -58,6 +69,15 @@ class Evidence(BaseModel):
     evidence_id: str  # "L-0421", "M-017", "R-12-3"
     kind: EvidenceKind
     excerpt: str  # short, already redacted
+
+
+class ToolResult(BaseModel):
+    """What a tool returns, before redaction. `evidence` holds the citable items."""
+
+    tool: Tool
+    args: dict[str, str | int | float | None]
+    summary: str
+    evidence: list[Evidence]
 
 
 class Claim(BaseModel):

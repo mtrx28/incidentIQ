@@ -1,0 +1,750 @@
+{
+  "embedder": "sentence-transformers/all-MiniLM-L6-v2",
+  "incidents": [
+    {
+      "alert": {
+        "runbook@1": false,
+        "runbook@3": false,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-03-6",
+          "R-13-6",
+          "R-03-2"
+        ]
+      },
+      "alert+evidence": {
+        "runbook@1": false,
+        "runbook@3": false,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-03-6",
+          "R-13-4",
+          "R-13-6"
+        ]
+      },
+      "category": "bad_deployment",
+      "diagnosed-fix": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-01-1",
+          "R-01-3",
+          "R-01-6"
+        ]
+      },
+      "gold_sections": [
+        "R-01-5"
+      ],
+      "hard_case": null,
+      "incident_id": "INC-002"
+    },
+    {
+      "alert": {
+        "runbook@1": false,
+        "runbook@3": false,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-03-6",
+          "R-03-2",
+          "R-13-6"
+        ]
+      },
+      "alert+evidence": {
+        "runbook@1": false,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-09-1",
+          "R-04-2",
+          "R-02-1"
+        ]
+      },
+      "category": "downstream_timeout",
+      "diagnosed-fix": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": true,
+        "top": [
+          "R-04-2",
+          "R-04-5",
+          "R-04-1"
+        ]
+      },
+      "gold_sections": [
+        "R-04-5"
+      ],
+      "hard_case": null,
+      "incident_id": "INC-004"
+    },
+    {
+      "alert": {
+        "runbook@1": false,
+        "runbook@3": false,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-03-6",
+          "R-03-2",
+          "R-13-6"
+        ]
+      },
+      "alert+evidence": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-02-6",
+          "R-03-6",
+          "R-02-1"
+        ]
+      },
+      "category": "db_connection_pool_exhaustion",
+      "diagnosed-fix": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": true,
+        "top": [
+          "R-02-7",
+          "R-02-5",
+          "R-02-6"
+        ]
+      },
+      "gold_sections": [
+        "R-02-5"
+      ],
+      "hard_case": null,
+      "incident_id": "INC-006"
+    },
+    {
+      "alert": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-04-2",
+          "R-07-2",
+          "R-04-6"
+        ]
+      },
+      "alert+evidence": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-04-1",
+          "R-04-2",
+          "R-04-6"
+        ]
+      },
+      "category": "downstream_timeout",
+      "diagnosed-fix": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": true,
+        "top": [
+          "R-04-2",
+          "R-04-5",
+          "R-04-1"
+        ]
+      },
+      "gold_sections": [
+        "R-04-3",
+        "R-04-5"
+      ],
+      "hard_case": "runbook_needed",
+      "incident_id": "INC-014"
+    },
+    {
+      "alert": {
+        "runbook@1": false,
+        "runbook@3": false,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-04-2",
+          "R-04-6",
+          "R-07-2"
+        ]
+      },
+      "alert+evidence": {
+        "runbook@1": false,
+        "runbook@3": false,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-11-3",
+          "R-11-4",
+          "R-11-1"
+        ]
+      },
+      "category": "memory_leak_oom",
+      "diagnosed-fix": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": true,
+        "top": [
+          "R-05-3",
+          "R-05-5",
+          "R-05-7"
+        ]
+      },
+      "gold_sections": [
+        "R-05-5"
+      ],
+      "hard_case": "logs_only",
+      "incident_id": "INC-015"
+    },
+    {
+      "alert": {
+        "runbook@1": false,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-14-1",
+          "R-04-2",
+          "R-03-6"
+        ]
+      },
+      "alert+evidence": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": true,
+        "top": [
+          "R-03-3",
+          "R-03-5",
+          "R-03-4"
+        ]
+      },
+      "category": "slow_query_missing_index",
+      "diagnosed-fix": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": true,
+        "section@3": true,
+        "top": [
+          "R-03-5",
+          "R-03-7",
+          "R-03-3"
+        ]
+      },
+      "gold_sections": [
+        "R-03-5"
+      ],
+      "hard_case": null,
+      "incident_id": "INC-016"
+    },
+    {
+      "alert": {
+        "runbook@1": false,
+        "runbook@3": false,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-03-6",
+          "R-03-2",
+          "R-13-6"
+        ]
+      },
+      "alert+evidence": {
+        "runbook@1": false,
+        "runbook@3": false,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-03-6",
+          "R-13-4",
+          "R-13-6"
+        ]
+      },
+      "category": "bad_deployment",
+      "diagnosed-fix": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-01-1",
+          "R-01-3",
+          "R-01-6"
+        ]
+      },
+      "gold_sections": [
+        "R-01-5"
+      ],
+      "hard_case": "logs_only",
+      "incident_id": "INC-017"
+    },
+    {
+      "alert": {
+        "runbook@1": false,
+        "runbook@3": false,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-13-6",
+          "R-16-6",
+          "R-04-2"
+        ]
+      },
+      "alert+evidence": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-02-6",
+          "R-12-6",
+          "R-02-2"
+        ]
+      },
+      "category": "db_connection_pool_exhaustion",
+      "diagnosed-fix": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": true,
+        "top": [
+          "R-02-7",
+          "R-02-5",
+          "R-02-6"
+        ]
+      },
+      "gold_sections": [
+        "R-02-5"
+      ],
+      "hard_case": "metrics_only",
+      "incident_id": "INC-019"
+    },
+    {
+      "alert": {
+        "runbook@1": false,
+        "runbook@3": false,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-13-6",
+          "R-16-6",
+          "R-07-3"
+        ]
+      },
+      "alert+evidence": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-10-3",
+          "R-10-2",
+          "R-10-6"
+        ]
+      },
+      "category": "cache_stampede_outage",
+      "diagnosed-fix": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": true,
+        "section@3": true,
+        "top": [
+          "R-10-5",
+          "R-10-7",
+          "R-10-2"
+        ]
+      },
+      "gold_sections": [
+        "R-10-5"
+      ],
+      "hard_case": null,
+      "incident_id": "INC-020"
+    },
+    {
+      "alert": {
+        "runbook@1": false,
+        "runbook@3": false,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-13-6",
+          "R-16-6",
+          "R-04-2"
+        ]
+      },
+      "alert+evidence": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": true,
+        "top": [
+          "R-08-3",
+          "R-08-5",
+          "R-08-6"
+        ]
+      },
+      "category": "misconfiguration",
+      "diagnosed-fix": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": true,
+        "section@3": true,
+        "top": [
+          "R-08-5",
+          "R-08-7",
+          "R-08-6"
+        ]
+      },
+      "gold_sections": [
+        "R-08-5"
+      ],
+      "hard_case": null,
+      "incident_id": "INC-021"
+    },
+    {
+      "alert": {
+        "runbook@1": false,
+        "runbook@3": false,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-04-2",
+          "R-04-6",
+          "R-13-6"
+        ]
+      },
+      "alert+evidence": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-06-4",
+          "R-06-2",
+          "R-06-3"
+        ]
+      },
+      "category": "disk_full",
+      "diagnosed-fix": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": true,
+        "section@3": true,
+        "top": [
+          "R-06-5",
+          "R-06-7",
+          "R-06-2"
+        ]
+      },
+      "gold_sections": [
+        "R-06-5"
+      ],
+      "hard_case": null,
+      "incident_id": "INC-023"
+    },
+    {
+      "alert": {
+        "runbook@1": false,
+        "runbook@3": false,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-04-2",
+          "R-04-6",
+          "R-13-6"
+        ]
+      },
+      "alert+evidence": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-09-1",
+          "R-09-2",
+          "R-04-2"
+        ]
+      },
+      "category": "traffic_spike_rate_limit",
+      "diagnosed-fix": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": true,
+        "section@3": true,
+        "top": [
+          "R-09-5",
+          "R-09-7",
+          "R-09-3"
+        ]
+      },
+      "gold_sections": [
+        "R-09-5"
+      ],
+      "hard_case": null,
+      "incident_id": "INC-024"
+    },
+    {
+      "alert": {
+        "runbook@1": false,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-14-1",
+          "R-04-2",
+          "R-03-6"
+        ]
+      },
+      "alert+evidence": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": true,
+        "top": [
+          "R-03-3",
+          "R-03-5",
+          "R-03-4"
+        ]
+      },
+      "category": "slow_query_missing_index",
+      "diagnosed-fix": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": true,
+        "section@3": true,
+        "top": [
+          "R-03-5",
+          "R-03-7",
+          "R-03-3"
+        ]
+      },
+      "gold_sections": [
+        "R-03-5"
+      ],
+      "hard_case": "overlapping",
+      "incident_id": "INC-025"
+    },
+    {
+      "alert": {
+        "runbook@1": false,
+        "runbook@3": false,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-09-4",
+          "R-04-2",
+          "R-16-6"
+        ]
+      },
+      "alert+evidence": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": true,
+        "top": [
+          "R-07-6",
+          "R-07-3",
+          "R-07-5"
+        ]
+      },
+      "category": "expired_tls_cert",
+      "diagnosed-fix": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": true,
+        "section@3": true,
+        "top": [
+          "R-07-5",
+          "R-07-7",
+          "R-07-2"
+        ]
+      },
+      "gold_sections": [
+        "R-07-5"
+      ],
+      "hard_case": null,
+      "incident_id": "INC-036"
+    },
+    {
+      "alert": {
+        "runbook@1": false,
+        "runbook@3": false,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-03-6",
+          "R-03-2",
+          "R-13-6"
+        ]
+      },
+      "alert+evidence": {
+        "runbook@1": false,
+        "runbook@3": false,
+        "section@1": false,
+        "section@3": false,
+        "top": [
+          "R-11-3",
+          "R-11-1",
+          "R-11-4"
+        ]
+      },
+      "category": "memory_leak_oom",
+      "diagnosed-fix": {
+        "runbook@1": true,
+        "runbook@3": true,
+        "section@1": false,
+        "section@3": true,
+        "top": [
+          "R-05-3",
+          "R-05-5",
+          "R-05-7"
+        ]
+      },
+      "gold_sections": [
+        "R-05-5"
+      ],
+      "hard_case": null,
+      "incident_id": "INC-037"
+    }
+  ],
+  "split": "dev",
+  "summary": {
+    "all": {
+      "alert": {
+        "runbook@1": 0.067,
+        "runbook@3": 0.2,
+        "section@1": 0.0,
+        "section@3": 0.0
+      },
+      "alert+evidence": {
+        "runbook@1": 0.667,
+        "runbook@3": 0.733,
+        "section@1": 0.0,
+        "section@3": 0.267
+      },
+      "diagnosed-fix": {
+        "runbook@1": 1.0,
+        "runbook@3": 1.0,
+        "section@1": 0.467,
+        "section@3": 0.867
+      },
+      "n": 15
+    },
+    "logs_only": {
+      "alert": {
+        "runbook@1": 0.0,
+        "runbook@3": 0.0,
+        "section@1": 0.0,
+        "section@3": 0.0
+      },
+      "alert+evidence": {
+        "runbook@1": 0.0,
+        "runbook@3": 0.0,
+        "section@1": 0.0,
+        "section@3": 0.0
+      },
+      "diagnosed-fix": {
+        "runbook@1": 1.0,
+        "runbook@3": 1.0,
+        "section@1": 0.0,
+        "section@3": 0.5
+      },
+      "n": 2
+    },
+    "metrics_only": {
+      "alert": {
+        "runbook@1": 0.0,
+        "runbook@3": 0.0,
+        "section@1": 0.0,
+        "section@3": 0.0
+      },
+      "alert+evidence": {
+        "runbook@1": 1.0,
+        "runbook@3": 1.0,
+        "section@1": 0.0,
+        "section@3": 0.0
+      },
+      "diagnosed-fix": {
+        "runbook@1": 1.0,
+        "runbook@3": 1.0,
+        "section@1": 0.0,
+        "section@3": 1.0
+      },
+      "n": 1
+    },
+    "overlapping": {
+      "alert": {
+        "runbook@1": 0.0,
+        "runbook@3": 1.0,
+        "section@1": 0.0,
+        "section@3": 0.0
+      },
+      "alert+evidence": {
+        "runbook@1": 1.0,
+        "runbook@3": 1.0,
+        "section@1": 0.0,
+        "section@3": 1.0
+      },
+      "diagnosed-fix": {
+        "runbook@1": 1.0,
+        "runbook@3": 1.0,
+        "section@1": 1.0,
+        "section@3": 1.0
+      },
+      "n": 1
+    },
+    "runbook_needed": {
+      "alert": {
+        "runbook@1": 1.0,
+        "runbook@3": 1.0,
+        "section@1": 0.0,
+        "section@3": 0.0
+      },
+      "alert+evidence": {
+        "runbook@1": 1.0,
+        "runbook@3": 1.0,
+        "section@1": 0.0,
+        "section@3": 0.0
+      },
+      "diagnosed-fix": {
+        "runbook@1": 1.0,
+        "runbook@3": 1.0,
+        "section@1": 0.0,
+        "section@3": 1.0
+      },
+      "n": 1
+    },
+    "standard": {
+      "alert": {
+        "runbook@1": 0.0,
+        "runbook@3": 0.1,
+        "section@1": 0.0,
+        "section@3": 0.0
+      },
+      "alert+evidence": {
+        "runbook@1": 0.7,
+        "runbook@3": 0.8,
+        "section@1": 0.0,
+        "section@3": 0.3
+      },
+      "diagnosed-fix": {
+        "runbook@1": 1.0,
+        "runbook@3": 1.0,
+        "section@1": 0.6,
+        "section@3": 0.9
+      },
+      "n": 10
+    }
+  }
+}
