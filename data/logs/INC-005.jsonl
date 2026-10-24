@@ -417,7 +417,7 @@
 {"level": "INFO", "line_id": "L-0417", "message": "reconciliation matched ref=202608015817 ledger_entry=144940", "service": "payments", "ts": "2026-07-28T12:21:27Z"}
 {"level": "INFO", "line_id": "L-0418", "message": "GET /api/v1/stock status=200 duration_ms=46 trace=a55fb41316f4a59f", "service": "inventory", "ts": "2026-07-28T12:21:55Z"}
 {"level": "INFO", "line_id": "L-0419", "message": "session refreshed session=301de91364d4 trace=fa081d1bd9e4dd72", "service": "auth", "ts": "2026-07-28T12:22:18Z"}
-{"level": "INFO", "line_id": "L-0420", "message": "kyc verification passed id=9826 6101 1927 status=ok", "service": "auth", "ts": "2026-07-28T12:22:23Z"}
+{"level": "INFO", "line_id": "L-0420", "message": "kyc verification passed id=9826 6101 1922 status=ok", "service": "auth", "ts": "2026-07-28T12:22:23Z"}
 {"level": "INFO", "line_id": "L-0421", "message": "cart loaded cart_id=c-621022 items=1 request_id=req-0865de45", "service": "checkout", "ts": "2026-07-28T12:22:33Z"}
 {"level": "INFO", "line_id": "L-0422", "message": "config heartbeat ok revision=346", "service": "notifications", "ts": "2026-07-28T12:24:09Z"}
 {"level": "INFO", "line_id": "L-0423", "message": "gc pause 50ms heap_used=55%", "service": "checkout", "ts": "2026-07-28T12:24:57Z"}

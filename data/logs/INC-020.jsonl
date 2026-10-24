@@ -265,7 +265,7 @@
 {"level": "INFO", "line_id": "L-0265", "message": "email job dequeued job=4af55fa4e2 template=order_confirmation", "service": "notifications", "ts": "2026-06-22T07:34:57Z"}
 {"level": "INFO", "line_id": "L-0266", "message": "POST /api/v1/checkout status=200 duration_ms=401 trace=8f65a7a269d0fcec", "service": "checkout", "ts": "2026-06-22T07:35:10Z"}
 {"level": "INFO", "line_id": "L-0267", "message": "healthcheck ok latency_ms=1", "service": "search", "ts": "2026-06-22T07:35:15Z"}
-{"level": "INFO", "line_id": "L-0268", "message": "payout kyc check aadhaar=6100 5127 6975 result=match", "service": "payments", "ts": "2026-06-22T07:35:20Z"}
+{"level": "INFO", "line_id": "L-0268", "message": "payout kyc check aadhaar=6100 5127 6970 result=match", "service": "payments", "ts": "2026-06-22T07:35:20Z"}
 {"level": "INFO", "line_id": "L-0269", "message": "token issued sub=u-151818 ttl=3600 request_id=req-60aecf47", "service": "auth", "ts": "2026-06-22T07:36:04Z"}
 {"level": "WARN", "line_id": "L-0270", "message": "gateway latency elevated 553ms (within SLO)", "service": "payments", "ts": "2026-06-22T07:36:10Z"}
 {"level": "INFO", "line_id": "L-0271", "message": "reconciliation matched ref=202603822543 ledger_entry=450770", "service": "payments", "ts": "2026-06-22T07:36:18Z"}
@@ -398,7 +398,7 @@
 {"level": "INFO", "line_id": "L-0398", "message": "reservation released sku=SKU-2343 qty=2", "service": "inventory", "ts": "2026-06-22T08:08:27Z"}
 {"level": "INFO", "line_id": "L-0399", "message": "template rendered name=shipping_update version=v1.2.5", "service": "notifications", "ts": "2026-06-22T08:08:57Z"}
 {"level": "INFO", "line_id": "L-0400", "message": "gc pause 53ms heap_used=60%", "service": "payments", "ts": "2026-06-22T08:09:48Z"}
-{"level": "INFO", "line_id": "L-0401", "message": "payout kyc check aadhaar=5023 7146 5767 result=match", "service": "payments", "ts": "2026-06-22T08:10:23Z"}
+{"level": "INFO", "line_id": "L-0401", "message": "payout kyc check aadhaar=5023 7146 5765 result=match", "service": "payments", "ts": "2026-06-22T08:10:23Z"}
 {"level": "INFO", "line_id": "L-0402", "message": "POST /api/v1/payments status=200 duration_ms=125 trace=19c7ae04db3f153e", "service": "payments", "ts": "2026-06-22T08:10:45Z"}
 {"level": "INFO", "line_id": "L-0403", "message": "healthcheck ok latency_ms=6", "service": "payments", "ts": "2026-06-22T08:11:03Z"}
 {"level": "INFO", "line_id": "L-0404", "message": "coupon applied code=FEST11 discount_pct=18", "service": "checkout", "ts": "2026-06-22T08:11:12Z"}

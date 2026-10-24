@@ -446,7 +446,7 @@
 {"level": "INFO", "line_id": "L-0446", "message": "config heartbeat ok revision=487", "service": "search", "ts": "2026-06-15T10:28:04Z"}
 {"level": "WARN", "line_id": "L-0447", "message": "gateway latency elevated 672ms (within SLO)", "service": "payments", "ts": "2026-06-15T10:28:29Z"}
 {"level": "INFO", "line_id": "L-0448", "message": "config heartbeat ok revision=601", "service": "inventory", "ts": "2026-06-15T10:29:45Z"}
-{"level": "INFO", "line_id": "L-0449", "message": "payout kyc check aadhaar=826352941154 result=match", "service": "payments", "ts": "2026-06-15T10:29:47Z"}
+{"level": "INFO", "line_id": "L-0449", "message": "payout kyc check aadhaar=826352941153 result=match", "service": "payments", "ts": "2026-06-15T10:29:47Z"}
 {"level": "INFO", "line_id": "L-0450", "message": "shipment dispatched ref=202609231250 carrier=express parcels=4", "service": "inventory", "ts": "2026-06-15T10:29:56Z"}
 {"level": "INFO", "line_id": "L-0451", "message": "config heartbeat ok revision=534", "service": "payments", "ts": "2026-06-15T10:30:26Z"}
 {"level": "INFO", "line_id": "L-0452", "message": "metrics scrape served bytes=23726", "service": "checkout", "ts": "2026-06-15T10:30:28Z"}
@@ -491,7 +491,7 @@
 {"level": "INFO", "line_id": "L-0491", "message": "reconciliation matched ref=202605576191 ledger_entry=181070", "service": "payments", "ts": "2026-06-15T10:41:34Z"}
 {"level": "INFO", "line_id": "L-0492", "message": "config heartbeat ok revision=486", "service": "auth", "ts": "2026-06-15T10:42:25Z"}
 {"level": "INFO", "line_id": "L-0493", "message": "healthcheck ok latency_ms=4", "service": "checkout", "ts": "2026-06-15T10:43:02Z"}
-{"level": "INFO", "line_id": "L-0494", "message": "kyc verification passed id=627284353769 status=ok", "service": "auth", "ts": "2026-06-15T10:43:29Z"}
+{"level": "INFO", "line_id": "L-0494", "message": "kyc verification passed id=627284353760 status=ok", "service": "auth", "ts": "2026-06-15T10:43:29Z"}
 {"level": "INFO", "line_id": "L-0495", "message": "healthcheck ok latency_ms=1", "service": "search", "ts": "2026-06-15T10:43:41Z"}
 {"level": "INFO", "line_id": "L-0496", "message": "token issued sub=u-448034 ttl=3600 request_id=req-14676bac", "service": "auth", "ts": "2026-06-15T10:43:48Z"}
 {"level": "INFO", "line_id": "L-0497", "message": "password policy check passed", "service": "auth", "ts": "2026-06-15T10:45:01Z"}

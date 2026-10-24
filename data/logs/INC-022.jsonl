@@ -21,7 +21,7 @@
 {"level": "INFO", "line_id": "L-0021", "message": "GET /api/v1/search status=200 hits=339 duration_ms=89 trace=387a9eafff0b3d74", "service": "search", "ts": "2026-09-01T19:11:51Z"}
 {"level": "INFO", "line_id": "L-0022", "message": "config heartbeat ok revision=662", "service": "auth", "ts": "2026-09-01T19:11:59Z"}
 {"level": "INFO", "line_id": "L-0023", "message": "healthcheck ok latency_ms=5", "service": "payments", "ts": "2026-09-01T19:12:18Z"}
-{"level": "INFO", "line_id": "L-0024", "message": "kyc verification passed id=8492 2399 3171 status=ok", "service": "auth", "ts": "2026-09-01T19:12:31Z"}
+{"level": "INFO", "line_id": "L-0024", "message": "kyc verification passed id=8492 2399 3176 status=ok", "service": "auth", "ts": "2026-09-01T19:12:31Z"}
 {"level": "INFO", "line_id": "L-0025", "message": "password policy check passed", "service": "auth", "ts": "2026-09-01T19:12:38Z"}
 {"level": "INFO", "line_id": "L-0026", "message": "3ds challenge completed txn=TXN-906580", "service": "payments", "ts": "2026-09-01T19:12:43Z"}
 {"level": "INFO", "line_id": "L-0027", "message": "index refresh completed shard=1 docs=101454", "service": "search", "ts": "2026-09-01T19:12:52Z"}
@@ -363,7 +363,7 @@
 {"level": "ERROR", "line_id": "L-0363", "message": "upstream returned 503 for /api/v1/cart request_id=req-3f9f88d6", "service": "inventory", "ts": "2026-09-01T21:00:19Z"}
 {"level": "INFO", "line_id": "L-0364", "message": "config heartbeat ok revision=743", "service": "inventory", "ts": "2026-09-01T21:00:38Z"}
 {"level": "ERROR", "line_id": "L-0365", "message": "request failed status=502 path=/api/v1/cart request_id=req-1b31d645", "service": "inventory", "ts": "2026-09-01T21:00:55Z"}
-{"level": "INFO", "line_id": "L-0366", "message": "payout kyc check aadhaar=3740 0528 4270 result=match", "service": "payments", "ts": "2026-09-01T21:01:00Z"}
+{"level": "INFO", "line_id": "L-0366", "message": "payout kyc check aadhaar=3740 0528 4273 result=match", "service": "payments", "ts": "2026-09-01T21:01:00Z"}
 {"level": "INFO", "line_id": "L-0367", "message": "warehouse sync batch=7777 rows=3757 sha=9df9fdf", "service": "inventory", "ts": "2026-09-01T21:01:25Z"}
 {"level": "INFO", "line_id": "L-0368", "message": "config heartbeat ok revision=709", "service": "search", "ts": "2026-09-01T21:01:55Z"}
 {"level": "INFO", "line_id": "L-0369", "message": "warehouse sync batch=1388 rows=2518 sha=76cc877", "service": "inventory", "ts": "2026-09-01T21:01:59Z"}

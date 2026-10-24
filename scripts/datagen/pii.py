@@ -8,6 +8,10 @@ redaction layer can be scored against ground truth.
 import random
 import string
 
+from incidentiq.checksums import luhn_check_digit, luhn_valid, verhoeff_check_digit
+
+__all__ = ["PII_LINES", "PII_TYPES", "generate", "luhn_valid"]
+
 PII_TYPES = [
     "email", "phone", "name", "card", "aadhaar", "ip",
     "secret_password", "secret_token", "secret_apikey", "secret_aws",
@@ -24,29 +28,6 @@ _WORDS = ["Maple", "Tiger", "Orbit", "Cobalt", "Monsoon", "Falcon", "Pepper", "H
 def _digits(rng: random.Random, n: int) -> str:
     return "".join(rng.choice(string.digits) for _ in range(n))
 
-
-def _luhn_check_digit(partial: str) -> str:
-    total = 0
-    for i, ch in enumerate(reversed(partial)):
-        d = int(ch)
-        if i % 2 == 0:  # these positions get doubled once the check digit is appended
-            d *= 2
-            if d > 9:
-                d -= 9
-        total += d
-    return str((10 - total % 10) % 10)
-
-
-def luhn_valid(number: str) -> bool:
-    digits = [int(c) for c in number if c.isdigit()]
-    total = 0
-    for i, d in enumerate(reversed(digits)):
-        if i % 2 == 1:
-            d *= 2
-            if d > 9:
-                d -= 9
-        total += d
-    return total % 10 == 0
 
 
 def generate(kind: str, rng: random.Random) -> str:
@@ -70,14 +51,18 @@ def generate(kind: str, rng: random.Random) -> str:
         return f"{rng.choice(_FIRST)} {rng.choice(_LAST)}"
     if kind == "card":
         partial = rng.choice(["4111", "4539", "5500", "5425"]) + _digits(rng, 11)
-        number = partial + _luhn_check_digit(partial)
+        number = partial + luhn_check_digit(partial)
         style = rng.randint(0, 2)
         if style == 0:
             return number
         sep = " " if style == 1 else "-"
         return sep.join(number[i:i + 4] for i in range(0, 16, 4))
     if kind == "aadhaar":
-        number = str(rng.randint(2, 9)) + _digits(rng, 11)
+        # Real Aadhaar numbers end in a Verhoeff check digit, so these do too. The random draws
+        # are the same as before (11 digits, the last discarded) to keep the rest of the
+        # generated data unchanged.
+        body = str(rng.randint(2, 9)) + _digits(rng, 11)[:10]
+        number = body + verhoeff_check_digit(body)
         return number if rng.random() < 0.4 else " ".join(number[i:i + 4] for i in (0, 4, 8))
     if kind == "ip":
         if rng.random() < 0.3:

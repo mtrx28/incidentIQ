@@ -305,7 +305,7 @@
 {"level": "ERROR", "line_id": "L-0305", "message": "request failed status=502 path=/api/v1/pay request_id=req-2fa8f39a", "service": "inventory", "ts": "2026-06-10T15:47:46Z"}
 {"level": "WARN", "line_id": "L-0306", "message": "slow request took 468ms path=/api/v1/search", "service": "search", "ts": "2026-06-10T15:47:50Z"}
 {"level": "ERROR", "line_id": "L-0307", "message": "upstream returned 503 for /api/v1/pay request_id=req-31f879fd", "service": "inventory", "ts": "2026-06-10T15:47:54Z"}
-{"level": "INFO", "line_id": "L-0308", "message": "payout kyc check aadhaar=5819 0257 3559 result=match", "service": "payments", "ts": "2026-06-10T15:47:58Z"}
+{"level": "INFO", "line_id": "L-0308", "message": "payout kyc check aadhaar=5819 0257 3555 result=match", "service": "payments", "ts": "2026-06-10T15:47:58Z"}
 {"level": "INFO", "line_id": "L-0309", "message": "token validated sub=u-318049 latency_ms=8", "service": "auth", "ts": "2026-06-10T15:48:03Z"}
 {"level": "ERROR", "line_id": "L-0310", "message": "upstream returned 503 for /api/v1/pay request_id=req-aa62589b", "service": "inventory", "ts": "2026-06-10T15:48:05Z"}
 {"level": "ERROR", "line_id": "L-0311", "message": "upstream returned 503 for /api/v1/pay request_id=req-c1504b15", "service": "inventory", "ts": "2026-06-10T15:48:36Z"}

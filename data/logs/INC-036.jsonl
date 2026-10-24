@@ -64,7 +64,7 @@
 {"level": "INFO", "line_id": "L-0064", "message": "healthcheck ok latency_ms=3", "service": "auth", "ts": "2026-08-15T14:16:43Z"}
 {"level": "INFO", "line_id": "L-0065", "message": "metrics scrape served bytes=84206", "service": "payments", "ts": "2026-08-15T14:17:08Z"}
 {"level": "INFO", "line_id": "L-0066", "message": "POST /api/v1/payments status=200 duration_ms=220 trace=ea9b66cbd1fbfad9", "service": "payments", "ts": "2026-08-15T14:17:34Z"}
-{"level": "INFO", "line_id": "L-0067", "message": "kyc verification passed id=241227090999 status=ok", "service": "auth", "ts": "2026-08-15T14:18:36Z"}
+{"level": "INFO", "line_id": "L-0067", "message": "kyc verification passed id=241227090996 status=ok", "service": "auth", "ts": "2026-08-15T14:18:36Z"}
 {"level": "INFO", "line_id": "L-0068", "message": "template rendered name=shipping_update version=v4.8.8", "service": "notifications", "ts": "2026-08-15T14:18:47Z"}
 {"level": "INFO", "line_id": "L-0069", "message": "POST /api/v1/checkout status=200 duration_ms=395 trace=c16f30b2b82f27d2", "service": "checkout", "ts": "2026-08-15T14:18:57Z"}
 {"level": "INFO", "line_id": "L-0070", "message": "healthcheck ok latency_ms=2", "service": "search", "ts": "2026-08-15T14:19:18Z"}

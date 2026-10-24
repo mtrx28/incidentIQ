@@ -474,7 +474,7 @@
 {"level": "INFO", "line_id": "L-0474", "message": "metrics scrape served bytes=68577", "service": "checkout", "ts": "2026-04-07T12:38:06Z"}
 {"level": "INFO", "line_id": "L-0475", "message": "order created order_ref=202606075523 total_inr=14076", "service": "checkout", "ts": "2026-04-07T12:38:07Z"}
 {"level": "INFO", "line_id": "L-0476", "message": "token issued sub=u-560924 ttl=3600 request_id=req-64d3c333", "service": "auth", "ts": "2026-04-07T12:38:16Z"}
-{"level": "INFO", "line_id": "L-0477", "message": "payout kyc check aadhaar=536607198578 result=match", "service": "payments", "ts": "2026-04-07T12:38:18Z"}
+{"level": "INFO", "line_id": "L-0477", "message": "payout kyc check aadhaar=536607198575 result=match", "service": "payments", "ts": "2026-04-07T12:38:18Z"}
 {"level": "INFO", "line_id": "L-0478", "message": "cart loaded cart_id=c-190402 items=4 request_id=req-13e64349", "service": "checkout", "ts": "2026-04-07T12:38:55Z"}
 {"level": "INFO", "line_id": "L-0479", "message": "email job dequeued job=16a5d9fca9 template=order_confirmation", "service": "notifications", "ts": "2026-04-07T12:39:02Z"}
 {"level": "INFO", "line_id": "L-0480", "message": "coupon applied code=FEST39 discount_pct=13", "service": "checkout", "ts": "2026-04-07T12:39:45Z"}

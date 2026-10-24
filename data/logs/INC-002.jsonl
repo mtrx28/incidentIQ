@@ -433,7 +433,7 @@
 {"level": "INFO", "line_id": "L-0433", "message": "config heartbeat ok revision=345", "service": "notifications", "ts": "2026-04-26T10:17:03Z"}
 {"level": "INFO", "line_id": "L-0434", "message": "gc pause 22ms heap_used=55%", "service": "auth", "ts": "2026-04-26T10:17:07Z"}
 {"level": "INFO", "line_id": "L-0435", "message": "ranking model loaded version=v9.6.9 sha=0255eab", "service": "search", "ts": "2026-04-26T10:17:27Z"}
-{"level": "INFO", "line_id": "L-0436", "message": "kyc verification passed id=817200635515 status=ok", "service": "auth", "ts": "2026-04-26T10:17:39Z"}
+{"level": "INFO", "line_id": "L-0436", "message": "kyc verification passed id=817200635513 status=ok", "service": "auth", "ts": "2026-04-26T10:17:39Z"}
 {"level": "INFO", "line_id": "L-0437", "message": "gc pause 29ms heap_used=54%", "service": "inventory", "ts": "2026-04-26T10:17:51Z"}
 {"level": "WARN", "line_id": "L-0438", "message": "slow request took 636ms path=/api/v1/stock/bulk", "service": "inventory", "ts": "2026-04-26T10:18:34Z"}
 {"level": "INFO", "line_id": "L-0439", "message": "healthcheck ok latency_ms=3", "service": "search", "ts": "2026-04-26T10:19:08Z"}
@@ -538,7 +538,7 @@
 {"level": "WARN", "line_id": "L-0538", "message": "slow ldap lookup took 738ms", "service": "auth", "ts": "2026-04-26T10:54:46Z"}
 {"level": "INFO", "line_id": "L-0539", "message": "stock level query sku=SKU-6240 on_hand=532", "service": "inventory", "ts": "2026-04-26T10:54:46Z"}
 {"level": "INFO", "line_id": "L-0540", "message": "gc pause 14ms heap_used=56%", "service": "search", "ts": "2026-04-26T10:55:10Z"}
-{"level": "INFO", "line_id": "L-0541", "message": "payout kyc check aadhaar=2931 2613 9941 result=match", "service": "payments", "ts": "2026-04-26T10:55:15Z"}
+{"level": "INFO", "line_id": "L-0541", "message": "payout kyc check aadhaar=2931 2613 9948 result=match", "service": "payments", "ts": "2026-04-26T10:55:15Z"}
 {"level": "INFO", "line_id": "L-0542", "message": "warehouse sync batch=4142 rows=4701 sha=c537a2b", "service": "inventory", "ts": "2026-04-26T10:55:17Z"}
 {"level": "INFO", "line_id": "L-0543", "message": "metrics scrape served bytes=44454", "service": "notifications", "ts": "2026-04-26T10:55:20Z"}
 {"level": "WARN", "line_id": "L-0544", "message": "slow ldap lookup took 852ms", "service": "auth", "ts": "2026-04-26T10:55:25Z"}

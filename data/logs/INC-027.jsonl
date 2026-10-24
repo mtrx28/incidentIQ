@@ -245,7 +245,7 @@
 {"level": "INFO", "line_id": "L-0245", "message": "settlement batch closed batch=6536 txns=657", "service": "payments", "ts": "2026-05-20T09:29:39Z"}
 {"level": "INFO", "line_id": "L-0246", "message": "config heartbeat ok revision=532", "service": "auth", "ts": "2026-05-20T09:30:17Z"}
 {"level": "INFO", "line_id": "L-0247", "message": "stock level query sku=SKU-8044 on_hand=180", "service": "inventory", "ts": "2026-05-20T09:30:24Z"}
-{"level": "INFO", "line_id": "L-0248", "message": "payout kyc check aadhaar=3222 2002 8518 result=match", "service": "payments", "ts": "2026-05-20T09:30:44Z"}
+{"level": "INFO", "line_id": "L-0248", "message": "payout kyc check aadhaar=3222 2002 8515 result=match", "service": "payments", "ts": "2026-05-20T09:30:44Z"}
 {"level": "INFO", "line_id": "L-0249", "message": "token validated sub=u-139947 latency_ms=2", "service": "auth", "ts": "2026-05-20T09:31:22Z"}
 {"level": "INFO", "line_id": "L-0250", "message": "order created order_ref=202607196253 total_inr=20385", "service": "checkout", "ts": "2026-05-20T09:32:06Z"}
 {"level": "INFO", "line_id": "L-0251", "message": "gc pause 54ms heap_used=52%", "service": "auth", "ts": "2026-05-20T09:32:16Z"}

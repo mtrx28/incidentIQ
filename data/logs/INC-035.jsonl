@@ -476,7 +476,7 @@
 {"level": "WARN", "line_id": "L-0476", "message": "slow request took 437ms path=/api/v1/stock/bulk", "service": "inventory", "ts": "2026-03-26T04:37:08Z"}
 {"level": "INFO", "line_id": "L-0477", "message": "autocomplete served prefix_len=6 duration_ms=5", "service": "search", "ts": "2026-03-26T04:37:21Z"}
 {"level": "INFO", "line_id": "L-0478", "message": "POST /api/v1/checkout status=200 duration_ms=112 trace=393f32b7a93cfcc7", "service": "checkout", "ts": "2026-03-26T04:37:30Z"}
-{"level": "INFO", "line_id": "L-0479", "message": "kyc verification passed id=255603917355 status=ok", "service": "auth", "ts": "2026-03-26T04:38:36Z"}
+{"level": "INFO", "line_id": "L-0479", "message": "kyc verification passed id=255603917351 status=ok", "service": "auth", "ts": "2026-03-26T04:38:36Z"}
 {"level": "INFO", "line_id": "L-0480", "message": "metrics scrape served bytes=88642", "service": "search", "ts": "2026-03-26T04:38:44Z"}
 {"level": "WARN", "line_id": "L-0481", "message": "slow request took 411ms path=/api/v1/stock/bulk", "service": "inventory", "ts": "2026-03-26T04:39:26Z"}
 {"level": "INFO", "line_id": "L-0482", "message": "config heartbeat ok revision=459", "service": "inventory", "ts": "2026-03-26T04:40:16Z"}

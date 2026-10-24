@@ -101,7 +101,7 @@
 {"level": "INFO", "line_id": "L-0101", "message": "healthcheck ok latency_ms=4", "service": "search", "ts": "2026-04-10T10:36:19Z"}
 {"level": "INFO", "line_id": "L-0102", "message": "template rendered name=shipping_update version=v6.9.8", "service": "notifications", "ts": "2026-04-10T10:36:40Z"}
 {"level": "INFO", "line_id": "L-0103", "message": "template rendered name=shipping_update version=v9.0.5", "service": "notifications", "ts": "2026-04-10T10:37:37Z"}
-{"level": "INFO", "line_id": "L-0104", "message": "payout kyc check aadhaar=4324 5098 7735 result=match", "service": "payments", "ts": "2026-04-10T10:37:49Z"}
+{"level": "INFO", "line_id": "L-0104", "message": "payout kyc check aadhaar=4324 5098 7730 result=match", "service": "payments", "ts": "2026-04-10T10:37:49Z"}
 {"level": "INFO", "line_id": "L-0105", "message": "config heartbeat ok revision=622", "service": "checkout", "ts": "2026-04-10T10:39:06Z"}
 {"level": "INFO", "line_id": "L-0106", "message": "metrics scrape served bytes=32804", "service": "notifications", "ts": "2026-04-10T10:39:11Z"}
 {"level": "INFO", "line_id": "L-0107", "message": "metrics scrape served bytes=65441", "service": "notifications", "ts": "2026-04-10T10:39:28Z"}

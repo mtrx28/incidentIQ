@@ -517,4 +517,4 @@
 {"level": "INFO", "line_id": "L-0517", "message": "gc pause 57ms heap_used=54%", "service": "search", "ts": "2026-05-07T21:58:39Z"}
 {"level": "WARN", "line_id": "L-0518", "message": "slow ldap lookup took 598ms", "service": "auth", "ts": "2026-05-07T21:58:49Z"}
 {"level": "INFO", "line_id": "L-0519", "message": "config heartbeat ok revision=198", "service": "inventory", "ts": "2026-05-07T21:59:00Z"}
-{"level": "INFO", "line_id": "L-0520", "message": "kyc verification passed id=571286856843 status=ok", "service": "auth", "ts": "2026-05-07T21:59:32Z"}
+{"level": "INFO", "line_id": "L-0520", "message": "kyc verification passed id=571286856849 status=ok", "service": "auth", "ts": "2026-05-07T21:59:32Z"}

@@ -3,7 +3,7 @@
 {"level": "INFO", "line_id": "L-0003", "message": "gc pause 27ms heap_used=41%", "service": "checkout", "ts": "2026-05-16T20:02:47Z"}
 {"level": "INFO", "line_id": "L-0004", "message": "autocomplete served prefix_len=4 duration_ms=16", "service": "search", "ts": "2026-05-16T20:02:48Z"}
 {"level": "INFO", "line_id": "L-0005", "message": "healthcheck ok latency_ms=5", "service": "inventory", "ts": "2026-05-16T20:02:52Z"}
-{"level": "INFO", "line_id": "L-0006", "message": "kyc verification passed id=6524 9956 0253 status=ok", "service": "auth", "ts": "2026-05-16T20:03:08Z"}
+{"level": "INFO", "line_id": "L-0006", "message": "kyc verification passed id=6524 9956 0254 status=ok", "service": "auth", "ts": "2026-05-16T20:03:08Z"}
 {"level": "INFO", "line_id": "L-0007", "message": "healthcheck ok latency_ms=4", "service": "payments", "ts": "2026-05-16T20:03:12Z"}
 {"level": "INFO", "line_id": "L-0008", "message": "metrics scrape served bytes=62409", "service": "search", "ts": "2026-05-16T20:03:30Z"}
 {"level": "INFO", "line_id": "L-0009", "message": "metrics scrape served bytes=72999", "service": "notifications", "ts": "2026-05-16T20:03:40Z"}
@@ -11,7 +11,7 @@
 {"level": "INFO", "line_id": "L-0011", "message": "gc pause 51ms heap_used=60%", "service": "inventory", "ts": "2026-05-16T20:04:35Z"}
 {"level": "INFO", "line_id": "L-0012", "message": "healthcheck ok latency_ms=4", "service": "search", "ts": "2026-05-16T20:04:43Z"}
 {"level": "INFO", "line_id": "L-0013", "message": "config heartbeat ok revision=901", "service": "payments", "ts": "2026-05-16T20:04:45Z"}
-{"level": "INFO", "line_id": "L-0014", "message": "payout kyc check aadhaar=3845 3213 5650 result=match", "service": "payments", "ts": "2026-05-16T20:05:13Z"}
+{"level": "INFO", "line_id": "L-0014", "message": "payout kyc check aadhaar=3845 3213 5653 result=match", "service": "payments", "ts": "2026-05-16T20:05:13Z"}
 {"level": "WARN", "line_id": "L-0015", "message": "slow ldap lookup took 619ms", "service": "auth", "ts": "2026-05-16T20:05:37Z"}
 {"level": "INFO", "line_id": "L-0016", "message": "gc pause 57ms heap_used=45%", "service": "inventory", "ts": "2026-05-16T20:06:02Z"}
 {"level": "INFO", "line_id": "L-0017", "message": "metrics scrape served bytes=72100", "service": "search", "ts": "2026-05-16T20:06:56Z"}

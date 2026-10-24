@@ -68,7 +68,7 @@
 {"level": "INFO", "line_id": "L-0068", "message": "template rendered name=shipping_update version=v7.8.9", "service": "notifications", "ts": "2026-08-23T11:22:27Z"}
 {"level": "INFO", "line_id": "L-0069", "message": "coupon applied code=FEST24 discount_pct=21", "service": "checkout", "ts": "2026-08-23T11:23:11Z"}
 {"level": "INFO", "line_id": "L-0070", "message": "inventory reserved sku=SKU-2836 qty=3", "service": "checkout", "ts": "2026-08-23T11:24:03Z"}
-{"level": "INFO", "line_id": "L-0071", "message": "payout kyc check aadhaar=428560009914 result=match", "service": "payments", "ts": "2026-08-23T11:24:07Z"}
+{"level": "INFO", "line_id": "L-0071", "message": "payout kyc check aadhaar=428560009915 result=match", "service": "payments", "ts": "2026-08-23T11:24:07Z"}
 {"level": "INFO", "line_id": "L-0072", "message": "gc pause 55ms heap_used=54%", "service": "checkout", "ts": "2026-08-23T11:24:35Z"}
 {"level": "INFO", "line_id": "L-0073", "message": "token validated sub=u-671494 latency_ms=3", "service": "auth", "ts": "2026-08-23T11:25:18Z"}
 {"level": "INFO", "line_id": "L-0074", "message": "metrics scrape served bytes=31804", "service": "checkout", "ts": "2026-08-23T11:25:28Z"}
@@ -394,7 +394,7 @@
 {"level": "INFO", "line_id": "L-0394", "message": "gc pause 36ms heap_used=42%", "service": "inventory", "ts": "2026-08-23T13:06:01Z"}
 {"level": "INFO", "line_id": "L-0395", "message": "index refresh completed shard=0 docs=878462", "service": "search", "ts": "2026-08-23T13:06:03Z"}
 {"level": "INFO", "line_id": "L-0396", "message": "gateway response code=00 gateway_ref=ef55ad730cbf", "service": "payments", "ts": "2026-08-23T13:06:13Z"}
-{"level": "INFO", "line_id": "L-0397", "message": "kyc verification passed id=6125 0676 6025 status=ok", "service": "auth", "ts": "2026-08-23T13:06:58Z"}
+{"level": "INFO", "line_id": "L-0397", "message": "kyc verification passed id=6125 0676 6029 status=ok", "service": "auth", "ts": "2026-08-23T13:06:58Z"}
 {"level": "INFO", "line_id": "L-0398", "message": "shipment dispatched ref=202609457639 carrier=express parcels=2", "service": "inventory", "ts": "2026-08-23T13:07:12Z"}
 {"level": "INFO", "line_id": "L-0399", "message": "email job dequeued job=812a721cc7 template=order_confirmation", "service": "notifications", "ts": "2026-08-23T13:07:31Z"}
 {"level": "WARN", "line_id": "L-0400", "message": "slow request took 655ms path=/api/v1/search", "service": "search", "ts": "2026-08-23T13:08:03Z"}

@@ -34,7 +34,7 @@
 {"level": "INFO", "line_id": "L-0034", "message": "autocomplete served prefix_len=4 duration_ms=16", "service": "search", "ts": "2026-03-08T20:12:00Z"}
 {"level": "INFO", "line_id": "L-0035", "message": "gc pause 53ms heap_used=50%", "service": "notifications", "ts": "2026-03-08T20:12:09Z"}
 {"level": "WARN", "line_id": "L-0036", "message": "slow request took 325ms path=/api/v1/search", "service": "search", "ts": "2026-03-08T20:12:22Z"}
-{"level": "INFO", "line_id": "L-0037", "message": "payout kyc check aadhaar=7899 8642 8973 result=match", "service": "payments", "ts": "2026-03-08T20:12:25Z"}
+{"level": "INFO", "line_id": "L-0037", "message": "payout kyc check aadhaar=7899 8642 8974 result=match", "service": "payments", "ts": "2026-03-08T20:12:25Z"}
 {"level": "INFO", "line_id": "L-0038", "message": "gc pause 51ms heap_used=43%", "service": "notifications", "ts": "2026-03-08T20:12:33Z"}
 {"level": "INFO", "line_id": "L-0039", "message": "config heartbeat ok revision=617", "service": "notifications", "ts": "2026-03-08T20:12:55Z"}
 {"level": "INFO", "line_id": "L-0040", "message": "inventory reserved sku=SKU-2838 qty=2", "service": "checkout", "ts": "2026-03-08T20:13:06Z"}

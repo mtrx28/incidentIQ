@@ -1,0 +1,409 @@
+{
+  "ablation_no_aadhaar_checksum": {
+    "config": {
+      "aadhaar_verhoeff": false
+    },
+    "false_positives": {
+      "clean_lines": {
+        "altered": 976,
+        "rate": 0.0473,
+        "total": 20656
+      },
+      "lookalikes": {
+        "hex_id": {
+          "fired_detectors": {
+            "aadhaar": 8
+          },
+          "rate": 0.0017,
+          "total": 4780,
+          "touched": 8
+        },
+        "order_ref": {
+          "fired_detectors": {
+            "aadhaar": 968
+          },
+          "rate": 1.0,
+          "total": 968,
+          "touched": 968
+        },
+        "sha": {
+          "fired_detectors": {},
+          "rate": 0.0,
+          "total": 689,
+          "touched": 0
+        },
+        "version": {
+          "fired_detectors": {},
+          "rate": 0.0,
+          "total": 746,
+          "touched": 0
+        }
+      },
+      "spurious_examples": {
+        "aadhaar": [
+          "202605898846",
+          "202603905185",
+          "202605925337",
+          "202603844806",
+          "202604953619"
+        ]
+      },
+      "spurious_findings_by_detector": {
+        "aadhaar": 976
+      }
+    },
+    "recall": {
+      "by_type": {
+        "aadhaar": {
+          "caught": 59,
+          "rate": 1.0,
+          "total": 59
+        },
+        "card": {
+          "caught": 60,
+          "rate": 1.0,
+          "total": 60
+        },
+        "email": {
+          "caught": 60,
+          "rate": 1.0,
+          "total": 60
+        },
+        "ip": {
+          "caught": 54,
+          "rate": 1.0,
+          "total": 54
+        },
+        "name": {
+          "caught": 58,
+          "rate": 1.0,
+          "total": 58
+        },
+        "phone": {
+          "caught": 61,
+          "rate": 1.0,
+          "total": 61
+        },
+        "secret_apikey": {
+          "caught": 60,
+          "rate": 1.0,
+          "total": 60
+        },
+        "secret_aws": {
+          "caught": 61,
+          "rate": 1.0,
+          "total": 61
+        },
+        "secret_password": {
+          "caught": 66,
+          "rate": 1.0,
+          "total": 66
+        },
+        "secret_token": {
+          "caught": 62,
+          "rate": 1.0,
+          "total": 62
+        }
+      },
+      "overall": {
+        "caught": 601,
+        "rate": 1.0,
+        "total": 601
+      }
+    }
+  },
+  "config": {
+    "aadhaar_verhoeff": true
+  },
+  "false_positives": {
+    "clean_lines": {
+      "altered": 119,
+      "rate": 0.0058,
+      "total": 20656
+    },
+    "lookalikes": {
+      "hex_id": {
+        "fired_detectors": {
+          "aadhaar_verhoeff": 1
+        },
+        "rate": 0.0002,
+        "total": 4780,
+        "touched": 1
+      },
+      "order_ref": {
+        "fired_detectors": {
+          "aadhaar_verhoeff": 118
+        },
+        "rate": 0.1219,
+        "total": 968,
+        "touched": 118
+      },
+      "sha": {
+        "fired_detectors": {},
+        "rate": 0.0,
+        "total": 689,
+        "touched": 0
+      },
+      "version": {
+        "fired_detectors": {},
+        "rate": 0.0,
+        "total": 746,
+        "touched": 0
+      }
+    },
+    "spurious_examples": {
+      "aadhaar_verhoeff": [
+        "202608420746",
+        "202608564942",
+        "202603842011",
+        "202605484940",
+        "202606617566"
+      ]
+    },
+    "spurious_findings_by_detector": {
+      "aadhaar_verhoeff": 119
+    }
+  },
+  "gold_log_lines": {
+    "altered": 6,
+    "examples": [
+      {
+        "incident_id": "INC-001",
+        "line_id": "L-0292",
+        "redacted_line": "Unable to acquire JDBC Connection url=jdbc:postgresql://inventory_app:[SECRET_3]@inventory-db-1:5432/inventory"
+      },
+      {
+        "incident_id": "INC-004",
+        "line_id": "L-0284",
+        "redacted_line": "outbound call failed to=inventory-service Authorization: Bearer [SECRET_5] status=timeout"
+      },
+      {
+        "incident_id": "INC-006",
+        "line_id": "L-0277",
+        "redacted_line": "Unable to acquire JDBC Connection url=jdbc:postgresql://search_app:[SECRET_4]@search-db-1:5432/search"
+      },
+      {
+        "incident_id": "INC-007",
+        "line_id": "L-0290",
+        "redacted_line": "outbound call failed to=inventory-service Authorization: Bearer [SECRET_5] status=timeout"
+      },
+      {
+        "incident_id": "INC-032",
+        "line_id": "L-0274",
+        "redacted_line": "outbound call failed to=auth-service Authorization: Bearer [SECRET_3] status=timeout"
+      }
+    ],
+    "total": 116
+  },
+  "hard_cases": {
+    "by_type": {
+      "aadhaar": {
+        "caught": 2,
+        "rate": 0.6667,
+        "total": 3
+      },
+      "card": {
+        "caught": 2,
+        "rate": 0.6667,
+        "total": 3
+      },
+      "email": {
+        "caught": 3,
+        "rate": 0.75,
+        "total": 4
+      },
+      "gov_id": {
+        "caught": 0,
+        "rate": 0.0,
+        "total": 1
+      },
+      "ip": {
+        "caught": 4,
+        "rate": 0.8,
+        "total": 5
+      },
+      "name": {
+        "caught": 1,
+        "rate": 0.2,
+        "total": 5
+      },
+      "phone": {
+        "caught": 2,
+        "rate": 0.3333,
+        "total": 6
+      },
+      "secret_apikey": {
+        "caught": 3,
+        "rate": 1.0,
+        "total": 3
+      },
+      "secret_aws": {
+        "caught": 2,
+        "rate": 1.0,
+        "total": 2
+      },
+      "secret_password": {
+        "caught": 2,
+        "rate": 0.3333,
+        "total": 6
+      },
+      "secret_token": {
+        "caught": 4,
+        "rate": 1.0,
+        "total": 4
+      }
+    },
+    "misses": [
+      {
+        "redacted_line": "callback requested on 98765 43210 for order ORD-48213",
+        "type": "phone",
+        "value": "98765 43210"
+      },
+      {
+        "redacted_line": "customer phone 09876543210 verified by agent",
+        "type": "phone",
+        "value": "09876543210"
+      },
+      {
+        "redacted_line": "delivery contact (415) 555-0132 added to shipment",
+        "type": "phone",
+        "value": "(415) 555-0132"
+      },
+      {
+        "redacted_line": "support call from +44 (0)20 7946 0958 transferred",
+        "type": "phone",
+        "value": "+44 (0)20 7946 0958"
+      },
+      {
+        "redacted_line": "Customer Priya Sharma called about a delayed refund",
+        "type": "name",
+        "value": "Priya Sharma"
+      },
+      {
+        "redacted_line": "ticket opened by Rahul Iyer regarding duplicate charge",
+        "type": "name",
+        "value": "Rahul Iyer"
+      },
+      {
+        "redacted_line": "shipping to Ananya Gupta, 14 MG Road, Pune",
+        "type": "name",
+        "value": "Ananya Gupta"
+      },
+      {
+        "redacted_line": "account holder=\"Meera Nair\" flagged for review",
+        "type": "name",
+        "value": "Meera Nair"
+      },
+      {
+        "redacted_line": "callback url contact%3Dpriya.sharma%40gmail.com",
+        "type": "email",
+        "value": "priya.sharma%40gmail.com"
+      },
+      {
+        "redacted_line": "card number 4111.1111.1111.1111 rejected by validator",
+        "type": "card",
+        "value": "4111.1111.1111.1111"
+      },
+      {
+        "redacted_line": "kyc id 2345.6789.0124 accepted",
+        "type": "aadhaar",
+        "value": "2345.6789.0124"
+      },
+      {
+        "redacted_line": "pan card ABCDE1234F submitted for payout",
+        "type": "gov_id",
+        "value": "ABCDE1234F"
+      },
+      {
+        "redacted_line": "client 2001:db8:85a3::8a2e:370:7334 connected",
+        "type": "ip",
+        "value": "2001:db8:85a3::8a2e:370:7334"
+      },
+      {
+        "redacted_line": "config dump {\"password\": \"Zebra#7781q\", \"port\": 5432}",
+        "type": "secret_password",
+        "value": "Zebra#7781q"
+      },
+      {
+        "redacted_line": "login with pwd Maple#4821x failed",
+        "type": "secret_password",
+        "value": "Maple#4821x"
+      },
+      {
+        "redacted_line": "mysql -u root -pWinter2024!x -h db-1",
+        "type": "secret_password",
+        "value": "Winter2024!x"
+      },
+      {
+        "redacted_line": "connecting to redis://:p4ssW0rdX9@redis-1:6379/0",
+        "type": "secret_password",
+        "value": "p4ssW0rdX9"
+      }
+    ],
+    "overall": {
+      "caught": 25,
+      "rate": 0.5952,
+      "total": 42
+    }
+  },
+  "misses": [],
+  "recall": {
+    "by_type": {
+      "aadhaar": {
+        "caught": 59,
+        "rate": 1.0,
+        "total": 59
+      },
+      "card": {
+        "caught": 60,
+        "rate": 1.0,
+        "total": 60
+      },
+      "email": {
+        "caught": 60,
+        "rate": 1.0,
+        "total": 60
+      },
+      "ip": {
+        "caught": 54,
+        "rate": 1.0,
+        "total": 54
+      },
+      "name": {
+        "caught": 58,
+        "rate": 1.0,
+        "total": 58
+      },
+      "phone": {
+        "caught": 61,
+        "rate": 1.0,
+        "total": 61
+      },
+      "secret_apikey": {
+        "caught": 60,
+        "rate": 1.0,
+        "total": 60
+      },
+      "secret_aws": {
+        "caught": 61,
+        "rate": 1.0,
+        "total": 61
+      },
+      "secret_password": {
+        "caught": 66,
+        "rate": 1.0,
+        "total": 66
+      },
+      "secret_token": {
+        "caught": 62,
+        "rate": 1.0,
+        "total": 62
+      }
+    },
+    "overall": {
+      "caught": 601,
+      "rate": 1.0,
+      "total": 601
+    }
+  }
+}

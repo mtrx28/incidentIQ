@@ -461,7 +461,7 @@
 {"level": "INFO", "line_id": "L-0461", "message": "push notification sent topic=order-updates delivered=264", "service": "notifications", "ts": "2026-05-08T12:34:51Z"}
 {"level": "INFO", "line_id": "L-0462", "message": "metrics scrape served bytes=54861", "service": "inventory", "ts": "2026-05-08T12:35:29Z"}
 {"level": "INFO", "line_id": "L-0463", "message": "config heartbeat ok revision=806", "service": "payments", "ts": "2026-05-08T12:36:09Z"}
-{"level": "INFO", "line_id": "L-0464", "message": "kyc verification passed id=239714719611 status=ok", "service": "auth", "ts": "2026-05-08T12:36:16Z"}
+{"level": "INFO", "line_id": "L-0464", "message": "kyc verification passed id=239714719613 status=ok", "service": "auth", "ts": "2026-05-08T12:36:16Z"}
 {"level": "INFO", "line_id": "L-0465", "message": "metrics scrape served bytes=77354", "service": "payments", "ts": "2026-05-08T12:36:18Z"}
 {"level": "INFO", "line_id": "L-0466", "message": "token issued sub=u-196289 ttl=3600 request_id=req-e239bfe5", "service": "auth", "ts": "2026-05-08T12:36:41Z"}
 {"level": "INFO", "line_id": "L-0467", "message": "gc pause 54ms heap_used=54%", "service": "auth", "ts": "2026-05-08T12:36:58Z"}

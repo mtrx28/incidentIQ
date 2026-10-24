@@ -235,7 +235,7 @@
 {"level": "INFO", "line_id": "L-0235", "message": "gc pause 23ms heap_used=53%", "service": "payments", "ts": "2026-05-28T07:29:22Z"}
 {"level": "INFO", "line_id": "L-0236", "message": "config heartbeat ok revision=295", "service": "checkout", "ts": "2026-05-28T07:29:35Z"}
 {"level": "INFO", "line_id": "L-0237", "message": "queue depth=7 oldest_age_s=12", "service": "notifications", "ts": "2026-05-28T07:29:45Z"}
-{"level": "INFO", "line_id": "L-0238", "message": "kyc verification passed id=5486 4280 6487 status=ok", "service": "auth", "ts": "2026-05-28T07:29:54Z"}
+{"level": "INFO", "line_id": "L-0238", "message": "kyc verification passed id=5486 4280 6481 status=ok", "service": "auth", "ts": "2026-05-28T07:29:54Z"}
 {"level": "INFO", "line_id": "L-0239", "message": "gc pause 45ms heap_used=43%", "service": "search", "ts": "2026-05-28T07:29:59Z"}
 {"level": "WARN", "line_id": "L-0240", "message": "disk usage 99% on /data (threshold 90%)", "service": "notifications", "ts": "2026-05-28T07:30:01Z"}
 {"level": "WARN", "line_id": "L-0241", "message": "slow request took 702ms path=/api/v1/stock/bulk", "service": "inventory", "ts": "2026-05-28T07:31:13Z"}

@@ -377,7 +377,7 @@
 {"level": "WARN", "line_id": "L-0377", "message": "retrying idempotent request attempt 1/3 request_id=req-96189135 (succeeded)", "service": "checkout", "ts": "2026-04-18T17:13:21Z"}
 {"level": "INFO", "line_id": "L-0378", "message": "s3 upload using aws_access_key_id=AKIATHYT911JQDZY9USF bucket=inventory-exports", "service": "inventory", "ts": "2026-04-18T17:13:30Z"}
 {"level": "INFO", "line_id": "L-0379", "message": "gc pause 34ms heap_used=67%", "service": "auth", "ts": "2026-04-18T17:13:46Z"}
-{"level": "INFO", "line_id": "L-0380", "message": "payout kyc check aadhaar=7303 3456 8262 result=match", "service": "payments", "ts": "2026-04-18T17:14:04Z"}
+{"level": "INFO", "line_id": "L-0380", "message": "payout kyc check aadhaar=7303 3456 8268 result=match", "service": "payments", "ts": "2026-04-18T17:14:04Z"}
 {"level": "INFO", "line_id": "L-0381", "message": "3ds challenge completed txn=TXN-435090", "service": "payments", "ts": "2026-04-18T17:14:22Z"}
 {"level": "INFO", "line_id": "L-0382", "message": "reconciliation matched ref=202604996640 ledger_entry=960878", "service": "payments", "ts": "2026-04-18T17:14:44Z"}
 {"level": "INFO", "line_id": "L-0383", "message": "healthcheck ok latency_ms=6", "service": "notifications", "ts": "2026-04-18T17:15:07Z"}

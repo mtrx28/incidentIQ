@@ -284,7 +284,7 @@
 {"level": "ERROR", "line_id": "L-0284", "message": "request failed status=502 path=/api/v1/stock request_id=req-8d9564b8", "service": "search", "ts": "2026-07-29T14:45:16Z"}
 {"level": "ERROR", "line_id": "L-0285", "message": "request failed status=500 path=/api/v1/stock request_id=req-d7f80dba duration_ms=13709", "service": "search", "ts": "2026-07-29T14:45:41Z"}
 {"level": "WARN", "line_id": "L-0286", "message": "request error rate above SLO window=5m", "service": "search", "ts": "2026-07-29T14:46:20Z"}
-{"level": "INFO", "line_id": "L-0287", "message": "kyc verification passed id=467318421697 status=ok", "service": "auth", "ts": "2026-07-29T14:46:35Z"}
+{"level": "INFO", "line_id": "L-0287", "message": "kyc verification passed id=467318421696 status=ok", "service": "auth", "ts": "2026-07-29T14:46:35Z"}
 {"level": "INFO", "line_id": "L-0288", "message": "healthcheck ok latency_ms=5", "service": "auth", "ts": "2026-07-29T14:47:11Z"}
 {"level": "WARN", "line_id": "L-0289", "message": "request error rate above SLO window=5m", "service": "search", "ts": "2026-07-29T14:47:14Z"}
 {"level": "INFO", "line_id": "L-0290", "message": "gc pause 60ms heap_used=66%", "service": "payments", "ts": "2026-07-29T14:47:30Z"}

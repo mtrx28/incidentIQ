@@ -141,7 +141,7 @@
 {"level": "INFO", "line_id": "L-0141", "message": "session refreshed session=e3d943350b53 trace=276ddc90021823f5", "service": "auth", "ts": "2026-04-09T10:48:02Z"}
 {"level": "INFO", "line_id": "L-0142", "message": "session refreshed session=3c8954e71cc8 trace=425aca8328cb90ee", "service": "auth", "ts": "2026-04-09T10:48:17Z"}
 {"level": "INFO", "line_id": "L-0143", "message": "POST /api/v1/checkout status=200 duration_ms=187 trace=cb048b11e73f349a", "service": "checkout", "ts": "2026-04-09T10:48:38Z"}
-{"level": "INFO", "line_id": "L-0144", "message": "payout kyc check aadhaar=474952279371 result=match", "service": "payments", "ts": "2026-04-09T10:48:49Z"}
+{"level": "INFO", "line_id": "L-0144", "message": "payout kyc check aadhaar=474952279378 result=match", "service": "payments", "ts": "2026-04-09T10:48:49Z"}
 {"level": "INFO", "line_id": "L-0145", "message": "healthcheck ok latency_ms=6", "service": "auth", "ts": "2026-04-09T10:50:02Z"}
 {"level": "INFO", "line_id": "L-0146", "message": "email job dequeued job=e33deddb17 template=order_confirmation", "service": "notifications", "ts": "2026-04-09T10:50:11Z"}
 {"level": "INFO", "line_id": "L-0147", "message": "token issued sub=u-577015 ttl=3600 request_id=req-68347499", "service": "auth", "ts": "2026-04-09T10:50:23Z"}
@@ -429,7 +429,7 @@
 {"level": "INFO", "line_id": "L-0429", "message": "index refresh completed shard=2 docs=741915", "service": "search", "ts": "2026-04-09T12:18:53Z"}
 {"level": "INFO", "line_id": "L-0430", "message": "gc pause 11ms heap_used=50%", "service": "payments", "ts": "2026-04-09T12:19:01Z"}
 {"level": "INFO", "line_id": "L-0431", "message": "template rendered name=shipping_update version=v6.2.0", "service": "notifications", "ts": "2026-04-09T12:19:20Z"}
-{"level": "INFO", "line_id": "L-0432", "message": "payout kyc check aadhaar=9561 5510 3093 result=match", "service": "payments", "ts": "2026-04-09T12:19:29Z"}
+{"level": "INFO", "line_id": "L-0432", "message": "payout kyc check aadhaar=9561 5510 3098 result=match", "service": "payments", "ts": "2026-04-09T12:19:29Z"}
 {"level": "INFO", "line_id": "L-0433", "message": "email job dequeued job=8fa66468b6 template=order_confirmation", "service": "notifications", "ts": "2026-04-09T12:20:23Z"}
 {"level": "INFO", "line_id": "L-0434", "message": "password policy check passed", "service": "auth", "ts": "2026-04-09T12:20:27Z"}
 {"level": "INFO", "line_id": "L-0435", "message": "settlement batch closed batch=6304 txns=674", "service": "payments", "ts": "2026-04-09T12:20:29Z"}

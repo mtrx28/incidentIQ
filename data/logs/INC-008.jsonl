@@ -52,7 +52,7 @@
 {"level": "WARN", "line_id": "L-0052", "message": "gateway latency elevated 516ms (within SLO)", "service": "payments", "ts": "2026-03-10T07:18:23Z"}
 {"level": "INFO", "line_id": "L-0053", "message": "metrics scrape served bytes=30370", "service": "auth", "ts": "2026-03-10T07:18:41Z"}
 {"level": "INFO", "line_id": "L-0054", "message": "autocomplete served prefix_len=3 duration_ms=16", "service": "search", "ts": "2026-03-10T07:19:07Z"}
-{"level": "INFO", "line_id": "L-0055", "message": "payout kyc check aadhaar=554573756108 result=match", "service": "payments", "ts": "2026-03-10T07:19:16Z"}
+{"level": "INFO", "line_id": "L-0055", "message": "payout kyc check aadhaar=554573756102 result=match", "service": "payments", "ts": "2026-03-10T07:19:16Z"}
 {"level": "INFO", "line_id": "L-0056", "message": "healthcheck ok latency_ms=2", "service": "auth", "ts": "2026-03-10T07:20:06Z"}
 {"level": "INFO", "line_id": "L-0057", "message": "gc pause 31ms heap_used=44%", "service": "search", "ts": "2026-03-10T07:20:17Z"}
 {"level": "INFO", "line_id": "L-0058", "message": "gc pause 13ms heap_used=43%", "service": "search", "ts": "2026-03-10T07:20:30Z"}
@@ -508,7 +508,7 @@
 {"level": "WARN", "line_id": "L-0508", "message": "gateway latency elevated 629ms (within SLO)", "service": "payments", "ts": "2026-03-10T09:51:52Z"}
 {"level": "INFO", "line_id": "L-0509", "message": "config heartbeat ok revision=306", "service": "search", "ts": "2026-03-10T09:51:59Z"}
 {"level": "INFO", "line_id": "L-0510", "message": "healthcheck ok latency_ms=1", "service": "checkout", "ts": "2026-03-10T09:52:19Z"}
-{"level": "INFO", "line_id": "L-0511", "message": "payout kyc check aadhaar=6065 5696 8881 result=match", "service": "payments", "ts": "2026-03-10T09:52:38Z"}
+{"level": "INFO", "line_id": "L-0511", "message": "payout kyc check aadhaar=6065 5696 8888 result=match", "service": "payments", "ts": "2026-03-10T09:52:38Z"}
 {"level": "INFO", "line_id": "L-0512", "message": "gc pause 37ms heap_used=48%", "service": "checkout", "ts": "2026-03-10T09:52:40Z"}
 {"level": "INFO", "line_id": "L-0513", "message": "healthcheck ok latency_ms=2", "service": "auth", "ts": "2026-03-10T09:53:02Z"}
 {"level": "INFO", "line_id": "L-0514", "message": "gateway response code=00 gateway_ref=6e2ea49e314f", "service": "payments", "ts": "2026-03-10T09:53:26Z"}

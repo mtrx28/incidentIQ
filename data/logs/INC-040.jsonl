@@ -80,7 +80,7 @@
 {"level": "INFO", "line_id": "L-0080", "message": "config heartbeat ok revision=197", "service": "notifications", "ts": "2026-04-05T18:30:33Z"}
 {"level": "INFO", "line_id": "L-0081", "message": "gc pause 57ms heap_used=52%", "service": "notifications", "ts": "2026-04-05T18:30:41Z"}
 {"level": "INFO", "line_id": "L-0082", "message": "session refreshed session=7bfea68351c8 trace=165931c75875c44b", "service": "auth", "ts": "2026-04-05T18:30:49Z"}
-{"level": "INFO", "line_id": "L-0083", "message": "kyc verification passed id=495043283565 status=ok", "service": "auth", "ts": "2026-04-05T18:30:57Z"}
+{"level": "INFO", "line_id": "L-0083", "message": "kyc verification passed id=495043283564 status=ok", "service": "auth", "ts": "2026-04-05T18:30:57Z"}
 {"level": "INFO", "line_id": "L-0084", "message": "metrics scrape served bytes=25224", "service": "notifications", "ts": "2026-04-05T18:31:07Z"}
 {"level": "INFO", "line_id": "L-0085", "message": "gateway response code=00 gateway_ref=5f3865e06c41", "service": "payments", "ts": "2026-04-05T18:31:38Z"}
 {"level": "INFO", "line_id": "L-0086", "message": "config heartbeat ok revision=125", "service": "payments", "ts": "2026-04-05T18:31:50Z"}
@@ -466,7 +466,7 @@
 {"level": "WARN", "line_id": "L-0466", "message": "card tokenisation request pan=5500-2684-2466-3687 retry=1", "service": "payments", "ts": "2026-04-05T20:31:21Z"}
 {"level": "INFO", "line_id": "L-0467", "message": "order created order_ref=202607927765 total_inr=20876", "service": "checkout", "ts": "2026-04-05T20:31:29Z"}
 {"level": "INFO", "line_id": "L-0468", "message": "POST /api/v1/checkout status=200 duration_ms=180 trace=97beb739610ad803", "service": "checkout", "ts": "2026-04-05T20:31:35Z"}
-{"level": "INFO", "line_id": "L-0469", "message": "kyc verification passed id=4511 5110 4160 status=ok", "service": "auth", "ts": "2026-04-05T20:31:35Z"}
+{"level": "INFO", "line_id": "L-0469", "message": "kyc verification passed id=4511 5110 4168 status=ok", "service": "auth", "ts": "2026-04-05T20:31:35Z"}
 {"level": "INFO", "line_id": "L-0470", "message": "config heartbeat ok revision=511", "service": "auth", "ts": "2026-04-05T20:31:45Z"}
 {"level": "INFO", "line_id": "L-0471", "message": "config heartbeat ok revision=560", "service": "payments", "ts": "2026-04-05T20:31:46Z"}
 {"level": "INFO", "line_id": "L-0472", "message": "config heartbeat ok revision=799", "service": "inventory", "ts": "2026-04-05T20:31:52Z"}

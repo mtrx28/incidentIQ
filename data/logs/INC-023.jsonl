@@ -407,7 +407,7 @@
 {"level": "INFO", "line_id": "L-0407", "message": "POST /api/v1/payments status=200 duration_ms=298 trace=fa0d9db6c5462888", "service": "payments", "ts": "2026-05-23T16:11:11Z"}
 {"level": "INFO", "line_id": "L-0408", "message": "payment authorised card=5425 5739 7301 9096 amount_inr=6750 auth_code=073d5a", "service": "payments", "ts": "2026-05-23T16:11:22Z"}
 {"level": "INFO", "line_id": "L-0409", "message": "config heartbeat ok revision=897", "service": "search", "ts": "2026-05-23T16:11:29Z"}
-{"level": "INFO", "line_id": "L-0410", "message": "payout kyc check aadhaar=5112 7583 4324 result=match", "service": "payments", "ts": "2026-05-23T16:11:50Z"}
+{"level": "INFO", "line_id": "L-0410", "message": "payout kyc check aadhaar=5112 7583 4326 result=match", "service": "payments", "ts": "2026-05-23T16:11:50Z"}
 {"level": "INFO", "line_id": "L-0411", "message": "gc pause 20ms heap_used=48%", "service": "notifications", "ts": "2026-05-23T16:12:05Z"}
 {"level": "INFO", "line_id": "L-0412", "message": "token validated sub=u-934978 latency_ms=9", "service": "auth", "ts": "2026-05-23T16:12:40Z"}
 {"level": "INFO", "line_id": "L-0413", "message": "config heartbeat ok revision=109", "service": "payments", "ts": "2026-05-23T16:13:56Z"}
@@ -435,7 +435,7 @@
 {"level": "INFO", "line_id": "L-0435", "message": "healthcheck ok latency_ms=5", "service": "payments", "ts": "2026-05-23T16:21:43Z"}
 {"level": "INFO", "line_id": "L-0436", "message": "reservation released sku=SKU-8121 qty=3", "service": "inventory", "ts": "2026-05-23T16:22:15Z"}
 {"level": "WARN", "line_id": "L-0437", "message": "gateway latency elevated 440ms (within SLO)", "service": "payments", "ts": "2026-05-23T16:22:30Z"}
-{"level": "INFO", "line_id": "L-0438", "message": "kyc verification passed id=349109504010 status=ok", "service": "auth", "ts": "2026-05-23T16:23:14Z"}
+{"level": "INFO", "line_id": "L-0438", "message": "kyc verification passed id=349109504014 status=ok", "service": "auth", "ts": "2026-05-23T16:23:14Z"}
 {"level": "INFO", "line_id": "L-0439", "message": "GET /api/v1/search status=200 hits=113 duration_ms=23 trace=1b929566297abc6f", "service": "search", "ts": "2026-05-23T16:23:47Z"}
 {"level": "INFO", "line_id": "L-0440", "message": "reconciliation matched ref=202605254135 ledger_entry=142137", "service": "payments", "ts": "2026-05-23T16:24:29Z"}
 {"level": "INFO", "line_id": "L-0441", "message": "warehouse sync batch=4894 rows=3378 sha=ef7c707", "service": "inventory", "ts": "2026-05-23T16:24:32Z"}

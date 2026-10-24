@@ -80,7 +80,7 @@
 {"level": "INFO", "line_id": "L-0080", "message": "config heartbeat ok revision=335", "service": "inventory", "ts": "2026-06-26T12:34:46Z"}
 {"level": "INFO", "line_id": "L-0081", "message": "config heartbeat ok revision=350", "service": "inventory", "ts": "2026-06-26T12:35:01Z"}
 {"level": "INFO", "line_id": "L-0082", "message": "gateway response code=00 gateway_ref=917a998b5e5e", "service": "payments", "ts": "2026-06-26T12:35:01Z"}
-{"level": "INFO", "line_id": "L-0083", "message": "payout kyc check aadhaar=4767 3089 2782 result=match", "service": "payments", "ts": "2026-06-26T12:35:17Z"}
+{"level": "INFO", "line_id": "L-0083", "message": "payout kyc check aadhaar=4767 3089 2787 result=match", "service": "payments", "ts": "2026-06-26T12:35:17Z"}
 {"level": "INFO", "line_id": "L-0084", "message": "config heartbeat ok revision=828", "service": "auth", "ts": "2026-06-26T12:35:18Z"}
 {"level": "INFO", "line_id": "L-0085", "message": "queue depth=12 oldest_age_s=6", "service": "notifications", "ts": "2026-06-26T12:35:38Z"}
 {"level": "INFO", "line_id": "L-0086", "message": "settlement batch closed batch=8473 txns=797", "service": "payments", "ts": "2026-06-26T12:35:49Z"}

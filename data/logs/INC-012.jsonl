@@ -245,7 +245,7 @@
 {"level": "INFO", "line_id": "L-0245", "message": "POST /api/v1/checkout status=200 duration_ms=388 trace=fecacb84bcc8df08", "service": "checkout", "ts": "2026-07-21T11:25:25Z"}
 {"level": "INFO", "line_id": "L-0246", "message": "ranking model loaded version=v2.0.4 sha=51cb77a", "service": "search", "ts": "2026-07-21T11:25:25Z"}
 {"level": "INFO", "line_id": "L-0247", "message": "metrics scrape served bytes=59739", "service": "auth", "ts": "2026-07-21T11:26:38Z"}
-{"level": "INFO", "line_id": "L-0248", "message": "kyc verification passed id=7447 6654 4347 status=ok", "service": "auth", "ts": "2026-07-21T11:26:56Z"}
+{"level": "INFO", "line_id": "L-0248", "message": "kyc verification passed id=7447 6654 4348 status=ok", "service": "auth", "ts": "2026-07-21T11:26:56Z"}
 {"level": "INFO", "line_id": "L-0249", "message": "healthcheck ok latency_ms=3", "service": "checkout", "ts": "2026-07-21T11:26:57Z"}
 {"level": "INFO", "line_id": "L-0250", "message": "gc pause 30ms heap_used=63%", "service": "inventory", "ts": "2026-07-21T11:27:00Z"}
 {"level": "INFO", "line_id": "L-0251", "message": "metrics scrape served bytes=43564", "service": "payments", "ts": "2026-07-21T11:27:20Z"}
@@ -505,7 +505,7 @@
 {"level": "INFO", "line_id": "L-0505", "message": "stock level query sku=SKU-1797 on_hand=236", "service": "inventory", "ts": "2026-07-21T12:54:08Z"}
 {"level": "INFO", "line_id": "L-0506", "message": "session refreshed session=13de0c096092 trace=19085efa5d05b3c7", "service": "auth", "ts": "2026-07-21T12:54:30Z"}
 {"level": "INFO", "line_id": "L-0507", "message": "settlement batch closed batch=7177 txns=772", "service": "payments", "ts": "2026-07-21T12:55:12Z"}
-{"level": "INFO", "line_id": "L-0508", "message": "payout kyc check aadhaar=4085 3974 5946 result=match", "service": "payments", "ts": "2026-07-21T12:55:30Z"}
+{"level": "INFO", "line_id": "L-0508", "message": "payout kyc check aadhaar=4085 3974 5942 result=match", "service": "payments", "ts": "2026-07-21T12:55:30Z"}
 {"level": "INFO", "line_id": "L-0509", "message": "token issued sub=u-988518 ttl=3600 request_id=req-cf68c0b9", "service": "auth", "ts": "2026-07-21T12:56:01Z"}
 {"level": "INFO", "line_id": "L-0510", "message": "reconciliation matched ref=202607459113 ledger_entry=148507", "service": "payments", "ts": "2026-07-21T12:56:18Z"}
 {"level": "INFO", "line_id": "L-0511", "message": "gc pause 37ms heap_used=49%", "service": "inventory", "ts": "2026-07-21T12:57:08Z"}

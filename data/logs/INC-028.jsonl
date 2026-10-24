@@ -169,7 +169,7 @@
 {"level": "INFO", "line_id": "L-0169", "message": "gateway response code=00 gateway_ref=872e6c14b6b2", "service": "payments", "ts": "2026-03-05T07:04:14Z"}
 {"level": "INFO", "line_id": "L-0170", "message": "POST /api/v1/checkout status=200 duration_ms=80 trace=082ba44ddd68ba2f", "service": "checkout", "ts": "2026-03-05T07:04:27Z"}
 {"level": "INFO", "line_id": "L-0171", "message": "gc pause 12ms heap_used=46%", "service": "checkout", "ts": "2026-03-05T07:05:18Z"}
-{"level": "INFO", "line_id": "L-0172", "message": "payout kyc check aadhaar=483213817879 result=match", "service": "payments", "ts": "2026-03-05T07:05:23Z"}
+{"level": "INFO", "line_id": "L-0172", "message": "payout kyc check aadhaar=483213817872 result=match", "service": "payments", "ts": "2026-03-05T07:05:23Z"}
 {"level": "INFO", "line_id": "L-0173", "message": "email job dequeued job=43c2f28e30 template=order_confirmation", "service": "notifications", "ts": "2026-03-05T07:05:57Z"}
 {"level": "INFO", "line_id": "L-0174", "message": "config heartbeat ok revision=402", "service": "notifications", "ts": "2026-03-05T07:06:32Z"}
 {"level": "INFO", "line_id": "L-0175", "message": "cart loaded cart_id=c-122280 items=8 request_id=req-c31dc7b3", "service": "checkout", "ts": "2026-03-05T07:06:53Z"}
