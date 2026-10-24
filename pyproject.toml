@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "incidentiq"
+version = "0.1.0"
+description = "Multi-agent incident-diagnosis assistant with cited, schema-validated output"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.7,<3",
+    "python-dotenv>=1.0,<2",
+]
+
+[project.optional-dependencies]
+agents = ["langgraph>=0.2", "openai>=1.40"]
+db = ["psycopg[binary]>=3.1", "pgvector>=0.3"]
+embed = ["sentence-transformers>=3.0"]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+incidentiq = "incidentiq.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["incidentiq*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["db: needs the pgvector Postgres from docker compose"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
