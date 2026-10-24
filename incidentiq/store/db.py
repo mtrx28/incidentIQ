@@ -8,7 +8,7 @@ from incidentiq.config import load_config
 
 def connect(url: str | None = None) -> psycopg.Connection:
     # The extension must exist before the vector type can be registered on the connection.
-    conn = psycopg.connect(url or load_config().database_url, autocommit=True)
+    conn = psycopg.connect(url or load_config().database_url, autocommit=True, connect_timeout=5)
     conn.execute("CREATE EXTENSION IF NOT EXISTS vector")
     register_vector(conn)
     return conn

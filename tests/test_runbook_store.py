@@ -44,7 +44,7 @@ def conn():
     """A separate database, so these tests never overwrite the real ingested runbooks."""
     base = load_config().database_url
     try:
-        with psycopg.connect(base, autocommit=True) as admin:
+        with psycopg.connect(base, autocommit=True, connect_timeout=3) as admin:
             exists = admin.execute("SELECT 1 FROM pg_database WHERE datname = %s",
                                    (TEST_DB,)).fetchone()
             if not exists:
