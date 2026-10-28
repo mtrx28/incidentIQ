@@ -2,6 +2,8 @@
 
 from collections.abc import Callable
 
+import psycopg
+
 from incidentiq.schemas import PlanStep, ToolResult
 from incidentiq.tools import ToolError
 from incidentiq.tools.logs import log_search
@@ -55,7 +57,12 @@ class ToolBox:
         from incidentiq.tools.runbooks import runbook_retrieve
 
         if self._conn is None:
-            self._conn = db.connect()
+            try:
+                self._conn = db.connect()
+            except psycopg.OperationalError as exc:
+                # Infrastructure problems must stop the run, not look like a tool error.
+                raise RuntimeError("Cannot reach Postgres for runbook search. "
+                                   "Run `make up` (or `docker compose up -d`) and `make seed`.") from exc
         return runbook_retrieve(query, k, conn=self._conn)
 
     def run(self, step: PlanStep) -> ToolResult:

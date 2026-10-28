@@ -139,6 +139,31 @@ class ObserveUpdate(BaseModel):
     hypotheses: list[Hypothesis] = Field(max_length=4)
 
 
+class ClaimCheck(BaseModel):
+    """The verifier's verdict on one claim or recommended action."""
+
+    section: Literal["claim", "action"]
+    index: int  # 1-based position in its list
+    unknown_ids: list[str] = Field(default_factory=list)  # cited IDs never retrieved this run
+    overlap: float | None = None  # share of the statement's key terms found in the cited evidence
+    method: Literal["lexical", "llm", "none"] = "none"  # how support was decided
+    supported: bool
+
+
+class Verification(BaseModel):
+    ok: bool
+    errors: list[str]
+    method: Literal["lexical", "lexical+llm"]
+    checks: list[ClaimCheck]
+
+
+class Entailment(BaseModel):
+    """The optional LLM check: does the cited evidence support this statement?"""
+
+    supported: bool
+    reason: str
+
+
 class GraphState(BaseModel):
     incident: Incident
     plan: list[PlanStep] = Field(default_factory=list)
@@ -152,7 +177,8 @@ class GraphState(BaseModel):
     planner_done: bool = False
     diagnosis: Diagnosis | None = None
     validation_errors: list[str] = Field(default_factory=list)
-    retries: int = 0
+    retries: int = 0  # reporter retries used so far (the verifier allows 2)
+    verification: Verification | None = None  # the verifier's latest result
 
     def known_evidence_ids(self) -> set[str]:
         """Every evidence ID collected in this run. The verifier checks citations against it."""

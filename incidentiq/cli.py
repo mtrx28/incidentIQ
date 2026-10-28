@@ -39,6 +39,17 @@ def render_diagnosis(d: Diagnosis) -> str:
     return "\n".join(lines)
 
 
+def render_verification(s) -> list[str]:
+    v = s.verification
+    methods = sorted({c.method for c in v.checks if c.method != "none"}) or ["none"]
+    status = "PASSED" if v.ok else ("FAILED, marked unverified" if s.diagnosis and
+                                    s.diagnosis.unverified else "retrying")
+    lines = [f"VERIFIER: {status} ({len(v.checks)} statements checked; support decided by "
+             f"{'+'.join(methods)}; reporter retries used: {s.retries})"]
+    lines += [_wrap(f"- {e}", "  ") for e in v.errors]
+    return lines + [""]
+
+
 def render_result(result: AgentResult) -> str:
     s = result.state
     out = [f"INCIDENT {s.incident.incident_id}", _wrap(s.incident.alert_text, "  "), ""]
@@ -59,6 +70,8 @@ def render_result(result: AgentResult) -> str:
         out += ["Hypotheses: " + "; ".join(h.root_cause_category for h in s.hypotheses), ""]
     if s.diagnosis:
         out += ["DIAGNOSIS", render_diagnosis(s.diagnosis), ""]
+    if s.verification:
+        out += render_verification(s)
     st = result.stats
     out += [f"Steps used: {s.step_count}/{s.max_steps}. LLM calls: {st.calls} "
             f"({st.retries} retries), tokens in/out: {st.prompt_tokens}/{st.completion_tokens}, "
@@ -74,11 +87,15 @@ def main(argv: list[str] | None = None) -> int:
     d.add_argument("--demo", action="store_true", help="use the bundled sample incident")
     d.add_argument("--llm", choices=["replay", "live", "mock"], help="override INCIDENTIQ_LLM")
     d.add_argument("--max-steps", type=int)
+    d.add_argument("--no-verify", action="store_true", help="skip the citation verifier")
+    d.add_argument("--llm-entailment", action="store_true",
+                   help="let the LLM re-check statements the lexical check rejects (extra calls)")
     args = parser.parse_args(argv)
     incident_id = demo_incident_id() if args.demo else args.incident_id
     if not incident_id:
         parser.error("give an incident ID or --demo")
-    result = run_incident(incident_id, get_llm(args.llm), max_steps=args.max_steps)
+    result = run_incident(incident_id, get_llm(args.llm), max_steps=args.max_steps,
+                          verify_output=not args.no_verify, llm_entailment=args.llm_entailment)
     print(render_result(result))
     return 0
 
