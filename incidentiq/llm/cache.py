@@ -8,10 +8,8 @@ import hashlib
 import json
 from pathlib import Path
 
-from incidentiq.config import DATA_DIR
+from incidentiq.config import load_config
 from incidentiq.llm.base import Generation, Message
-
-DEFAULT_DIR = DATA_DIR / "llm_cache"
 
 
 def cache_key(model: str, messages: list[Message], schema_name: str | None) -> str:
@@ -22,7 +20,8 @@ def cache_key(model: str, messages: list[Message], schema_name: str | None) -> s
 
 class ResponseCache:
     def __init__(self, directory: Path | None = None):
-        self.directory = directory or DEFAULT_DIR
+        # LLM_CACHE_DIR lets development runs record somewhere disposable.
+        self.directory = directory or load_config().llm_cache_dir
 
     def _path(self, key: str) -> Path:
         return self.directory / key[:2] / f"{key}.json"

@@ -4,7 +4,7 @@ import re
 
 from incidentiq import data
 from incidentiq.schemas import Evidence, LogLine, ToolResult
-from incidentiq.tools import ToolError
+from incidentiq.tools import ToolError, parse_time_arg
 
 MAX_RESULTS = 30
 LEVELS = ("DEBUG", "INFO", "WARN", "ERROR")
@@ -31,8 +31,7 @@ def search_logs(
     if level is not None and level.upper() not in LEVELS:
         raise ToolError(f"level must be one of {LEVELS}")
     limit = max(1, min(int(limit), MAX_RESULTS))
-    lo = data.parse_ts(start) if start else None
-    hi = data.parse_ts(end) if end else None
+    lo, hi = parse_time_arg(start, "start"), parse_time_arg(end, "end")
     terms = _terms(query)
 
     scored: list[tuple[float, LogLine]] = []

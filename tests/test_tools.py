@@ -1,5 +1,7 @@
 """Tools and chunking, tested against the committed dataset. No database or model needed."""
 
+from datetime import timedelta
+
 import pytest
 
 from incidentiq import data
@@ -54,6 +56,15 @@ def test_metrics_time_range_filters_points():
     assert s.points < full.points
 
 
+def test_a_short_range_says_it_is_too_short_instead_of_claiming_no_change():
+    inc = _incident("bad_deployment")
+    incident = data.load_incident(inc)
+    start = data.parse_ts(incident.window_start)
+    result = metrics_query(inc, incident.service, "error_rate_pct", start=incident.window_start,
+                           end=(start + timedelta(minutes=20)).isoformat())
+    assert "too few to test for a change" in result.evidence[0].excerpt
+
+
 def test_metrics_aggregations():
     inc = _incident("bad_deployment")
     svc = data.load_incident(inc).service
@@ -69,6 +80,14 @@ def test_metrics_aggregations():
 def test_metrics_bad_arguments_raise_tool_error(kwargs):
     with pytest.raises(ToolError):
         query_metric("INC-001", **kwargs)
+
+
+@pytest.mark.parametrize("bad", ["02:30:00Z", "yesterday", "2026-03-01T14:00:00"])
+def test_malformed_timestamps_are_tool_errors_not_crashes(bad):
+    with pytest.raises(ToolError, match="ISO 8601|timezone"):
+        query_metric("INC-001", "auth", "cpu_pct", start=bad)
+    with pytest.raises(ToolError):
+        search_logs("INC-001", end=bad)
 
 
 def test_metrics_empty_range_raises_tool_error():

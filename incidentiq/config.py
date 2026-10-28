@@ -22,6 +22,7 @@ class Config:
     llm_model: str
     llm_api_key: str
     llm_min_interval_s: float
+    llm_cache_dir: Path
     database_url: str
     embedding_model: str
     embedding_dim: int
@@ -39,6 +40,7 @@ def load_config() -> Config:
         llm_model=os.environ.get("LLM_MODEL", "gemini-3.5-flash-lite"),
         llm_api_key=os.environ.get("LLM_API_KEY", ""),
         llm_min_interval_s=float(os.environ.get("LLM_MIN_INTERVAL_S", "4")),
+        llm_cache_dir=Path(os.environ.get("LLM_CACHE_DIR") or DATA_DIR / "llm_cache"),
         database_url=os.environ.get(
             "DATABASE_URL", "postgresql://incidentiq:incidentiq@localhost:5432/incidentiq"
         ),

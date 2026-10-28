@@ -5,10 +5,11 @@ from statistics import mean, pstdev
 
 from incidentiq import data
 from incidentiq.schemas import Evidence, ToolResult
-from incidentiq.tools import ToolError
+from incidentiq.tools import ToolError, parse_time_arg
 
 AGGREGATIONS = ("mean", "max", "min", "last")
 MIN_CHANGE_SCORE = 3.0  # shift must be at least this many baseline standard deviations
+MIN_POINTS_FOR_CHANGE = 8  # the detector needs a few points on each side of a change
 
 
 @dataclass
@@ -64,8 +65,7 @@ def query_metric(
         raise ToolError(f"aggregation must be one of {AGGREGATIONS}")
 
     series_id, all_points = series[(service, metric)]
-    lo = data.parse_ts(start) if start else None
-    hi = data.parse_ts(end) if end else None
+    lo, hi = parse_time_arg(start, "start"), parse_time_arg(end, "end")
     points = [
         (ts, v) for ts, v in all_points
         if (lo is None or data.parse_ts(ts) >= lo) and (hi is None or data.parse_ts(ts) <= hi)
@@ -112,6 +112,9 @@ def metrics_query(
         lines.append(
             f"Change detected at {c.ts}: mean {_fmt(c.before_mean)} before, "
             f"{_fmt(c.after_mean)} after ({c.score:.1f} baseline standard deviations).")
+    elif s.points < MIN_POINTS_FOR_CHANGE:
+        lines.append(f"Only {s.points} points in this range, too few to test for a change; "
+                     f"use a wider range.")
     else:
         lines.append("No significant change detected in this range.")
     lines.append("Notable points: " + "; ".join(

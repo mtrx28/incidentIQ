@@ -109,10 +109,13 @@ class Observation(BaseModel):
     """One redacted tool result. `evidence` holds the citable items it produced."""
 
     step: int
+    round: int = 1  # which planner round asked for it (1-based)
     tool: Tool
     args: dict[str, str | int | float | None]
+    reason: str = ""  # why the planner asked for it
     summary: str
     evidence: list[Evidence]
+    error: bool = False  # the call itself failed (bad arguments, duplicate call, ...)
 
 
 class Hypothesis(BaseModel):
@@ -121,12 +124,30 @@ class Hypothesis(BaseModel):
     supporting_evidence_ids: list[str] = Field(default_factory=list)
 
 
+class PlannerDecision(BaseModel):
+    """What the planner LLM returns each round."""
+
+    reasoning: str
+    done: bool = False  # true when there is enough evidence to write the diagnosis
+    steps: list[PlanStep] = Field(default_factory=list, max_length=3)
+
+
+class ObserveUpdate(BaseModel):
+    """What the observe LLM returns after a batch of tool calls."""
+
+    summary: str  # what was learned from the latest results
+    hypotheses: list[Hypothesis] = Field(max_length=4)
+
+
 class GraphState(BaseModel):
     incident: Incident
     plan: list[PlanStep] = Field(default_factory=list)
     observations: list[Observation] = Field(default_factory=list)
     hypotheses: list[Hypothesis] = Field(default_factory=list)
+    planner_notes: list[str] = Field(default_factory=list)  # one per planner round
+    observer_notes: list[str] = Field(default_factory=list)  # one per observe round
     step_count: int = 0
+    observed_through: int = 0  # steps already reviewed by the observe node
     max_steps: int = 8
     planner_done: bool = False
     diagnosis: Diagnosis | None = None
