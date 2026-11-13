@@ -1,0 +1,10 @@
+{
+  "INC-005": "M-030 (db pool) retrieved at S6, M-028 (cache hit ratio) never queried; predicted db_connection_pool_exhaustion. S7 runbook query was built around db pool (R-02-1 first), so R-10-5 not retrieved.",
+  "INC-009": "disk_used_pct (gold M-049) never queried (S1-S3 were error rate, cpu, memory); S5 runbook query worded around bad deployment; ruled_out lists disk_full; actions cite R-01-5.",
+  "INC-014": "S4,S5 checked inventory; gold M-002/M-006 are auth metrics. S6 runbook query, likely the forced v4 lookup, was built from the bad_deployment hypothesis (R-01-3). No gold ID retrieved.",
+  "INC-020": "Hit the step cap (8). M-012 (db pool) retrieved at S4 and L-0284 (cache miss) at S7, and cache_stampede was a hypothesis; cache_hit_ratio (gold M-010) never queried.",
+  "INC-021": "Restarts rose at 07:40 (S3, gold M-018), but log queries S4,S6 returned 0 lines, so config-reload lines (gold L-0250..L-0255) not retrieved. memory_pct unchanged (S5), yet predicted memory_leak_oom.",
+  "INC-030": "Logs-only case: gold lines (rate limit, load shedding) are WARN/INFO and not retrieved; S3,S4 queries matched 1 and 2 lines. S6 runbook query worded around bad deployment (R-01-1, similarity 0.55).",
+  "INC-031": "disk_used_pct (gold M-049) never queried; log queries S3,S6 used deploy/config/error/timeout terms, none of the gold disk lines (L-0236, L-0259, L-0263) retrieved. S7 runbook query: downstream.",
+  "INC-035": "Gold M-009 (S2), L-0281/L-0283 (S7) and R-08-3 (S6) were retrieved, and misconfiguration was a hypothesis, but the diagnosis is bad_deployment and the action cites R-01-1."
+}

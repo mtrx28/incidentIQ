@@ -1,0 +1,16 @@
+{
+  "INC-003": "Same calls as v2 (disk_used_pct never queried; S2 returned 0 lines). Reporter retried once, then verification passed with a claim citing R-01-1; predicted bad_deployment.",
+  "INC-005": "Same calls as v2 (M-028 never queried; S7 runbook query worded around downstream or slow query). Reporter retried twice, then verification passed; predicted slow_query_missing_index.",
+  "INC-009": "Same calls and claims as v2: disk_used_pct (gold M-049) never queried; S7 runbook query worded around downstream timeout. Verification passed with no retries.",
+  "INC-011": "New miss vs v2. M-021 and M-019 retrieved (S2,S4) and cache_stampede was a hypothesis, but after 2 reporter retries the claims cite M-024, L-0310, R-03-2; predicted slow_query_missing_index.",
+  "INC-016": "Same calls and claims as v2: M-024 retrieved at S1, db_pool (gold M-021) never queried, payments unchanged (S4,S5). Verification passed with no retries.",
+  "INC-019": "Same calls and claims as v2: db_pool_in_use_pct (gold M-012) never queried; S7 runbook query worded around upstream timeout. Verification passed with no retries.",
+  "INC-020": "Same calls and claims as v2; hit the step cap (8), no db_pool or cache_hit_ratio query (gold M-012/M-010). Verification passed with no retries.",
+  "INC-024": "Same calls and claims as v2: cpu_pct and request_rate_rps (gold M-038/M-044) never queried; inventory unchanged (S3-S5). Verification passed with no retries.",
+  "INC-027": "Same calls and claims as v2: no cpu/request-rate query (gold M-038/M-044); S3 filtered to ERROR while gold lines are WARN. Verification passed with no retries.",
+  "INC-030": "Same calls and claims as v2: logs-only case, S2 filtered to ERROR while gold lines are WARN/INFO; stopped after 4 steps. Verification passed with no retries.",
+  "INC-033": "Same calls and claims as v2: S2 returned 0 lines; gold deploy/exception lines and M-036 never retrieved. Verification passed with no retries.",
+  "INC-035": "Same calls as v2. Reporter retried once; claims cite M-005 and L-0285..L-0301, the action cites R-04-6; gold L-0281/L-0283 (retrieved at S2) are not cited. Predicted downstream_timeout.",
+  "INC-038": "Same calls as v2, no runbook retrieved. After 2 reporter retries the verifier still reported no recommended actions, so the diagnosis is marked unverified. db_pool and cache_hit_ratio never queried.",
+  "INC-039": "Same calls and claims as v2: notifications db_pool and latency (gold M-030/M-033) never queried; payments unchanged (S3,S4,S6). Verification passed with no retries."
+}

@@ -1,6 +1,6 @@
-# Retrieval-only evaluation (all split)
+# Retrieval-only evaluation (all split, embedding sentence-transformers/all-MiniLM-L6-v2)
 
-Embedder: `sentence-transformers/all-MiniLM-L6-v2`. Section hit = a gold runbook section is in the top k; runbook hit = any section of the gold runbook is.
+Section hit = a gold runbook section is in the top k; runbook hit = any section of the gold runbook is.
 
 | Group | n | Query | section@1 | section@3 | runbook@1 | runbook@3 |
 |---|---|---|---|---|---|---|

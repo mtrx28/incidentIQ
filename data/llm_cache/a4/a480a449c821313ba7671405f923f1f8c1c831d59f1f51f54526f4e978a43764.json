@@ -1,0 +1,21 @@
+{
+ "key": "a480a449c821313ba7671405f923f1f8c1c831d59f1f51f54526f4e978a43764",
+ "messages": [
+  {
+   "content": "ROLE: observer\nYou review the results of an incident investigation. Write a short summary of what the latest results show, then update the list of hypotheses (at most 4, most likely first).\n\nRoot-cause categories:\n- bad_deployment: a new release introduced a defect (errors begin right after a deploy)\n- db_connection_pool_exhaustion: every database connection in the pool is in use, so requests wait\n- slow_query_missing_index: a database query became slow (for example a missing index)\n- downstream_timeout: a dependency the service calls is slow or unresponsive\n- memory_leak_oom: memory grows until the process is killed (OOM) and restarts\n- disk_full: a volume is full so writes fail\n- expired_tls_cert: a TLS certificate expired so handshakes fail\n- misconfiguration: a wrong environment variable, setting or feature flag\n- traffic_spike_rate_limit: request volume far above capacity, causing rate limiting or load shedding\n- cache_stampede_outage: the cache is down or emptied so everything falls through to the database\n\nEach hypothesis has root_cause_category (one of the categories), rationale, and supporting_evidence_ids (only IDs that appear in the evidence below).\n\nReply with only JSON in this shape:\n{\"summary\": \"...\", \"hypotheses\": [{\"root_cause_category\": \"disk_full\", \"rationale\": \"...\", \"supporting_evidence_ids\": [\"L-0123\"]}]}",
+   "role": "system"
+  },
+  {
+   "content": "Alert: payments-service: HTTP error rate above 5% for 5 minutes (since 11:44 UTC)\nAlerting service: payments\nAlert time: 2026-07-21T11:44:00Z\nData available from 2026-07-21T10:00:00Z to 2026-07-21T13:00:00Z\n\nEvidence so far (the latest results are steps 1 onwards):\nStep 1: metrics_query {\"end\": \"2026-07-21T12:00:00Z\", \"metric\": \"error_rate_pct\", \"service\": \"payments\", \"start\": \"2026-07-21T11:30:00Z\"} (asked because: Check the error rate metric for payments service around the alert time.)\n  Result: M-041: Only 7 points in this range, too few to test for a change; use a wider range.\n  [M-041] payments.error_rate_pct from 2026-07-21T11:30:00Z to 2026-07-21T12:00:00Z (7 points, 5-minute steps): min=0.42 max=41.03 mean=29.39 last=40.93; mean=29.39. Only 7 points in this range, too few to test for a change; use a wider range. Notable points: 2026-07-21T11:35:00Z = 0.42 (lowest); 2026-07-21T11:55:00Z = 41.03 (peak); 2026-07-21T12:00:00Z = 40.93 (last).\nStep 2: log_search {\"end\": \"2026-07-21T11:50:00Z\", \"level\": \"ERROR\", \"query\": \"error failed exception timeout 500\", \"service\": \"payments\", \"start\": \"2026-07-21T11:40:00Z\"} (asked because: Search for error logs in payments service around the alert time.)\n  Result: 4 matching log lines.\n  [L-0282] 2026-07-21T11:40:02Z payments ERROR SSL handshake failed: certificate has expired notAfter=2026-07-21T11:39:00Z subject=CN=payments.internal.shop\n  [L-0292] 2026-07-21T11:42:27Z payments ERROR request failed status=500 path=/api/v1/cart request_id=req-6af2276d duration_ms=12822\n  [L-0305] 2026-07-21T11:45:44Z payments ERROR request failed status=502 path=/api/v1/cart request_id=req-e9813e28\n  [L-0315] 2026-07-21T11:48:50Z payments ERROR request failed status=502 path=/api/v1/cart request_id=req-0dfa7150\n\nPrevious hypotheses:\nNone yet.",
+   "role": "user"
+  }
+ ],
+ "model": "gemini-3.5-flash-lite",
+ "response": "{\n  \"summary\": \"The latest results show that the payments service error rate spiked starting around 11:40 UTC, accompanied by an explicit error log stating that the SSL handshake failed because the certificate expired at 2026-07-21T11:39:00Z.\",\n  \"hypotheses\": [\n    {\n      \"root_cause_category\": \"expired_tls_cert\",\n      \"rationale\": \"Logs explicitly report that the SSL handshake failed because the certificate expired just before the errors started.\",\n      \"supporting_evidence_ids\": [\n        \"L-0282\"\n      ]\n    }\n  ]\n}",
+ "schema": "ObserveUpdate",
+ "usage": {
+  "completion_tokens": 150,
+  "latency_s": 12.505,
+  "prompt_tokens": 1170
+ }
+}

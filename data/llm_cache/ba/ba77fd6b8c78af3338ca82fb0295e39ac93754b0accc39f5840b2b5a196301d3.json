@@ -1,0 +1,21 @@
+{
+ "key": "ba77fd6b8c78af3338ca82fb0295e39ac93754b0accc39f5840b2b5a196301d3",
+ "messages": [
+  {
+   "content": "ROLE: observer\nYou review the results of an incident investigation. Write a short summary of what the latest results show, then update the list of hypotheses (at most 4, most likely first).\n\nRoot-cause categories:\n- bad_deployment: a new release introduced a defect (errors begin right after a deploy)\n- db_connection_pool_exhaustion: every database connection in the pool is in use, so requests wait\n- slow_query_missing_index: a database query became slow (for example a missing index)\n- downstream_timeout: a dependency the service calls is slow or unresponsive\n- memory_leak_oom: memory grows until the process is killed (OOM) and restarts\n- disk_full: a volume is full so writes fail\n- expired_tls_cert: a TLS certificate expired so handshakes fail\n- misconfiguration: a wrong environment variable, setting or feature flag\n- traffic_spike_rate_limit: request volume far above capacity, causing rate limiting or load shedding\n- cache_stampede_outage: the cache is down or emptied so everything falls through to the database\n\nEach hypothesis has root_cause_category (one of the categories), rationale, and supporting_evidence_ids (only IDs that appear in the evidence below).\n\nReply with only JSON in this shape:\n{\"summary\": \"...\", \"hypotheses\": [{\"root_cause_category\": \"disk_full\", \"rationale\": \"...\", \"supporting_evidence_ids\": [\"L-0123\"]}]}",
+   "role": "system"
+  },
+  {
+   "content": "Alert: checkout-service: HTTP error rate above 5% for 5 minutes (since 07:42 UTC)\nAlerting service: checkout\nAlert time: 2026-04-07T07:42:00Z\nData available from 2026-04-07T06:00:00Z to 2026-04-07T09:00:00Z\n\nEvidence so far (the latest results are steps 1 onwards):\nStep 1: metrics_query {\"end\": \"2026-04-07T09:00:00Z\", \"metric\": \"error_rate_pct\", \"service\": \"checkout\", \"start\": \"2026-04-07T06:00:00Z\"} (asked because: Check error rate metric for checkout service to confirm anomaly.)\n  Result: M-014: Change detected at 2026-04-07T06:15:00Z: mean 0.52 before, 14.6 after (373.6 baseline standard deviations).\n  [M-014] checkout.error_rate_pct from 2026-04-07T06:00:00Z to 2026-04-07T08:55:00Z (36 points, 5-minute steps): min=0.18 max=29.99 mean=13.43 last=29.66; mean=13.43. Change detected at 2026-04-07T06:15:00Z: mean 0.52 before, 14.6 after (373.6 baseline standard deviations). Notable points: 2026-04-07T06:15:00Z = 0.18 (first point after the change); 2026-04-07T06:15:00Z = 0.18 (lowest); 2026-04-07T08:00:00Z = 29.99 (peak); 2026-04-07T08:55:00Z = 29.66 (last).\n\nPrevious hypotheses:\nNone yet.",
+   "role": "user"
+  }
+ ],
+ "model": "gemini-3.5-flash-lite",
+ "response": "{\n  \"summary\": \"The initial investigation confirms that the checkout service error rate spiked significantly at 2026-04-07T06:15:00Z, rising from a baseline of ~0.5% to an average of ~14.6% and peaking near 30%.\",\n  \"hypotheses\": [\n    {\n      \"root_cause_category\": \"bad_deployment\",\n      \"rationale\": \"The error rate jumped abruptly at 06:15 UTC, which often correlates with a newly deployed version containing a defect.\",\n      \"supporting_evidence_ids\": [\n        \"M-014\"\n      ]\n    },\n    {\n      \"root_cause_category\": \"downstream_timeout\",\n      \"rationale\": \"The checkout service relies on external dependencies and payments which could be timing out and raising the error rate.\",\n      \"supporting_evidence_ids\": [\n        \"M-014\"\n      ]\n    },\n    {\n      \"root_cause_category\": \"db_connection_pool_exhaustion\",\n      \"rationale\": \"Sudden increases in HTTP error rates can be caused by database connection pool exhaustion during traffic or operational shifts.\",\n      \"supporting_evidence_ids\": [\n        \"M-014\"\n      ]\n    }\n  ]\n}",
+ "schema": "ObserveUpdate",
+ "usage": {
+  "completion_tokens": 303,
+  "latency_s": 22.53,
+  "prompt_tokens": 885
+ }
+}

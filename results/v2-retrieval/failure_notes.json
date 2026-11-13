@@ -1,0 +1,15 @@
+{
+  "INC-003": "Same investigation as v1: disk_used_pct (gold M-031) never queried, S2 returned 0 lines. S7 runbook query was worded around bad deployment (R-01-1 first); predicted bad_deployment.",
+  "INC-005": "M-030 retrieved at S6, M-028 (cache hit ratio) never queried. S7 runbook query worded around downstream or slow query (R-04-2 first); predicted slow_query_missing_index; db_pool was also a hypothesis.",
+  "INC-009": "disk_used_pct (gold M-049) never queried; S1,S3,S5,S6 were 7-point windows (no change test). S7 runbook query worded around downstream timeout (R-04-1, similarity 0.70). No gold ID retrieved.",
+  "INC-016": "M-024 retrieved at S1 but db_pool (gold M-021) never queried; payments unchanged (S4,S5) yet downstream_timeout kept. S6 runbook query worded around downstream timeout (R-04-1, similarity 0.77).",
+  "INC-019": "db_pool_in_use_pct (gold M-012) never queried; payments error rate unchanged (S3) yet downstream_timeout kept. S7 runbook query worded around upstream timeout (R-04-1, similarity 0.69).",
+  "INC-020": "Hit the step cap (8). No db_pool or cache_hit_ratio query (gold M-012/M-010); hypotheses were downstream_timeout, slow_query, db_pool, none cache. S8 runbook query worded around downstream timeout.",
+  "INC-024": "cpu_pct and request_rate_rps (gold M-038/M-044) never queried; inventory unchanged (S3-S5) yet downstream_timeout kept. S2 filtered to ERROR; gold L-0254/L-0256 are WARN.",
+  "INC-027": "Only payments latency and error rate queried (S1,S2); no cpu/request-rate query (gold M-038/M-044). S3 filtered to ERROR; gold L-0277/L-0280 are WARN. S5 runbook query worded around downstream.",
+  "INC-030": "Logs-only case: gold lines (rate limit, load shedding) are WARN/INFO, S2 filtered to ERROR. Stopped after 4 steps; S4 runbook query worded around downstream timeout (R-04-1, 0.73).",
+  "INC-033": "S2 (ERROR, query 'error') returned 0 lines; gold deploy and exception lines and restarts metric M-036 never retrieved. S5 runbook query worded around downstream timeout (R-04-2, similarity 0.72).",
+  "INC-035": "Gold L-0281/L-0283 retrieved at S2 and misconfiguration was a hypothesis, but M-009 (restarts) was never queried. S5 runbook query worded around downstream timeout (R-04-2); S7 returned 0 lines.",
+  "INC-038": "S3 (ERROR, query 'error') returned 0 lines; db_pool and cache_hit_ratio (gold M-021/M-019) never queried. No runbook retrieved in 6 steps, so no recommended action cites a runbook.",
+  "INC-039": "notifications db_pool and latency (gold M-030/M-033) never queried; payments unchanged (S3,S4,S6) yet downstream_timeout kept. S5 runbook query worded around downstream timeout (R-04-1, 0.71)."
+}

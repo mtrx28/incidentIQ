@@ -1,0 +1,5 @@
+{
+  "INC-005": "Baseline sees only the last 100 log lines; gold cause evidence is metrics M-028/M-030, not in the dump. Its 4 claims cite generic 5xx lines (L-0271..L-0287); predicted downstream_timeout.",
+  "INC-009": "Baseline sees only log lines; gold cause evidence is metric M-049 (disk_used_pct), not in the dump. Its 2 claims cite 503/failure lines (L-0301..L-0308); ruled_out lists disk_full.",
+  "INC-019": "Baseline sees only log lines; gold cause evidence is metric M-012 (db_pool_in_use_pct), not in the dump. Its one claim cites 503 line L-0278; ruled_out lists db_connection_pool_exhaustion."
+}
