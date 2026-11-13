@@ -51,6 +51,8 @@ def build_results(variant: Variant, runs: list[IncidentRun]) -> dict:
     }
     if data.log_scale() != 1:  # original results keep exactly their old shape
         results["condition"] = "scale100"
+    if variant.rarity:  # only v5 records its log search mode; other results keep their shape
+        results["log_mode"] = "rarity"
     return results
 
 

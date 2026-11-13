@@ -47,6 +47,17 @@ cause supports, not the one the symptoms suggest. downstream_timeout needs evide
 dependency itself is slow or that calls to it timed out. Cite the evidence that identifies the \
 cause (the telltale log line or the metric that changed), not only symptom lines."""
 
+# Extra instructions for the v5-scale stage (100x log volume), added after the v4 rules.
+TUNED_V5_PLANNER_ADDENDUM = """Log search at high volume:
+- When you give neither start nor end, log_search looks at a default window from 30 minutes \
+before to 5 minutes after the alert time. If you give a start or an end, no default window applies. It ranks \
+lines whose message pattern is rare in the matching window above lines that repeat thousands of \
+times (digits, ids and quoted values are ignored when comparing messages), so a one-off line is \
+more likely to be shown than routine noise.
+- Each result starts with a header: the total number of matching lines, the count per level, the \
+number of distinct message patterns, and the 5 most frequent patterns with their counts. Frequent \
+patterns are usually routine noise; use the header to decide how to narrow the next search."""
+
 _TOOLS = """Tools (all read-only):
 - metrics_query: summarise one metric of one service. args: service, metric, optional start and end \
 (ISO 8601 UTC), optional aggregation (mean, max, min or last). Reports min, max, mean, and whether \
@@ -99,7 +110,7 @@ def _with_tuned(system: str, tuned: bool, rules: str) -> str:
 
 
 def planner_messages(state: GraphState, services: list[str], metrics: list[str],
-                     tuned: bool = False) -> list[Message]:
+                     tuned: bool = False, v5: bool = False) -> list[Message]:
     remaining = state.max_steps - state.step_count
     system = f"""ROLE: planner
 You are the planner of an assistant that helps on-call engineers find the root cause of an \
@@ -143,8 +154,10 @@ Current hypotheses:
 {_hypotheses(state)}
 
 Decide the next steps."""
-    return [{"role": "system", "content": _with_tuned(system, tuned, TUNED_PLANNER_RULES)},
-            {"role": "user", "content": user}]
+    system = _with_tuned(system, tuned, TUNED_PLANNER_RULES)
+    if v5:
+        system = f"{system}\n\n{TUNED_V5_PLANNER_ADDENDUM}"
+    return [{"role": "system", "content": system}, {"role": "user", "content": user}]
 
 
 def observer_messages(state: GraphState, first_new_step: int) -> list[Message]:

@@ -17,13 +17,13 @@ def _mitigation_step(state: GraphState) -> PlanStep:
                     reason="Retrieve mitigation guidance before diagnosing.")
 
 
-def planner_node(state: GraphState, llm: LLMClient, tuned: bool = False) -> dict:
+def planner_node(state: GraphState, llm: LLMClient, tuned: bool = False, v5: bool = False) -> dict:
     remaining = state.max_steps - state.step_count
     if remaining <= 0:
         return {"plan": [], "planner_done": True}
     messages = planner_messages(
         state, data.known_services(state.incident.incident_id),
-        data.known_metrics(state.incident.incident_id), tuned)
+        data.known_metrics(state.incident.incident_id), tuned, v5)
     decision = llm.complete(messages, PlannerDecision)
     assert isinstance(decision, PlannerDecision)
     steps = decision.steps[:remaining]

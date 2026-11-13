@@ -56,3 +56,18 @@ def test_tuned_switch_leaves_the_base_prompt_alone_when_it_has_no_extra_rules(mo
     monkeypatch.setattr(prompts, "TUNED_PLANNER_RULES", "")
     assert planner_messages(s, ["auth"], ["cpu_pct"], tuned=True) == \
         planner_messages(s, ["auth"], ["cpu_pct"])
+
+
+def test_v4_prompts_and_the_v5_addendum_are_pinned():
+    from incidentiq.agents.prompts import TUNED_V5_PLANNER_ADDENDUM
+
+    s = _state()
+    assert _hash(planner_messages(s, ["auth"], ["cpu_pct"], tuned=True)) == "d372cad214c8d63a"
+    assert _hash(reporter_messages(s, tuned=True)) == "ad7e7562cbf2e313"
+    # v5 = the v4 system prompt plus the addendum, and nothing else changes.
+    v4 = planner_messages(s, ["auth"], ["cpu_pct"], tuned=True)
+    v5 = planner_messages(s, ["auth"], ["cpu_pct"], tuned=True, v5=True)
+    assert v5[0]["content"] == f"{v4[0]['content']}\n\n{TUNED_V5_PLANNER_ADDENDUM}"
+    assert v5[1] == v4[1]
+    assert _hash(v5) == "b21caa19efcc4f66"
+    assert hashlib.sha256(TUNED_V5_PLANNER_ADDENDUM.encode()).hexdigest()[:16] == "05a3a787e3ac3a36"

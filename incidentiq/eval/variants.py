@@ -11,6 +11,7 @@ class Variant:
     retrieval: str = "embedding"  # runbook search: "keyword" (BM25) or "embedding" (pgvector)
     verifier: bool = False  # citation verifier with up to 2 reporter retries
     tuned: bool = False  # v4 prompt and stopping-rule changes, written from dev failures only
+    rarity: bool = False  # v5: rarity-ranked log_search, default window, header, prompt addendum
     filtered: bool = False  # baseline only: WARN/ERROR lines of the alerting service (v0b)
     in_original: bool = True  # part of `--run all` for the original condition (and `make eval`)
 
@@ -35,4 +36,10 @@ VARIANTS: dict[str, Variant] = {v.name: v for v in [
             "Single LLM call with the alert and the last 100 WARN and ERROR log lines of the "
             "alerting service. Added for the scale100 condition; the first baseline is v0a.",
             kind="baseline", filtered=True, in_original=False),
+    Variant("v5-scale",
+            "v4 plus rarity-ranked log_search with a default window around the alert and a "
+            "count/template header (and a prompt addendum describing them). Built for the "
+            "scale100 condition; scope fixed in docs/benchmark-scale100.md.",
+            kind="agent", retrieval="embedding", verifier=True, tuned=True, rarity=True,
+            in_original=False),
 ]}

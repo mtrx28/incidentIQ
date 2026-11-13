@@ -4,6 +4,7 @@ from collections.abc import Callable
 
 import psycopg
 
+from incidentiq import data
 from incidentiq.schemas import PlanStep, ToolResult
 from incidentiq.tools import ToolError
 from incidentiq.tools.logs import log_search
@@ -44,11 +45,16 @@ class ToolBox:
 
     `runbook_search` is injected so tests (and the keyword baseline) can replace pgvector; by
     default it opens a database connection on first use.
+
+    `log_mode` is set by the variant ("legacy", or "rarity" for v5). It is not in ALLOWED_ARGS,
+    so the model cannot change it.
     """
 
     def __init__(self, incident_id: str,
-                 runbook_search: Callable[..., ToolResult] | None = None):
+                 runbook_search: Callable[..., ToolResult] | None = None,
+                 log_mode: str = "legacy"):
         self.incident_id = incident_id
+        self.log_mode = log_mode
         self._runbook_search = runbook_search
         self._conn = None
 
@@ -71,7 +77,11 @@ class ToolBox:
             if step.tool == "metrics_query":
                 return metrics_query(self.incident_id, **args)
             if step.tool == "log_search":
-                return log_search(self.incident_id, **args)
+                if self.log_mode == "legacy":
+                    return log_search(self.incident_id, **args)
+                alert_time = data.load_incident(self.incident_id).start_time
+                return log_search(self.incident_id, **args, mode=self.log_mode,
+                                  alert_time=alert_time)
             return (self._runbook_search or self._default_runbook_search)(**args)
         except TypeError as exc:  # a wrongly typed argument that slipped through
             raise ToolError(f"invalid arguments for {step.tool}: {exc}") from exc

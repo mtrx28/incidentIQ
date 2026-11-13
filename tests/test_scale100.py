@@ -222,11 +222,11 @@ def test_v0b_is_a_baseline_variant_outside_the_original_run_all():
     assert v.kind == "baseline" and v.filtered and not v.in_original
 
 
-def test_run_all_is_five_runs_originally_and_exactly_three_under_scale100():
+def test_run_all_is_five_runs_originally_and_exactly_four_under_scale100():
     assert cli._variant_names("all", scale100=False) == [
         "v0-baseline", "v1-tools", "v2-retrieval", "v3-verifier", "v4-final"]
     assert cli._variant_names("all", scale100=True) == [
-        "v0-baseline", "v0b-filtered-baseline", "v4-final"]
+        "v0-baseline", "v0b-filtered-baseline", "v4-final", "v5-scale"]
     assert cli._variant_names("v1-tools", scale100=False) == ["v1-tools"]
     assert cli._variant_names("v0b-filtered-baseline", scale100=True) == ["v0b-filtered-baseline"]
 

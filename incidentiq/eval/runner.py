@@ -56,7 +56,8 @@ def run_one(variant: Variant, incident_id: str, llm: LLMClient, max_steps: int |
             toolbox = (ToolBox(incident_id, runbook_search=keyword_runbook_retrieve)
                        if variant.retrieval == "keyword" else None)
             state = run_incident(incident_id, llm, toolbox, max_steps=max_steps,
-                                 verify_output=variant.verifier, tuned=variant.tuned).state
+                                 verify_output=variant.verifier, tuned=variant.tuned,
+                                 v5=variant.rarity).state
     except LLMOutputError as exc:
         error = f"LLMOutputError: {exc}"
     return IncidentRun(incident_id, state, _delta(before, llm.stats),

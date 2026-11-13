@@ -30,7 +30,7 @@ from incidentiq.llm import CacheMiss, QuotaExhausted, get_llm
 SCALE_ENV = "INCIDENTIQ_LOG_SCALE"
 
 
-SCALE100_RUNS = ["v0-baseline", "v0b-filtered-baseline", "v4-final"]  # v5-scale joins later
+SCALE100_RUNS = ["v0-baseline", "v0b-filtered-baseline", "v4-final", "v5-scale"]
 
 
 def _variant_names(run: str, scale100: bool) -> list[str]:
@@ -39,6 +39,8 @@ def _variant_names(run: str, scale100: bool) -> list[str]:
     if scale100 and run != "all" and run not in SCALE100_RUNS:
         raise ValueError(f"{run} is not part of the scale100 condition; choose from "
                          f"{SCALE100_RUNS}")
+    if not scale100 and run in VARIANTS and VARIANTS[run].rarity:
+        raise ValueError(f"{run} exists only for the scale100 condition; add --condition scale100")
     if run != "all":
         return [run]
     if scale100:
