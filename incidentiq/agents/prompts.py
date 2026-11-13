@@ -21,7 +21,31 @@ CATEGORIES = {
     "traffic_spike_rate_limit": "request volume far above capacity, causing rate limiting or load shedding",
     "cache_stampede_outage": "the cache is down or emptied so everything falls through to the database",
 }
-_CATEGORY_LIST = "\n".join(f"- {name}: {text}" for name, text in CATEGORIES.items())
+CATEGORY_LIST = "\n".join(f"- {name}: {text}" for name, text in CATEGORIES.items())
+_CATEGORY_LIST = CATEGORY_LIST
+
+# Extra instructions for the v4 stage, written from failures on the dev split only. The base
+# prompts above are frozen: recorded answers are keyed by prompt text (see tests/test_prompts.py).
+TUNED_PLANNER_RULES = """Additional rules, learned from reviewing earlier investigations:
+- Do not restrict log searches to level ERROR. Causes usually appear as WARN or INFO lines (a \
+deploy, a migration, a config change, a pool or cache warning, rate limiting, a failing \
+certificate renewal) shortly before or at the start of the errors. Search the alerting service \
+without a level filter, or with WARN, starting about 10 minutes before the alert time.
+- Lines such as "request failed status=500" or "upstream returned 503" appear under every root \
+cause. They describe symptoms and do not point to a dependency. Choose downstream_timeout only \
+with evidence about the dependency itself: its own latency or error metrics, or logs saying calls \
+to it timed out.
+- Besides error_rate_pct and latency_p99_ms, check the alerting service's resource and traffic \
+metrics: cpu_pct, memory_pct, disk_used_pct, db_pool_in_use_pct, cache_hit_ratio_pct, \
+request_rate_rps and restarts. A cause usually shows up as one of them changing when the \
+incident starts.
+- Query metrics over a range of at least an hour around the alert time; change detection needs \
+several points on each side of a change.
+- If the dependencies look healthy, look for the cause in the alerting service itself."""
+TUNED_REPORTER_RULES = """Additional rules: choose the category that the evidence about the \
+cause supports, not the one the symptoms suggest. downstream_timeout needs evidence that the \
+dependency itself is slow or that calls to it timed out. Cite the evidence that identifies the \
+cause (the telltale log line or the metric that changed), not only symptom lines."""
 
 _TOOLS = """Tools (all read-only):
 - metrics_query: summarise one metric of one service. args: service, metric, optional start and end \
@@ -70,7 +94,12 @@ def _incident_block(state: GraphState) -> str:
             f"Data available from {i.window_start} to {i.window_end}")
 
 
-def planner_messages(state: GraphState, services: list[str], metrics: list[str]) -> list[Message]:
+def _with_tuned(system: str, tuned: bool, rules: str) -> str:
+    return f"{system}\n\n{rules}" if tuned and rules else system
+
+
+def planner_messages(state: GraphState, services: list[str], metrics: list[str],
+                     tuned: bool = False) -> list[Message]:
     remaining = state.max_steps - state.step_count
     system = f"""ROLE: planner
 You are the planner of an assistant that helps on-call engineers find the root cause of an \
@@ -114,7 +143,8 @@ Current hypotheses:
 {_hypotheses(state)}
 
 Decide the next steps."""
-    return [{"role": "system", "content": system}, {"role": "user", "content": user}]
+    return [{"role": "system", "content": _with_tuned(system, tuned, TUNED_PLANNER_RULES)},
+            {"role": "user", "content": user}]
 
 
 def observer_messages(state: GraphState, first_new_step: int) -> list[Message]:
@@ -141,7 +171,7 @@ Previous hypotheses:
     return [{"role": "system", "content": system}, {"role": "user", "content": user}]
 
 
-def reporter_messages(state: GraphState) -> list[Message]:
+def reporter_messages(state: GraphState, tuned: bool = False) -> list[Message]:
     system = f"""ROLE: reporter
 You write the final diagnosis of an incident from the evidence gathered. Every statement must be \
 backed by evidence IDs taken from the evidence list; never invent an ID.
@@ -174,4 +204,5 @@ Hypotheses from the investigation:
         problems = "\n".join(f"- {e}" for e in state.validation_errors)
         user += (f"\n\nYour previous diagnosis was rejected for these problems. Fix them and "
                  f"reply with the corrected JSON:\n{problems}")
-    return [{"role": "system", "content": system}, {"role": "user", "content": user}]
+    return [{"role": "system", "content": _with_tuned(system, tuned, TUNED_REPORTER_RULES)},
+            {"role": "user", "content": user}]

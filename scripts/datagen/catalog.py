@@ -7,8 +7,6 @@ Templates may use {name} placeholders filled from the per-incident context, plus
 
 from dataclasses import dataclass, field
 
-SEED = 20260301
-
 POINTS = 36  # metric points per series (5-minute resolution, 3 hour window)
 STEP_MIN = 5
 ONSET_IDX = 20  # the anomaly starts at this point (100 minutes into the window)

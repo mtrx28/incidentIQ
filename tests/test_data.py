@@ -20,9 +20,12 @@ from incidentiq.schemas import ROOT_CAUSES, GroundTruth, Incident
 
 
 def _digest(directory: Path) -> dict[str, str]:
+    """Hashes of the generated files. data/llm_cache holds recorded model replies, not generator
+    output, so it is left out."""
     return {
         str(p.relative_to(directory)): hashlib.sha256(p.read_bytes()).hexdigest()
-        for p in sorted(directory.rglob("*")) if p.is_file()
+        for p in sorted(directory.rglob("*"))
+        if p.is_file() and p.relative_to(directory).parts[0] != "llm_cache"
     }
 
 

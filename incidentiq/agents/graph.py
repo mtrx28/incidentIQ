@@ -48,7 +48,7 @@ def verifier_node(state: GraphState, llm: LLMClient, use_llm: bool) -> dict:
 
 
 def build_graph(llm: LLMClient, toolbox: ToolBox, verify_output: bool = True,
-                llm_entailment: bool = False):
+                llm_entailment: bool = False, tuned: bool = False):
     def route_after_planner(state: GraphState) -> str:
         if state.planner_done or state.step_count >= state.max_steps:
             return "reporter"
@@ -59,10 +59,10 @@ def build_graph(llm: LLMClient, toolbox: ToolBox, verify_output: bool = True,
         return "end" if done or not state.validation_errors else "reporter"
 
     graph = StateGraph(GraphState)
-    graph.add_node("planner", lambda s: planner_node(s, llm))
+    graph.add_node("planner", lambda s: planner_node(s, llm, tuned))
     graph.add_node("act", lambda s: act_node(s, toolbox, llm))
     graph.add_node("observe", lambda s: observe_node(s, llm))
-    graph.add_node("reporter", lambda s: reporter_node(s, llm))
+    graph.add_node("reporter", lambda s: reporter_node(s, llm, tuned))
     graph.set_entry_point("planner")
     graph.add_conditional_edges("planner", route_after_planner,
                                 {"act": "act", "reporter": "reporter"})
@@ -80,7 +80,7 @@ def build_graph(llm: LLMClient, toolbox: ToolBox, verify_output: bool = True,
 
 def run_incident(incident_id: str, llm: LLMClient, toolbox: ToolBox | None = None,
                  max_steps: int | None = None, verify_output: bool = True,
-                 llm_entailment: bool = False) -> AgentResult:
+                 llm_entailment: bool = False, tuned: bool = False) -> AgentResult:
     llm.start_incident()  # fresh placeholder numbering, shared by tool output and prompts
     own_toolbox = toolbox is None
     toolbox = toolbox or ToolBox(incident_id)
@@ -88,7 +88,7 @@ def run_incident(incident_id: str, llm: LLMClient, toolbox: ToolBox | None = Non
     state = GraphState(incident=data.load_incident(incident_id), max_steps=max_steps)
     started = time.monotonic()
     try:
-        final = build_graph(llm, toolbox, verify_output, llm_entailment).invoke(
+        final = build_graph(llm, toolbox, verify_output, llm_entailment, tuned).invoke(
             state, config={"recursion_limit": 6 * max_steps + 10})
     finally:
         if own_toolbox:

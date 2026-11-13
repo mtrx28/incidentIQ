@@ -10,7 +10,6 @@ import argparse
 import json
 import math
 import random
-import re
 import shutil
 import sys
 from datetime import UTC, datetime, timedelta
@@ -29,7 +28,6 @@ from datagen.catalog import (
     ONSET_IDX,
     PCT_METRICS,
     POINTS,
-    SEED,
     SERVICES,
     STEP_MIN,
     Anomaly,
@@ -40,6 +38,8 @@ from datagen.catalog import (
 from datagen.noise import NOISE, SYMPTOM, UNIVERSAL
 
 from incidentiq.schemas import GroundTruth, Incident
+from incidentiq.synthetic import SEED
+from incidentiq.synthetic import render as render_template
 
 HARD_TYPES = ["logs_only", "metrics_only", "overlapping", "runbook_needed"]
 CFG_VARIANTS = [
@@ -49,7 +49,6 @@ CFG_VARIANTS = [
     ("REQUEST_TIMEOUT_MS", "-1", "3000"),
 ]
 ISO = "%Y-%m-%dT%H:%M:%SZ"
-TOKEN = re.compile(r"\{(int|hex|pii|lk):([^}]+)\}")
 
 
 # --- Planning ----------------------------------------------------------------------------
@@ -73,49 +72,9 @@ def plan_incidents() -> list[dict]:
 # --- Template rendering ------------------------------------------------------------------
 
 
-def _located(text: str, drawn: list[tuple[str, str]]) -> list[dict]:
-    items = []
-    for kind, value in drawn:
-        start = text.find(value)
-        assert start >= 0, (text, value)
-        items.append({"type": kind, "value": value, "start": start, "end": start + len(value)})
-    return items
-
-
 def render(template: str, ctx: dict, rng: random.Random) -> tuple[str, list[dict], list[dict]]:
-    """Fill a template.
-
-    Returns the message, the PII items injected into it, and the look-alike strings in it:
-    harmless tokens (hex IDs, SHAs, versions, 12-digit order refs) that a redactor could mistake
-    for PII. Release versions that come from the incident context are not tagged.
-    """
-    pii_drawn: list[tuple[str, str]] = []
-    lookalikes: list[tuple[str, str]] = []
-
-    def sub(match: re.Match) -> str:
-        kind, arg = match.groups()
-        if kind == "int":
-            lo, hi = arg.split(":")
-            return str(rng.randint(int(lo), int(hi)))
-        if kind == "hex":
-            value = "".join(rng.choice("0123456789abcdef") for _ in range(int(arg)))
-            lookalikes.append(("sha" if arg == "7" else "hex_id", value))
-            return value
-        if kind == "lk":
-            if arg == "version":
-                value = f"{rng.randint(1, 9)}.{rng.randint(0, 9)}.{rng.randint(0, 9)}"
-            elif arg == "order_ref":
-                value = str(rng.randint(202603000000, 202609999999))  # 12 digits, starts with 2
-            else:
-                raise ValueError(arg)
-            lookalikes.append((arg, value))
-            return value
-        value = pii.generate(arg, rng)
-        pii_drawn.append((arg, value))
-        return value
-
-    text = TOKEN.sub(sub, template).format_map(ctx)
-    return text, _located(text, pii_drawn), _located(text, lookalikes)
+    """Fill a template (see incidentiq.synthetic.render), drawing PII values from datagen.pii."""
+    return render_template(template, ctx, rng, pii.generate)
 
 
 # --- Metrics -----------------------------------------------------------------------------

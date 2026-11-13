@@ -27,6 +27,7 @@ from incidentiq.config import RESULTS_DIR
 from incidentiq.store import db
 from incidentiq.store.embed import get_embedder
 from incidentiq.tools.runbooks import search_runbooks
+from incidentiq.tools.runbooks_keyword import search_keyword
 
 MODES = ("alert", "alert+evidence", "diagnosed-fix")
 KS = (1, 3)
@@ -54,7 +55,8 @@ def build_query(incident_id: str, mode: str) -> str:
     return ". ".join(parts)
 
 
-def evaluate(split: str | None, conn, embedder) -> dict:
+def evaluate(split: str | None, search, backend: str) -> dict:
+    """`search(query, k)` returns the top-k section IDs, best first."""
     per_incident = []
     for incident_id in data.list_incident_ids(None if split == "all" else split):
         truth = data.load_ground_truth(incident_id)
@@ -63,8 +65,7 @@ def evaluate(split: str | None, conn, embedder) -> dict:
         row = {"incident_id": incident_id, "category": truth.root_cause_category,
                "hard_case": truth.hard_case, "gold_sections": sorted(gold_sections)}
         for mode in MODES:
-            hits = search_runbooks(conn, embedder, build_query(incident_id, mode), max(KS))
-            ids = [h.section_id for h in hits]
+            ids = search(build_query(incident_id, mode), max(KS))
             row[mode] = {
                 "top": ids,
                 **{f"section@{k}": bool(gold_sections & set(ids[:k])) for k in KS},
@@ -86,14 +87,13 @@ def evaluate(split: str | None, conn, embedder) -> dict:
                                   for mode in MODES}}
         for name, rows in groups.items()
     }
-    return {"split": split, "embedder": embedder.name, "summary": summary,
-            "incidents": per_incident}
+    return {"split": split, "backend": backend, "summary": summary, "incidents": per_incident}
 
 
 def to_markdown(result: dict) -> str:
-    lines = [f"# Retrieval-only evaluation ({result['split']} split)", "",
-             f"Embedder: `{result['embedder']}`. Section hit = a gold runbook section is in the "
-             "top k; runbook hit = any section of the gold runbook is.", "",
+    lines = [f"# Retrieval-only evaluation ({result['split']} split, {result['backend']})", "",
+             "Section hit = a gold runbook section is in the top k; runbook hit = any section of "
+             "the gold runbook is.", "",
              "| Group | n | Query | section@1 | section@3 | runbook@1 | runbook@3 |",
              "|---|---|---|---|---|---|---|"]
     for name, s in result["summary"].items():
@@ -113,11 +113,20 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--split", choices=["dev", "test", "all"], default="all")
     parser.add_argument("--out", type=Path, default=RESULTS_DIR / "retrieval")
+    parser.add_argument("--backend", choices=["embedding", "keyword"], default="embedding")
     args = parser.parse_args()
-    with db.connect() as conn:
-        result = evaluate(args.split, conn, get_embedder())
+    if args.backend == "keyword":
+        result = evaluate(args.split, lambda q, k: [h.section_id for h in search_keyword(q, k)],
+                          "keyword BM25 over section text")
+    else:
+        embedder = get_embedder()
+        with db.connect() as conn:
+            result = evaluate(
+                args.split,
+                lambda q, k: [h.section_id for h in search_runbooks(conn, embedder, q, k)],
+                f"embedding {embedder.name}")
     args.out.mkdir(parents=True, exist_ok=True)
-    stem = f"{args.split}"
+    stem = args.split if args.backend == "embedding" else f"{args.split}-keyword"
     (args.out / f"{stem}.json").write_text(
         json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
     (args.out / f"{stem}.md").write_text(to_markdown(result), encoding="utf-8", newline="\n")

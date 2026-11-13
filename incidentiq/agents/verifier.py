@@ -13,8 +13,6 @@ optional LLM check gives rejected statements a second chance; `Verification.meth
 `ClaimCheck.method` say which check decided.
 """
 
-import re
-
 from incidentiq.llm.base import LLMClient, LLMOutputError
 from incidentiq.schemas import (
     ROOT_CAUSES,
@@ -26,12 +24,11 @@ from incidentiq.schemas import (
     GraphState,
     Verification,
 )
+from incidentiq.text import STOPWORDS, words
 
 MAX_RETRIES = 2  # reporter retries after a failed verification
 LEXICAL_THRESHOLD = 0.3  # share of a statement's key terms that must appear in its evidence
 
-_STOPWORDS = frozenset(["a", "an", "and", "are", "as", "at", "be", "been", "by", "for", "from", "has", "have", "in", "into", "is", "it", "its", "of", "on", "or", "than", "that", "the", "their", "then", "there", "these", "this", "those", "to", "was", "were", "which", "while", "with", "within", "would", "also", "after", "before", "during", "over", "under", "both", "each", "other", "some", "such", "only", "more", "most", "not", "no", "but", "if", "so", "can", "could", "may", "might", "will", "shall", "do", "does", "did", "being", "about", "above", "across", "against", "all", "any", "because", "between", "how", "out", "up", "down", "off"])
-_TOKEN = re.compile(r"\d+(?:\.\d+)?|[a-z]+")
 
 
 def _stem(word: str) -> str:
@@ -45,8 +42,8 @@ def _stem(word: str) -> str:
 
 
 def key_terms(text: str) -> set[str]:
-    return {_stem(t) for t in _TOKEN.findall(text.lower())
-            if t not in _STOPWORDS and (len(t) >= 3 or t.replace(".", "").isdigit())}
+    return {_stem(t) for t in words(text)
+            if t not in STOPWORDS and (len(t) >= 3 or t.replace(".", "").isdigit())}
 
 
 def lexical_overlap(statement: str, evidence_text: str) -> float:

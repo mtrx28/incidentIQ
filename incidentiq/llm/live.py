@@ -105,7 +105,8 @@ class LiveLLM(LLMClient):
             return cached
         reply = self._call(messages, json_mode=schema_name is not None)
         # Record the redacted text, so the committed cache can never hold PII or secrets.
+        # Latency is rounded the way the cache stores it, so a live run and its replay agree.
         reply = Generation(redact(reply.text)[0], reply.prompt_tokens, reply.completion_tokens,
-                           reply.latency_s)
+                           round(reply.latency_s, 3))
         self.cache.put(key, self.model, messages, schema_name, reply)
         return reply
