@@ -17,7 +17,7 @@ def tables():
     return module
 
 
-@pytest.mark.parametrize("name", ["results", "redaction", "retrieval", "paired", "redaction-doc"])
+@pytest.mark.parametrize("name", ["results", "scale100", "redaction", "retrieval", "paired", "redaction-doc"])
 def test_generated_block_matches_results_files(tables, name):
     path = tables.BLOCK_FILES[name]
     found = tables.extract(path.read_text(encoding="utf-8"), name)

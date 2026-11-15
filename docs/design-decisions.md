@@ -32,7 +32,7 @@ Logs contain PII and secrets, and a prompt sent to a hosted model is data leavin
 
 ## The evaluation lives in the repo, with a dev/test split
 
-Results are committed (`results/`), the README tables are generated from them and a test fails if they drift, and the tuning protocol is written down (`results/TUNING_LOG.md`). The point is that every number in the README can be checked, including the unflattering ones: the single-call baseline scores highest on the original data, and a higher-volume condition meant to test that is pre-registered but not yet run ([benchmark-scale100.md](benchmark-scale100.md)).
+Results are committed (`results/`), the README tables are generated from them and a test fails if they drift, and the tuning protocol is written down (`results/TUNING_LOG.md`). The point is that every number in the README can be checked, including the unflattering ones: the single-call baseline scores highest on the original data, and on the pre-registered higher-volume condition the best agent only ties a filtered single-call baseline ([benchmark-scale100.md](benchmark-scale100.md)).
 
 ## Synthetic data, generated with a fixed seed
 

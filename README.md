@@ -90,7 +90,30 @@ What this table does and does not show:
 - The rise in "gold runbook cited" (12% in v1 to 44% in v4) is largely produced by the v4 stopping rule that forces a runbook lookup before the planner can finish. It is not evidence of better reasoning.
 - The verifier (v3) raised its own lexical support rate (87.0% in v2 to 98.0% in v3), which is partly circular: the lexical column is the verifier's own check. It did not raise accuracy, and the independent gold-ID support did not rise (38.0% to 36.7%).
 - Citation validity is 100% in every run: no run cited an evidence ID it had not retrieved.
-- **Pending:** a high-volume condition, `scale100` (about 100 times the log volume, pre-registered in [docs/benchmark-scale100.md](docs/benchmark-scale100.md)), has not been run. No results exist for it yet. It was added after seeing that the baseline was near ceiling on the original data.
+- The `scale100` condition, added because of the near-ceiling baseline above, is reported in the next section.
+
+### The `scale100` condition (about 100 times the log volume)
+
+Added after the original results showed the baseline near ceiling, so it was not planned before those numbers were seen. It was pre-registered ([docs/benchmark-scale100.md](docs/benchmark-scale100.md), committed before any scale100 run), and v5-scale was built and chosen on dev only ([results/scale100/TUNING_LOG.md](results/scale100/TUNING_LOG.md)). Only log volume changes: about 8,500 extra healthy-traffic lines per service per incident, from the existing noise templates. v0 is the naive baseline (last 100 log lines of the alerting service); v0b is a single call over the last 100 WARN and ERROR lines; v4-final is the recorded v4 agent unchanged; v5-scale is v4 plus a rarity-ranked log search.
+
+<!-- BEGIN GENERATED:scale100 (python scripts/make_readme_tables.py --write) -->
+| Version | Test accuracy (95% Wilson interval) | Strict accuracy | Citation validity | Support: lexical / gold | Gold evidence recall | Gold runbook cited | LLM calls / incident | Dev accuracy |
+|---|---|---|---|---|---|---|---|---|
+| [v0-baseline](results/scale100/v0-baseline/results.md) | 4.0% (1/25; 0.7% to 19.5%) | 0.0% | 100.0% | 85.7% / 0.0% | 0.0% | 0.0% | 1.00 | 20.0% (3/15) |
+| [v0b-filtered-baseline](results/scale100/v0b-filtered-baseline/results.md) | 88.0% (22/25; 70.0% to 95.8%) | 88.0% | 100.0% | 96.7% / 80.0% | 38.2% | 0.0% | 1.00 | 93.3% (14/15) |
+| [v4-final](results/scale100/v4-final/results.md) | 76.0% (19/25; 56.6% to 88.5%) | 76.0% | 100.0% | 99.2% / 46.3% | 41.3% | 44.0% | 7.28 | 86.7% (13/15) |
+| [v5-scale](results/scale100/v5-scale/results.md) | 88.0% (22/25; 70.0% to 95.8%) | 84.0% | 99.4% | 94.1% / 56.3% | 61.8% | 52.0% | 6.52 | 86.7% (13/15) |
+<!-- END GENERATED:scale100 -->
+
+What this table does and does not show:
+
+- **v5-scale ties the filtered baseline** (22/25 each, identical intervals). This repo does not show that the agent beats a baseline that filters the log dump. v5-scale's strict accuracy (84%) is slightly below v0b's (88%).
+- Both are far above the naive log dump (v0: 1/25), which shows what the 100x volume does to a plain dump. It is not the right comparison for the agent, because the filtered baseline also costs one call and uses no tools.
+- v5-scale (88%) and v4-final (76%) differ by 3 incidents, inside overlapping intervals. v5 was chosen over v4 on dev by a rule written beforehand, where the two tied (13/15 each, on different incidents), so this is not shown to be an improvement.
+- v5-scale retrieves more of the gold evidence (61.8%, against 38.2% for v0b and 41.3% for v4) and cites the gold runbook section more often (52%; v0b has no runbook access). The lexical support column for v5 (94.1%) is the verifier's own check.
+- v0b and v5-scale missed the same three incidents (INC-005, INC-009, INC-035); v4 missed those and three more (INC-029, INC-030, INC-039). Two of the three shared misses are metrics-only incidents whose evidence is in a metric the agent never queried. Per-incident notes are in `results/scale100/<run>/failure_notes.json`, written for v0b, v4 and v5 from the traces; the naive baseline's 24 misses are not annotated.
+- n = 25 per run, one recording each at temperature 0, so run-to-run variation is not measured.
+- During recording, the v5 test run printed its own summary table, so the v5 test score was seen before the other test results were read. No version was changed after any test result existed.
 
 ### Redaction (before the model sees anything)
 
@@ -149,7 +172,7 @@ How often runbook search returns the gold runbook section, on all 40 incidents. 
 
 - **Synthetic data.** Logs and metrics are generated from templates. Log noise is template-based, which is easier than real logs.
 - **Same author for data and runbooks.** The runbooks were written by the same person as the data, so they match it more closely than real runbooks would. Mitigations: loose wording in a third of the runbooks (1, 4, 5, 6, 8 and 9) and several deliberately similar ones (2, 3, 10 and 12), plus runbooks 11 to 18 that match no incident or only sound relevant. The retrieval table shows retrieval is not trivially perfect.
-- **Sparse logs.** About 3 lines per minute across all services (roughly 520 to 560 lines per 3-hour incident), with the cause lines minutes from the alert. A naive log dump therefore scores near ceiling (v0: 92% on test). The `scale100` condition was designed to test this, and is pending.
+- **Sparse logs.** About 3 lines per minute across all services (roughly 520 to 560 lines per 3-hour incident), with the cause lines minutes from the alert. A naive log dump therefore scores near ceiling (v0: 92% on test). The `scale100` condition tests this: with 100 times the volume the naive dump falls to 4%, but a filtered dump (v0b) scores 88%, the same as the best agent (v5-scale).
 - **Small benchmark.** 25 test incidents. The intervals are wide (for example 60.9% to 91.1% around 80%), and most differences between versions are inside them.
 - **Regex redaction misses formats.** On the hand-written hard set it caught 25 of 42. Real misses: phone numbers without a leading `+` (`98765 43210`, `09876543210`, `(415) 555-0132`, `+44 (0)20 7946 0958`); names outside a `user=` field (4 of 5 hard-set names missed); a URL-encoded email (`%40`); cards and Aadhaar-style IDs written with dots; a PAN-style ID; an IPv6 address; passwords in a JSON dump, after a `pwd` word without `=`, after a `-p` flag, or in a `redis://:pass@` URL. See [docs/redaction.md](docs/redaction.md) for why each is missed. Separately, 119 of 20,656 clean lines were altered (0.6%), almost all of them 12-digit order references that pass the Aadhaar checksum.
 - **The verifier's support check is lexical and approximate.** It grades its own homework: the "lexical" support column is the check the verifier itself applies, so it is not independent evidence of grounding. It can reject a fair statement. In four correct diagnoses (two in v3, two in v4) a statement about a metric was rejected at 14% to 27% overlap while citing that metric. It can also accept a loosely related one: a statement with a changed date still scored 62% overlap in a hand check, so dates and numbers can slip through. It checks grounding (does the cited text relate to the claim), not correctness.
@@ -180,7 +203,7 @@ incidentiq/
               redaction_eval.py  redaction_hard_cases.py  retrieval_eval.py
 data/         incidents/ metrics/ logs/ runbooks/ llm_cache/ split.json  (+ PII manifests)
 scripts/      generate_data.py  datagen/  make_readme_tables.py
-results/      v0-baseline/ ... v4-final/  redaction/  retrieval/  TUNING_LOG.md  comparison.md
+results/      v0-baseline/ ... v4-final/  scale100/  redaction/  retrieval/  TUNING_LOG.md  comparison.md
 docs/         architecture.md  evaluation.md  redaction.md  design-decisions.md  benchmark-scale100.md
 tests/
 ```

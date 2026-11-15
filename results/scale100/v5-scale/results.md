@@ -60,8 +60,8 @@ Redactor on the injected set: 601/601 caught (100.0%); on the independent hard s
 
 | Incident | Split | Case | True | Predicted | Steps | Signals | Reason |
 |---|---|---|---|---|---|---|---|
-| INC-005 | test | metrics_only | cache_stampede_outage | downstream_timeout | 6 | never retrieved the cause evidence | (not yet analysed) |
-| INC-009 | test | metrics_only | disk_full | downstream_timeout | 6 | never retrieved the cause evidence | (not yet analysed) |
+| INC-005 | test | metrics_only | cache_stampede_outage | downstream_timeout | 6 | never retrieved the cause evidence | Same miss as v4: the metrics-only gold evidence (M-028, M-030) was never queried. The one log search matched 706 lines (30 rarest shown; 11 ERROR, 83 WARN) with no gold line. Runbook query written around downstream_timeout. |
+| INC-009 | test | metrics_only | disk_full | downstream_timeout | 6 | never retrieved the cause evidence | Same miss as v4: disk_used_pct (gold M-049) never queried. The log search matched 697 lines (30 rarest shown); a later search on the checkout service for 'cart' returned INFO lines only. Runbook query was about downstream_timeout. |
 | INC-019 | dev | metrics_only | db_connection_pool_exhaustion | misconfiguration | 5 | never retrieved the cause evidence; no runbook retrieved; unverified after retries | (not yet analysed) |
-| INC-035 | test | runbook_needed | misconfiguration | bad_deployment | 6 | - | (not yet analysed) |
+| INC-035 | test | runbook_needed | misconfiguration | bad_deployment | 6 | - | Gold L-0281 and L-0283 were retrieved at S3 and M-009 at S2, but the diagnosis was bad_deployment and hypotheses did not contain misconfiguration. An OOM/deploy-term search returned 0 lines. Best runbook match R-01-1 at similarity 0.59. |
 | INC-036 | dev | standard | expired_tls_cert | bad_deployment | 5 | never retrieved the cause evidence | (not yet analysed) |

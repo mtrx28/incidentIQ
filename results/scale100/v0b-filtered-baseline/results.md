@@ -60,7 +60,7 @@ Redactor on the injected set: 601/601 caught (100.0%); on the independent hard s
 
 | Incident | Split | Case | True | Predicted | Steps | Signals | Reason |
 |---|---|---|---|---|---|---|---|
-| INC-005 | test | metrics_only | cache_stampede_outage | downstream_timeout | 0 | never retrieved the cause evidence | (not yet analysed) |
-| INC-009 | test | metrics_only | disk_full | downstream_timeout | 0 | never retrieved the cause evidence | (not yet analysed) |
+| INC-005 | test | metrics_only | cache_stampede_outage | downstream_timeout | 0 | never retrieved the cause evidence | Metrics-only case: the gold evidence is metrics (cache hit ratio M-028, db pool M-030) and a log dump holds none of it; the baseline predicted downstream_timeout from the WARN/ERROR lines. |
+| INC-009 | test | metrics_only | disk_full | downstream_timeout | 0 | never retrieved the cause evidence | Metrics-only case: the gold evidence is the disk-usage metric (M-049); the log dump holds none of it; predicted downstream_timeout. |
 | INC-019 | dev | metrics_only | db_connection_pool_exhaustion | downstream_timeout | 0 | never retrieved the cause evidence | (not yet analysed) |
-| INC-035 | test | runbook_needed | misconfiguration | downstream_timeout | 0 | - | (not yet analysed) |
+| INC-035 | test | runbook_needed | misconfiguration | downstream_timeout | 0 | - | Gold lines L-0281 and L-0283 were in the dump (cause evidence present), but the predicted category was downstream_timeout, not misconfiguration; no runbook was available to this variant. |

@@ -20,9 +20,10 @@ RESULTS = ROOT / "results"
 README = ROOT / "README.md"
 EVAL_DOC = ROOT / "docs" / "evaluation.md"
 RUNS = ["v0-baseline", "v1-tools", "v2-retrieval", "v3-verifier", "v4-final"]
+SCALE100_RUNS = ["v0-baseline", "v0b-filtered-baseline", "v4-final", "v5-scale"]
 # block name -> the file that holds it
 REDACTION_DOC = ROOT / "docs" / "redaction.md"
-BLOCK_FILES = {"results": README, "redaction": README, "retrieval": README, "paired": EVAL_DOC,
+BLOCK_FILES = {"results": README, "scale100": README, "redaction": README, "retrieval": README, "paired": EVAL_DOC,
                "redaction-doc": REDACTION_DOC}
 BLOCKS = tuple(BLOCK_FILES)
 
@@ -53,6 +54,28 @@ def results_table() -> str:
             f"| {_pct(t['gold_evidence_recall'])} | {_pct(t['gold_runbook_cited'])} "
             f"| {e['llm_calls_per_incident']:.2f} "
             f"| {e['prompt_tokens_per_incident']:.0f} / {e['completion_tokens_per_incident']:.0f} "
+            f"| {_pct(d['accuracy']['rate'])} ({d['accuracy']['correct']}/{d['n']}) |")
+    return "\n".join(lines)
+
+
+def scale100_table() -> str:
+    """Same columns as the main table, for the pre-registered scale100 condition."""
+    head = ("| Version | Test accuracy (95% Wilson interval) | Strict accuracy | Citation validity "
+            "| Support: lexical / gold | Gold evidence recall | Gold runbook cited "
+            "| LLM calls / incident | Dev accuracy |")
+    lines = [head, "|---|---|---|---|---|---|---|---|---|"]
+    for run in SCALE100_RUNS:
+        res = _load(RESULTS / "scale100" / run / "results.json")
+        t, d = res["splits"]["test"], res["splits"]["dev"]
+        a = t["accuracy"]
+        lines.append(
+            f"| [{run}](results/scale100/{run}/results.md) "
+            f"| {_pct(a['rate'])} ({a['correct']}/{t['n']}; {_pct(a['ci95'][0])} to "
+            f"{_pct(a['ci95'][1])}) "
+            f"| {_pct(t['strict_accuracy']['rate'])} | {_pct(t['citation_validity'])} "
+            f"| {_pct(t['citation_support_lexical'])} / {_pct(t['citation_support_gold'])} "
+            f"| {_pct(t['gold_evidence_recall'])} | {_pct(t['gold_runbook_cited'])} "
+            f"| {t['efficiency']['llm_calls_per_incident']:.2f} "
             f"| {_pct(d['accuracy']['rate'])} ({d['accuracy']['correct']}/{d['n']}) |")
     return "\n".join(lines)
 
@@ -115,7 +138,7 @@ def paired_table() -> str:
     return "\n".join(out)
 
 
-GENERATORS = {"results": results_table, "redaction": redaction_table,
+GENERATORS = {"results": results_table, "scale100": scale100_table, "redaction": redaction_table,
               "retrieval": retrieval_table, "paired": paired_table,
               "redaction-doc": redaction_table}
 

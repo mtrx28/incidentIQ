@@ -19,3 +19,7 @@ On the original data, v0 (the last 100 log lines) scored 92% and v1 scored 64% o
     python -m incidentiq.eval --run v0b-filtered-baseline --condition scale100 --split dev --llm live
 
 Results go to `results/scale100/<run>/`. The data loader reads `INCIDENTIQ_LOG_SCALE` (1 or 100; anything else is an error).
+
+## Results
+
+Recorded after this document was committed. Test-split numbers, intervals and caveats: [evaluation.md](evaluation.md#the-scale100-condition) and `results/scale100/`.

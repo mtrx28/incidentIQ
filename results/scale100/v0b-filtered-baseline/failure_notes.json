@@ -1,0 +1,5 @@
+{
+  "INC-005": "Metrics-only case: the gold evidence is metrics (cache hit ratio M-028, db pool M-030) and a log dump holds none of it; the baseline predicted downstream_timeout from the WARN/ERROR lines.",
+  "INC-009": "Metrics-only case: the gold evidence is the disk-usage metric (M-049); the log dump holds none of it; predicted downstream_timeout.",
+  "INC-035": "Gold lines L-0281 and L-0283 were in the dump (cause evidence present), but the predicted category was downstream_timeout, not misconfiguration; no runbook was available to this variant."
+}

@@ -78,3 +78,12 @@ None was found.
 
 v5 iteration 1 used 105 new live calls. Counted calls so far: 624 of the 1,300 cap (cache files
 minus the 491 present at the first quota stop; a 10% margin is kept on top).
+
+## After the test split was recorded
+
+Appended after the test results existed; nothing above was edited.
+
+- Test split, 25 incidents: v0 naive 1/25, v0b filtered 22/25, v4-final 19/25, v5-scale 22/25. v5 ties v0b and does not exceed it.
+- The v5 test run printed its own summary table when it finished, so its score was seen before the other test results were read. No version, prompt or rule was changed after any test result existed.
+- Final counted calls: 787 of the 1,300 cap (cache files 1,278 minus the 491 at the first quota stop).
+- Failure notes for the misses of v0b, v4 and v5 were written from the traces afterwards (`failure_notes.json` in each run folder). They are descriptive only.

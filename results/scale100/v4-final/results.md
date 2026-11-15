@@ -60,11 +60,11 @@ Redactor on the injected set: 601/601 caught (100.0%); on the independent hard s
 
 | Incident | Split | Case | True | Predicted | Steps | Signals | Reason |
 |---|---|---|---|---|---|---|---|
-| INC-005 | test | metrics_only | cache_stampede_outage | downstream_timeout | 6 | never retrieved the cause evidence | (not yet analysed) |
-| INC-009 | test | metrics_only | disk_full | downstream_timeout | 5 | never retrieved the cause evidence | (not yet analysed) |
+| INC-005 | test | metrics_only | cache_stampede_outage | downstream_timeout | 6 | never retrieved the cause evidence | Metrics-only case. Queried error rate and memory on the alerting service and error rate and latency on payments; cache hit ratio (gold M-028) and db pool (M-030) were never queried. The one log search matched 64 lines, none gold. The runbook query was written around downstream_timeout. |
+| INC-009 | test | metrics_only | disk_full | downstream_timeout | 5 | never retrieved the cause evidence | Metrics-only case. Queried error rate, cpu and memory; disk_used_pct (gold M-049) never queried. The one log search (954 matches, 30 shown) held no gold line. The runbook query was written around downstream_timeout. |
 | INC-014 | dev | runbook_needed | downstream_timeout | bad_deployment | 6 | never retrieved the cause evidence; true cause was among its hypotheses | (not yet analysed) |
 | INC-021 | dev | standard | misconfiguration | memory_leak_oom | 7 | - | (not yet analysed) |
-| INC-029 | test | standard | traffic_spike_rate_limit | downstream_timeout | 5 | never retrieved the cause evidence | (not yet analysed) |
-| INC-030 | test | logs_only | traffic_spike_rate_limit | slow_query_missing_index | 8 | hit the step cap; never retrieved the cause evidence | (not yet analysed) |
-| INC-035 | test | runbook_needed | misconfiguration | bad_deployment | 6 | true cause was among its hypotheses | (not yet analysed) |
-| INC-039 | test | standard | slow_query_missing_index | downstream_timeout | 6 | never retrieved the cause evidence | (not yet analysed) |
+| INC-029 | test | standard | traffic_spike_rate_limit | downstream_timeout | 5 | never retrieved the cause evidence | Standard case. The 30 lines shown from 748 matches (20-minute window, no query) held none of the gold lines (L-0278, L-0279, L-0281); metrics queried were error rate, restarts and latency, not the gold metrics M-002/M-008. The runbook query was about downstream_timeout. |
+| INC-030 | test | logs_only | traffic_spike_rate_limit | slow_query_missing_index | 8 | hit the step cap; never retrieved the cause evidence | Logs-only case; hit the step cap (8). Two log searches with deploy/config/tls/timeout-style query terms matched 85 and 37 lines, none gold (L-0257, L-0261, L-0266). Final runbook query was written around slow_query_missing_index; predicted that. |
+| INC-035 | test | runbook_needed | misconfiguration | bad_deployment | 6 | true cause was among its hypotheses | Gold M-009 (restarts) was retrieved at S2, but the log search (70 matches) held neither gold line (L-0281, L-0283). A second search for OOM terms returned 0 lines. The runbook query was written around bad_deployment (best match R-01-3, similarity 0.65). |
+| INC-039 | test | standard | slow_query_missing_index | downstream_timeout | 6 | never retrieved the cause evidence | Standard case. The log search (956 matches, 30 shown, no query) held no gold line (L-0283, L-0303, L-0306); metrics queried were error rate, restarts and payments, not the gold metrics M-030/M-033. The runbook query was about downstream_timeout. |

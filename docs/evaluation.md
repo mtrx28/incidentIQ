@@ -71,9 +71,22 @@ Counts of incidents whose outcome changed between two versions on the same 25 te
 
 How to read it: v4 gains some incidents and loses others relative to v1, and the gains are not shown to be more than chance with this sample. Relative to v0, v4 is not distinguishable on accuracy. The intervals for all three overlap.
 
-## Pending: the `scale100` condition
+## The `scale100` condition
 
-The original logs are sparse (about 3 lines per minute across all services) and the cause lines sit minutes from the alert, which is why a plain log dump (v0) scores near ceiling. A pre-registered condition, `scale100`, adds about 100 times the log volume of healthy-traffic noise and compares two single-call baselines (v0a, v0b), v4-final as recorded, and a later v5-scale. **It has not been run: no results exist for it yet.** The design, protocol and disclosures are in [benchmark-scale100.md](benchmark-scale100.md). It was added after seeing that the baseline was already near ceiling, which the document discloses.
+The original logs are sparse (about 3 lines per minute across all services) and the cause lines sit minutes from the alert, which is why a plain log dump (v0) scores near ceiling. The pre-registered `scale100` condition adds about 100 times the log volume of healthy-traffic noise. It compares two single-call baselines (v0a naive, v0b filtered to WARN and ERROR), v4-final as recorded, and v5-scale. The design, protocol and disclosures are in [benchmark-scale100.md](benchmark-scale100.md); how v5 was built and chosen on dev is in [../results/scale100/TUNING_LOG.md](../results/scale100/TUNING_LOG.md). It was added after seeing that the baseline was already near ceiling, which the pre-registration discloses.
+
+Test split (25 incidents), all four runs recorded once and replay-checked byte for byte:
+
+| Version | Test accuracy | 95% Wilson interval |
+|---|---|---|
+| v0 naive baseline | 4% (1/25) | 0.7% to 19.5% |
+| v0b filtered baseline | 88% (22/25) | 70.0% to 95.8% |
+| v4-final | 76% (19/25) | 56.6% to 88.5% |
+| v5-scale | 88% (22/25) | 70.0% to 95.8% |
+
+Reading: v5-scale ties the filtered baseline and does not exceed it. It is far above the naive dump. Its 3-incident lead over v4 is inside overlapping intervals. The full table with the other metrics is in the [README](../README.md); raw files are in `results/scale100/`.
+
+Protocol notes for this condition: the test split for v0a, v0b and v4 was recorded to a folder outside the repository and not read until every run was recorded and the replay checks passed. The v5 test run printed its own summary table when it finished, so v5's test score was seen before the rest were read; nothing was changed afterwards. v5 was frozen at commit `81d1665` before any v5 test call. Failure notes for the misses of v0b, v4 and v5 were written from the traces after all runs existed and were not used to change any version.
 
 ## Observations
 
@@ -91,6 +104,6 @@ Weaknesses and oddities noticed while building the benchmark. None of these were
 10. **The forced runbook step can confirm a wrong hypothesis.** It builds its query from the leading hypothesis, so it can retrieve text that appears to support it (also in the tuning log).
 11. **Per-category and per-case breakdowns are tiny.** Test has 1 to 3 incidents per category and per hard-case type, so those tables are descriptive only.
 12. **One category per incident.** Overlapping-symptom incidents are scored on a single category, so a diagnosis naming the second cause is wrong.
-13. **The recorded cache is not yet tracked in git** at the time of writing (`data/llm_cache/` shows as untracked). It must be committed for replay to work from a clone.
+13. **The recorded cache is committed** (`data/llm_cache/`), including recordings from tuning iterations that no committed run reaches. Those entries are harmless but not pruned.
 14. **The demo uses the verifier but not the v4 prompt changes** (`incidentiq.cli` does not pass the tuned switch), so `make demo` shows the v3 configuration, not the final one.
-15. **Test-split failure notes exist.** See protocol step 5: reading them before designing a new version would contaminate the test split.
+15. **Test-split failure notes exist** (original condition and scale100). See protocol step 5: reading them before designing a new version would contaminate the test split.
