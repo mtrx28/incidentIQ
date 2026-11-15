@@ -104,6 +104,6 @@ Weaknesses and oddities noticed while building the benchmark. None of these were
 10. **The forced runbook step can confirm a wrong hypothesis.** It builds its query from the leading hypothesis, so it can retrieve text that appears to support it (also in the tuning log).
 11. **Per-category and per-case breakdowns are tiny.** Test has 1 to 3 incidents per category and per hard-case type, so those tables are descriptive only.
 12. **One category per incident.** Overlapping-symptom incidents are scored on a single category, so a diagnosis naming the second cause is wrong.
-13. **The recorded cache is committed** (`data/llm_cache/`), including recordings from tuning iterations that no committed run reaches. Those entries are harmless but not pruned.
+13. **The recorded cache is committed** (`data/llm_cache/`), and every one of its 1,278 files is read by the committed replays (original runs, scale100 and the demo), so nothing is left over from tuning.
 14. **The demo uses the verifier but not the v4 prompt changes** (`incidentiq.cli` does not pass the tuned switch), so `make demo` shows the v3 configuration, not the final one.
 15. **Test-split failure notes exist** (original condition and scale100). See protocol step 5: reading them before designing a new version would contaminate the test split.

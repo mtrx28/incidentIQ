@@ -214,4 +214,4 @@ tests/
 
 ## Licence
 
-No licence file has been added yet.
+MIT, see [LICENSE](LICENSE).
