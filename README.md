@@ -2,7 +2,9 @@
 
 An incident-diagnosis agent for on-call engineers, built on LangGraph, Pydantic and pgvector, with an evaluation harness that scores it against labeled synthetic incidents.
 
-> **Demo recording: not yet recorded.** (Placeholder. A terminal recording of `make demo` will go here.)
+https://github.com/mtrx28/incidentIQ/raw/main/docs/demo.mp4
+
+*`make demo` (here via `tasks.ps1 demo`): diagnosing the sample incident (a dev-split connection-pool case) from recorded model replies, with no network call to a hosted model. The captions and yellow boxes were added in editing to point out the redacted password, the runbook retrieval, the cited evidence IDs and the verifier result. The clip is also at [docs/demo.mp4](docs/demo.mp4).*
 
 ## The problem
 
